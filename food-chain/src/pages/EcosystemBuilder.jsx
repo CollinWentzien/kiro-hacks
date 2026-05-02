@@ -5,6 +5,8 @@ import SpeciesLibraryPanel from '../components/SpeciesLibraryPanel.jsx';
 import EcosystemCanvas, { initialPosition } from '../components/EcosystemCanvas.jsx';
 import SpeciesInfoPanel from '../components/SpeciesInfoPanel.jsx';
 import HealthScorePanel from '../components/HealthScorePanel.jsx';
+import EcosystemChat from '../components/chat/EcosystemChat.jsx';
+import ChatToggleButton from '../components/chat/ChatToggleButton.jsx';
 
 const MODE_LABELS = { outdoor: 'Outdoor', terrarium: 'Terrarium', aquarium: 'Aquarium' };
 
@@ -14,6 +16,16 @@ export default function EcosystemBuilder({ projects, onUpdateProject }) {
 
   const [nodes, setNodes] = useState([]);
   const [selectedId, setSelectedId] = useState(null);
+  const [chatOpen, setChatOpen] = useState(false);
+
+  // Build profile for the chat coach from current project state
+  const chatProfile = useMemo(() => ({
+    userId: `project-${id}`,
+    location: project?.city || null,
+    climateZone: project?.mode === 'outdoor' ? 'temperate' : null,
+    placedSpeciesIds: nodes.map(n => n.id),
+    preferences: [],
+  }), [id, project, nodes]);
 
   const placedIds = useMemo(() => new Set(nodes.map(n => n.id)), [nodes]);
 
@@ -97,6 +109,18 @@ export default function EcosystemBuilder({ projects, onUpdateProject }) {
         placedIds={placedIds}
         onSelect={setSelectedId}
         onAdd={addSpecies}
+      />
+
+      {/* Ecosystem Coach Chat */}
+      <ChatToggleButton
+        isOpen={chatOpen}
+        onClick={() => setChatOpen(o => !o)}
+        speciesCount={nodes.length}
+      />
+      <EcosystemChat
+        profile={chatProfile}
+        isOpen={chatOpen}
+        onClose={() => setChatOpen(false)}
       />
 
       <div className="corner-mark">— a living index —</div>
