@@ -5,13 +5,15 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node --import dotenv/config index.js",
     "test": "vitest run",
     "test:watch": "vitest"
   },
   "dependencies": {
-    "hono": "4.6.3",
-    "@hono/node-server": "1.13.2"
+    "@hono/node-server": "1.13.2",
+    "@supabase/supabase-js": "^2.49.4",
+    "dotenv": "^16.4.7",
+    "hono": "4.6.3"
   },
   "devDependencies": {
     "fast-check": "3.22.0",
