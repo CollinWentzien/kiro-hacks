@@ -177,6 +177,45 @@ Resolves a city name to geographic metadata.
 
 ---
 
+### `GET /api/geocode/autocomplete`
+
+City search autocomplete for the home page search bar. Returns city suggestions for a partial query string. Powered by Photon (OpenStreetMap-based, purpose-built for autocomplete).
+
+**Query params:**
+
+| Param | Required | Default | Description |
+|---|---|---|---|
+| `q` | yes | — | Partial city name (min 2 characters) |
+| `limit` | no | 8 | Max suggestions (max 15) |
+
+**Response:**
+```json
+[
+  {
+    "city": "Los Angeles",
+    "state": "California",
+    "country": "United States",
+    "displayName": "Los Angeles, California, United States",
+    "lat": 34.0537,
+    "lng": -118.2428
+  },
+  {
+    "city": "Los Santos",
+    "state": "Castilla y León",
+    "country": "España",
+    "displayName": "Los Santos, Castilla y León, España",
+    "lat": 40.5449,
+    "lng": -5.7972
+  }
+]
+```
+
+**Usage:** Debounce calls on the frontend (300ms). When the user selects a suggestion, pass `city`, `state`, and `country` to `GET /api/ecosystem` for accurate results.
+
+**Caching:** Results cached 1 hour in memory.
+
+---
+
 ### `GET /api/species/observed`
 
 Returns species observed near a lat/lng from GBIF and iNaturalist.
@@ -403,6 +442,7 @@ Full detail for a single species by iNaturalist taxon ID. Includes taxonomy, pho
 | Source | Used for | Auth |
 |---|---|---|
 | Nominatim (OpenStreetMap) | Geocoding | None (User-Agent required) |
+| Photon (komoot) | City autocomplete | None |
 | iNaturalist | Observed species, enrichment, catalog search | None |
 | GBIF | Observed species (fallback), enrichment (fallback) | None |
 | POWO (Kew Gardens) | Plant native status | None |
@@ -422,7 +462,7 @@ food-chain/
     catalog.js       ← GET/POST /api/catalog/search, GET /api/catalog/species/:id
     ecosystem.js     ← GET /api/ecosystem, /gaps, /climate, /saved
     enrich.js        ← GET /api/species/enrich
-    geocode.js       ← GET /api/geocode
+    geocode.js       ← GET /api/geocode, GET /api/geocode/autocomplete
     native.js        ← GET /api/species/native
     observed.js      ← GET /api/species/observed
   services/
