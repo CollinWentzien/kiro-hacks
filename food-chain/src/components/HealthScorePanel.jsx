@@ -1,84 +1,128 @@
 import { useMemo } from 'react';
 import { SPECIES_BY_ID } from '../data/species.js';
 
+const TROPHIC_ORDER = ['producer', 'primary', 'secondary', 'tertiary', 'decomposer'];
+const TROPHIC_LABEL = { producer: 'Producers', primary: 'Primary', secondary: 'Secondary', tertiary: 'Apex', decomposer: 'Decomposers' };
+const TROPHIC_COLOR = { producer: 'var(--sage)', primary: 'var(--mustard)', secondary: 'var(--rust)', tertiary: 'var(--ink)', decomposer: 'var(--ink-fade)' };
+
 function computeHealth(nodes) {
-  if (nodes.length === 0) return { score: 0, status: 'empty', warnings: [] };
+  if (nodes.length === 0) return null;
   const idSet = new Set(nodes.map(n => n.id));
   const warnings = [];
   let score = 100;
 
   const hasProducer = nodes.some(n => SPECIES_BY_ID[n.id].trophic === 'producer');
   if (!hasProducer && nodes.length > 1) {
-    warnings.push({ kind: 'warning', badge: 'GAP', text: 'No producers — primary consumers will starve.' });
+    warnings.push({ badge: 'GAP', text: 'No producers — primary consumers will starve.' });
     score -= 25;
   }
 
   for (const n of nodes) {
     const s = SPECIES_BY_ID[n.id];
-    if (s.trophic === 'secondary' || s.trophic === 'tertiary') {
-      const hasFood = s.eats.some(p => idSet.has(p));
-      if (!hasFood) {
-        warnings.push({ kind: 'warning', badge: 'STARVE', text: `${s.name} has no prey present.` });
-        score -= 15;
-      }
-    }
-  }
-
-  for (const n of nodes) {
-    const s = SPECIES_BY_ID[n.id];
-    if (s.trophic === 'secondary' || s.trophic === 'tertiary') {
-      const willEat = s.eats.filter(p => idSet.has(p)).map(p => SPECIES_BY_ID[p].name);
-      if (willEat.length) {
-        warnings.push({ kind: 'warning', badge: 'PREDATION', text: `${s.name} will hunt: ${willEat.join(', ')}.` });
-      }
+    if ((s.trophic === 'secondary' || s.trophic === 'tertiary') && !s.eats.some(p => idSet.has(p))) {
+      warnings.push({ badge: 'STARVE', text: `${s.name} has no prey present.` });
+      score -= 15;
     }
   }
 
   const climates = new Set();
   nodes.forEach(n => SPECIES_BY_ID[n.id].climate.forEach(c => climates.add(c)));
   if (climates.has('arid') && climates.has('tropical')) {
-    warnings.push({ kind: 'info', badge: 'MIX', text: 'Mixing arid and tropical species — verify habitat.' });
+    warnings.push({ badge: 'HABITAT', text: 'Mixing arid and tropical species.' });
     score -= 10;
-  }
-
-  const hasDecomposer = nodes.some(n => SPECIES_BY_ID[n.id].trophic === 'decomposer');
-  if (!hasDecomposer && nodes.length >= 4) {
-    warnings.push({ kind: 'info', badge: 'TIP', text: 'No decomposers — add earthworms or springtails for nutrient cycling.' });
-    score -= 5;
   }
 
   score = Math.max(0, score);
   const status = score >= 75 ? 'healthy' : score >= 45 ? 'developing' : 'unstable';
-  return { score, status, warnings: warnings.slice(0, 5) };
+
+  // Trophic breakdown
+  const byTrophic = {};
+  for (const t of TROPHIC_ORDER) byTrophic[t] = nodes.filter(n => SPECIES_BY_ID[n.id].trophic === t).length;
+
+  // Count edges (food web connections)
+  let edges = 0;
+  for (const n of nodes) {
+    edges += SPECIES_BY_ID[n.id].eats.filter(id => idSet.has(id)).length;
+  }
+
+  return { score, status, warnings, byTrophic, edges, total: nodes.length };
 }
 
 export default function HealthScorePanel({ nodes }) {
-  const { score, status, warnings } = useMemo(() => computeHealth(nodes), [nodes]);
+  const data = useMemo(() => computeHealth(nodes), [nodes]);
+  if (!data) return null;
 
-  if (nodes.length === 0) return null;
+  const { score, status, warnings, byTrophic, edges, total } = data;
+  const arc = (pct) => {
+    const r = 28, cx = 36, cy = 36;
+    const angle = pct * 2 * Math.PI - Math.PI / 2;
+    const x = cx + r * Math.cos(angle), y = cy + r * Math.sin(angle);
+    const large = pct > 0.5 ? 1 : 0;
+    return pct >= 1
+      ? `M ${cx} ${cy - r} A ${r} ${r} 0 1 1 ${cx - 0.01} ${cy - r}`
+      : `M ${cx} ${cy - r} A ${r} ${r} 0 ${large} 1 ${x} ${y}`;
+  };
+
+  const statusColor = { healthy: 'var(--sage-dark)', developing: 'var(--mustard)', unstable: 'var(--rust)' }[status];
 
   return (
-    <>
-      <div className="health-panel">
-        <div>
-          <div className="health-score-label">Health Score</div>
-          <div className="health-score-num">{score}</div>
+    <div className="health-panel-v2">
+      <div className="hp-main-row">
+        {/* Score ring */}
+        <div className="hp-ring-wrap">
+          <svg width="72" height="72">
+            <circle cx="36" cy="36" r="28" fill="none" stroke="var(--rule)" strokeWidth="5" />
+            <path d={arc(score / 100)} fill="none" stroke={statusColor} strokeWidth="5" strokeLinecap="round" />
+          </svg>
+          <div className="hp-ring-num" style={{ color: statusColor, transform: 'translateY(-2px)' }}>{score}</div>
         </div>
-        <div>
-          <div className={`health-score-status ${status}`}>{status}</div>
-          <div className="health-score-label">{nodes.length} species</div>
+
+        {/* Stats column */}
+        <div className="hp-stats">
+          <div className="hp-status" style={{ color: statusColor }}>{status}</div>
+          <div className="hp-stat-row">
+            <span className="hp-stat-val">{total}</span>
+            <span className="hp-stat-lbl">species</span>
+            <span className="hp-stat-val" style={{ marginLeft: 10 }}>{edges}</span>
+            <span className="hp-stat-lbl">links</span>
+          </div>
+          <div className="hp-trophic-bar">
+            {TROPHIC_ORDER.filter(t => byTrophic[t] > 0).map(t => (
+              <div key={t} title={`${TROPHIC_LABEL[t]}: ${byTrophic[t]}`}
+                style={{ flex: byTrophic[t], background: TROPHIC_COLOR[t], height: '100%', borderRadius: 2 }} />
+            ))}
+          </div>
+          <div className="hp-trophic-legend">
+            {TROPHIC_ORDER.filter(t => byTrophic[t] > 0).map(t => (
+              <span key={t} className="hp-trophic-item">
+                <span style={{ background: TROPHIC_COLOR[t] }} className="hp-trophic-dot" />
+                {byTrophic[t]} {TROPHIC_LABEL[t]}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Action button */}
+        <div className="hp-actions">
+          <button className="hp-action-btn" onClick={() => {}}>
+            <i className="fa-solid fa-wand-magic-sparkles" />
+            <span>Improve<br/>Ecosystem</span>
+          </button>
         </div>
       </div>
+
+      {/* Warnings row */}
       {warnings.length > 0 && (
-        <div className="warnings">
+        <div className="hp-warnings-row">
           {warnings.map((w, i) => (
-            <div key={i} className={`warning ${w.kind === 'info' ? 'info' : ''}`}>
-              <span className="badge">{w.badge}</span>
+            <div key={i} className="hp-warning">
+              <i className="fa-solid fa-triangle-exclamation" style={{ color: 'var(--rust)', fontSize: 10, flexShrink: 0 }} />
+              <span className="hp-badge">{w.badge}</span>
               <span>{w.text}</span>
             </div>
           ))}
         </div>
       )}
-    </>
+    </div>
   );
 }

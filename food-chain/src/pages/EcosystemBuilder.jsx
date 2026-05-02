@@ -4,7 +4,6 @@ import { SPECIES_BY_ID } from '../data/species.js';
 import SpeciesLibraryPanel from '../components/SpeciesLibraryPanel.jsx';
 import EcosystemCanvas, { initialPosition } from '../components/EcosystemCanvas.jsx';
 import SpeciesInfoPanel from '../components/SpeciesInfoPanel.jsx';
-import HealthScorePanel from '../components/HealthScorePanel.jsx';
 
 const MODE_LABELS = { outdoor: 'Outdoor', terrarium: 'Terrarium', aquarium: 'Aquarium' };
 
@@ -16,6 +15,7 @@ export default function EcosystemBuilder({ projects, activeId, onUpdateProject }
   const [nodes, setNodes] = useState([]);
   const [selectedId, setSelectedId] = useState(null);
   const [draggingSpecies, setDraggingSpecies] = useState(null);
+  const [confirmClear, setConfirmClear] = useState(false);
 
   const placedIds = useMemo(() => new Set(nodes.map(n => n.id)), [nodes]);
 
@@ -61,15 +61,20 @@ export default function EcosystemBuilder({ projects, activeId, onUpdateProject }
         <div className="meta">
           <span><strong>{project.name}</strong></span>
           <span className="sep">·</span>
-          <span>{MODE_LABELS[project.mode]}{project.city ? ` · ${project.city}` : ''}</span>
-          <span className="sep">·</span>
           <span><strong>{nodes.length}</strong> species</span>
         </div>
         <div className="actions">
           <Link to="/" className="icon-btn" style={{ textDecoration: 'none' }}>← home</Link>
-          <button className="icon-btn" onClick={() => { setNodes([]); setSelectedId(null); onUpdateProject(id, { speciesCount: 0 }); }}>
-            clear
-          </button>
+          {confirmClear ? (
+            <span className="confirm-clear">
+              <span>clear canvas?</span>
+              <button className="icon-btn confirm-yes" onClick={() => { setNodes([]); setSelectedId(null); onUpdateProject(id, { speciesCount: 0 }); setConfirmClear(false); }}>yes</button>
+              <button className="icon-btn" onClick={() => setConfirmClear(false)}>no</button>
+            </span>
+          ) : (
+            <button className="icon-btn" onClick={() => setConfirmClear(true)}>clear</button>
+          )}
+          <button className="icon-btn" disabled title="Save — coming soon"><i className="fa-solid fa-floppy-disk" /> save</button>
         </div>
       </div>
 
@@ -90,7 +95,6 @@ export default function EcosystemBuilder({ projects, activeId, onUpdateProject }
           draggingSpecies={draggingSpecies}
           setDraggingSpecies={setDraggingSpecies}
         />
-        <HealthScorePanel nodes={nodes} />
       </div>
 
       <SpeciesInfoPanel

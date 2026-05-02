@@ -47,19 +47,22 @@ export default function SpeciesLibraryPanel({ placedIds, onDragStart, onAdd }) {
   const startDrag = (e, species) => {
     if (placedIds.has(species.id)) return;
     e.preventDefault();
+    e.stopPropagation();
     setGhostSpecies(species);
     setGhostPos({ x: e.clientX, y: e.clientY });
     onDragStart(species);
 
-    const onMove = (ev) => setGhostPos({ x: ev.clientX, y: ev.clientY });
+    const onMove = (ev) => { ev.preventDefault(); setGhostPos({ x: ev.clientX, y: ev.clientY }); };
     const onUp = () => {
       setGhostSpecies(null);
       setGhostPos(null);
       window.removeEventListener('pointermove', onMove);
       window.removeEventListener('pointerup', onUp);
+      window.removeEventListener('pointercancel', onUp);
     };
     window.addEventListener('pointermove', onMove);
     window.addEventListener('pointerup', onUp);
+    window.addEventListener('pointercancel', onUp);
   };
 
   const filtered = SPECIES.filter(s => {

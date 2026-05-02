@@ -7,6 +7,7 @@ export default function SpeciesPhoto({ species, className, style }) {
       <img
         src={src}
         alt={species.name}
+        draggable="false"
         onError={() => { if (src !== species.fallback) setSrc(species.fallback); }}
         style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
       />
