@@ -8,8 +8,9 @@ import HealthScorePanel from '../components/HealthScorePanel.jsx';
 
 const MODE_LABELS = { outdoor: 'Outdoor', terrarium: 'Terrarium', aquarium: 'Aquarium' };
 
-export default function EcosystemBuilder({ projects, onUpdateProject }) {
-  const { id } = useParams();
+export default function EcosystemBuilder({ projects, activeId, onUpdateProject }) {
+  const { id: paramId } = useParams();
+  const id = activeId || paramId;
   const project = projects.find(p => p.id === id);
 
   const [nodes, setNodes] = useState([]);
@@ -48,7 +49,7 @@ export default function EcosystemBuilder({ projects, onUpdateProject }) {
     return (
       <div className="paper-bg" style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <div style={{ fontFamily: 'var(--serif)', fontStyle: 'italic', fontSize: 22, color: 'var(--ink-fade)' }}>
-          Project not found. <Link to="/dashboard" style={{ color: 'var(--ink)' }}>← Back</Link>
+          Project not found. <Link to="/" style={{ color: 'var(--tidal)' }}>← Start over</Link>
         </div>
       </div>
     );

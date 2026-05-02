@@ -1,84 +1,88 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import GlobeScene from '../components/GlobeScene.jsx';
 
-function GlobeHero() {
-  const cx = 300, cy = 300, r = 260;
-  // latitude lines every 30deg
-  const latLines = [-60,-30,0,30,60].map(lat => {
-    const ry = r * Math.cos(lat * Math.PI / 180);
-    const y = cy + r * Math.sin(lat * Math.PI / 180);
-    return <ellipse key={lat} cx={cx} cy={y} rx={ry} ry={ry * 0.18} fill="none" stroke="#2a2520" strokeWidth="0.8" />;
-  });
-  // longitude lines every 30deg
-  const lonLines = [0,30,60,90,120,150].map(lon => {
-    const angle = lon * Math.PI / 180;
-    return (
-      <ellipse key={lon} cx={cx} cy={cy} rx={r * Math.abs(Math.cos(angle))} ry={r}
-        fill="none" stroke="#2a2520" strokeWidth="0.8"
-        transform={`rotate(${lon} ${cx} ${cy})`} />
-    );
-  });
-
-  return (
-    <div className="globe-wrap">
-      <svg className="globe-svg" width="600" height="600" viewBox="0 0 600 600">
-        <circle cx={cx} cy={cy} r={r} fill="none" stroke="#2a2520" strokeWidth="1.2" />
-        <g className="globe-grid">
-          {latLines}
-          {lonLines}
-        </g>
-        {/* simplified continent blobs */}
-        <g fill="#2a2520" opacity="0.35">
-          <ellipse cx="260" cy="240" rx="55" ry="70" transform="rotate(-10 260 240)" />
-          <ellipse cx="310" cy="310" rx="40" ry="55" transform="rotate(15 310 310)" />
-          <ellipse cx="380" cy="220" rx="65" ry="50" transform="rotate(-5 380 220)" />
-          <ellipse cx="420" cy="300" rx="30" ry="45" transform="rotate(20 420 300)" />
-          <ellipse cx="200" cy="330" rx="25" ry="35" />
-          <ellipse cx="460" cy="370" rx="35" ry="28" transform="rotate(-15 460 370)" />
-        </g>
-      </svg>
-    </div>
-  );
-}
+const AMBIENT = [
+  { text: 'trophic cascade', style: { top: '12%', left: '8%', transform: 'rotate(-8deg)' } },
+  { text: 'biodiversity index', style: { top: '18%', right: '10%', transform: 'rotate(5deg)' } },
+  { text: '40 species catalogued', style: { bottom: '28%', left: '6%', transform: 'rotate(3deg)' } },
+  { text: 'food web modeling', style: { bottom: '22%', right: '8%', transform: 'rotate(-4deg)' } },
+  { text: 'lat 0.000 · lon 0.000', style: { top: '42%', left: '4%' } },
+  { text: 'ecosystem health score', style: { top: '38%', right: '5%', transform: 'rotate(2deg)' } },
+  { text: 'vol. I · spring \'26', style: { bottom: '12%', left: '50%', transform: 'translateX(-50%)' } },
+];
 
 export default function HomePage({ onStart }) {
   const [city, setCity] = useState('');
+  const [zooming, setZooming] = useState(false);
   const navigate = useNavigate();
+  const pendingRef = useRef(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!city.trim()) return;
-    onStart({ city: city.trim(), mode: 'outdoor' });
-    navigate('/dashboard');
+    if (!city.trim() || zooming) return;
+    pendingRef.current = { city: city.trim(), mode: 'outdoor' };
+    setZooming(true);
+    setTimeout(() => {
+      onStart(pendingRef.current);
+      navigate('/builder');
+    }, 1100);
   };
 
   const handleBypass = () => {
     onStart({ city: null, mode: 'terrarium' });
-    navigate('/dashboard');
+    navigate('/builder');
   };
 
   return (
-    <div className="home paper-bg">
-      <GlobeHero />
-      <div className="home-card">
-        <div className="home-eyebrow">Food Chain · Field Guide to Ecosystems</div>
-        <div className="home-title">Where is your ecosystem?</div>
-        <div className="home-sub">Enter a city to build a location-aware outdoor ecosystem.</div>
+    <div className="home">
+      <GlobeScene zooming={zooming} />
+
+      {/* Scattered ambient labels */}
+      <div className="home-ambient">
+        {AMBIENT.map((a, i) => (
+          <div key={i} className="home-ambient-item" style={a.style}>{a.text}</div>
+        ))}
+      </div>
+
+      {/* Center overlay — fades + scales on zoom */}
+      <div className={`home-overlay ${zooming ? 'zooming' : ''}`}>
+        <div className="home-eyebrow">Field Guide to Ecosystems · v1</div>
+        <div className="home-title">where does it<br />all begin?</div>
+        <div className="home-tagline">drop a pin. build a world.</div>
+
         <form onSubmit={handleSubmit}>
-          <div className="home-input-wrap">
+          <div className="home-input-row">
             <input
               className="home-input"
-              placeholder="e.g. Portland, Oregon"
+              placeholder="a city, anywhere on earth…"
               value={city}
               onChange={e => setCity(e.target.value)}
               autoFocus
             />
+            <button className="home-go-btn" type="submit" aria-label="Begin">→</button>
           </div>
-          <button className="home-btn" type="submit">Begin →</button>
         </form>
+
         <button className="home-bypass" onClick={handleBypass}>
-          I'm building a terrarium / aquarium — skip location
+          building a terrarium or aquarium — skip location
         </button>
+      </div>
+
+      {/* Bottom stats */}
+      <div className="home-bottom">
+        <div className="home-bottom-item">
+          <span className="num">40</span>
+          <span className="lbl">species</span>
+        </div>
+        <div className="home-bottom-item">
+          <span className="num">5</span>
+          <span className="lbl">environments</span>
+        </div>
+        <div className="home-bottom-item">
+          <span className="num">∞</span>
+          <span className="lbl">combinations</span>
+        </div>
       </div>
     </div>
   );
