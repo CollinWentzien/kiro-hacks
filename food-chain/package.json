@@ -1,20 +1,20 @@
 {
-  "name": "food-chain",
+  "name": "ecosystem-builder-backend",
   "version": "1.0.0",
+  "description": "Rule-based ecological service layer for the Ecosystem Builder application",
   "type": "module",
+  "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-react": "^4.4.1",
-    "vite": "^6.3.5"
+    "start": "node index.js",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.30.0",
-    "three": "^0.176.0"
+    "hono": "4.6.3",
+    "@hono/node-server": "1.13.2"
+  },
+  "devDependencies": {
+    "fast-check": "3.22.0",
+    "vitest": "2.1.9"
   }
 }
