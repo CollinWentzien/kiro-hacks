@@ -1,5 +1,52 @@
 import { makePlaceholder } from './placeholders.js';
 
+// Real Wikimedia Commons thumbnails (300px)
+const PHOTOS = {
+  oak:          'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Quercus_alba_USDA.jpg/300px-Quercus_alba_USDA.jpg',
+  milkweed:     'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Asclepias_syriaca_2.jpg/300px-Asclepias_syriaca_2.jpg',
+  clover:       'https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Trifolium_repens_-_Keila.jpg/300px-Trifolium_repens_-_Keila.jpg',
+  caterpillar:  'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Monarch_caterpillar_on_milkweed.jpg/300px-Monarch_caterpillar_on_milkweed.jpg',
+  bee:          'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Apis_mellifera_Western_honey_bee.jpg/300px-Apis_mellifera_Western_honey_bee.jpg',
+  spider:       'https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Argiope_aurantia_2009.jpg/300px-Argiope_aurantia_2009.jpg',
+  earthworm:    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Earthworm.jpg/300px-Earthworm.jpg',
+  rabbit:       'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Sylvilagus_floridanus_-_Raleigh%2C_North_Carolina.jpg/300px-Sylvilagus_floridanus_-_Raleigh%2C_North_Carolina.jpg',
+  squirrel:     'https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Sciurus_carolinensis_in_St_James%27s_Park%2C_London_-_Nov_2006_edit.jpg/300px-Sciurus_carolinensis_in_St_James%27s_Park%2C_London_-_Nov_2006_edit.jpg',
+  deer:         'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/WhiteTailDeer.jpg/300px-WhiteTailDeer.jpg',
+  robin:        'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Turdus-migratorius-002.jpg/300px-Turdus-migratorius-002.jpg',
+  hawk:         'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Buteo_jamaicensis_-_01.jpg/300px-Buteo_jamaicensis_-_01.jpg',
+  fox:          'https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Vulpes_vulpes_laying_in_snow.jpg/300px-Vulpes_vulpes_laying_in_snow.jpg',
+  mole:         'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Mole_in_Mole_Hill.jpg/300px-Mole_in_Mole_Hill.jpg',
+  moss:         'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Hypnum_cupressiforme_-_Lindsey.jpg/300px-Hypnum_cupressiforme_-_Lindsey.jpg',
+  fern:         'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Adiantum_capillus-veneris.jpg/300px-Adiantum_capillus-veneris.jpg',
+  springtail:   'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Collembola_from_Ojcow.jpg/300px-Collembola_from_Ojcow.jpg',
+  isopod:       'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Armadillidium_vulgare_001.jpg/300px-Armadillidium_vulgare_001.jpg',
+  dartfrog:     'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Dendrobates_tinctorius_-_Azureus_1.jpg/300px-Dendrobates_tinctorius_-_Azureus_1.jpg',
+  anole:        'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Anolis_carolinensis.jpg/300px-Anolis_carolinensis.jpg',
+  leopardgecko: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Leopard_gecko_2.jpg/300px-Leopard_gecko_2.jpg',
+  succulent:    'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Echeveria_elegans.jpg/300px-Echeveria_elegans.jpg',
+  anubias:      'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Anubias_barteri_var._barteri.jpg/300px-Anubias_barteri_var._barteri.jpg',
+  javafern:     'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Microsorum_pteropus.jpg/300px-Microsorum_pteropus.jpg',
+  snail:        'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Neritina_natalensis.jpg/300px-Neritina_natalensis.jpg',
+  shrimp:       'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Neocaridina_davidi_var._red_-_Red_Cherry_Shrimp.jpg/300px-Neocaridina_davidi_var._red_-_Red_Cherry_Shrimp.jpg',
+  neon:         'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Paracheirodon_innesi.jpg/300px-Paracheirodon_innesi.jpg',
+  betta:        'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Betta_splendens_male.jpg/300px-Betta_splendens_male.jpg',
+  angelfish:    'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Pterophyllum_scalare.jpg/300px-Pterophyllum_scalare.jpg',
+  loach:        'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Pangio_kuhlii.jpg/300px-Pangio_kuhlii.jpg',
+  guppy:        'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Poecilia_reticulata_-_Guppy_-_Aquarium.jpg/300px-Poecilia_reticulata_-_Guppy_-_Aquarium.jpg',
+  coral:        'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Euphyllia_ancora.jpg/300px-Euphyllia_ancora.jpg',
+  anemone:      'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Entacmaea_quadricolor.jpg/300px-Entacmaea_quadricolor.jpg',
+  clownfish:    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Amphiprion_ocellaris_%28Clown_anemonefish%29_in_Magnificent_Sea_Anemone.jpg/300px-Amphiprion_ocellaris_%28Clown_anemonefish%29_in_Magnificent_Sea_Anemone.jpg',
+  tang:         'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Zebrasoma_flavescens_1.jpg/300px-Zebrasoma_flavescens_1.jpg',
+  cleanershrimp:'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Lysmata_amboinensis.jpg/300px-Lysmata_amboinensis.jpg',
+  lionfish:     'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Pterois_volitans_Manado-e.jpg/300px-Pterois_volitans_Manado-e.jpg',
+  lily:         'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Nymphaea_odorata_1.jpg/300px-Nymphaea_odorata_1.jpg',
+  duckweed:     'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Lemna_minor_-_duckweed.jpg/300px-Lemna_minor_-_duckweed.jpg',
+  tadpole:      'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Bullfrog_tadpole.jpg/300px-Bullfrog_tadpole.jpg',
+  koi:          'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Koi_fish_-_Nishikigoi.jpg/300px-Koi_fish_-_Nishikigoi.jpg',
+  goldfish:     'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Goldfish3.jpg/300px-Goldfish3.jpg',
+  heron:        'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Ardea_herodias_-_Great_Blue_Heron.jpg/300px-Ardea_herodias_-_Great_Blue_Heron.jpg',
+};
+
 const RAW = [
   // ── BACKYARD ──
   { id:'oak', name:'White Oak', latin:'Quercus alba', kind:'plant', env:['backyard'], climate:['temperate'], trophic:'producer', eats:[], eatenBy:['squirrel','deer','caterpillar'], blurb:'Keystone canopy tree. Acorns feed dozens of species; leaves host hundreds of caterpillar species.' },
@@ -51,5 +98,5 @@ const RAW = [
   { id:'heron', name:'Great Blue Heron', latin:'Ardea herodias', kind:'bird', env:['pond'], climate:['temperate'], trophic:'tertiary', eats:['koi','goldfish','tadpole'], eatenBy:[], blurb:'Patient stalker. Will empty an unprotected pond. Use netting or shelter.' },
 ];
 
-export const SPECIES = RAW.map((s, i) => ({ ...s, img: makePlaceholder(s, i) }));
+export const SPECIES = RAW.map((s, i) => ({ ...s, img: PHOTOS[s.id] || makePlaceholder(s, i), fallback: makePlaceholder(s, i) }));
 export const SPECIES_BY_ID = Object.fromEntries(SPECIES.map(s => [s.id, s]));

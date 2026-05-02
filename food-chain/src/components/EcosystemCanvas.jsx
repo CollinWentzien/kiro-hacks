@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect, useMemo } from 'react';
 import { SPECIES_BY_ID } from '../data/species.js';
+import SpeciesPhoto from './SpeciesPhoto.jsx';
 
 export function initialPosition(species, existing, canvasW, canvasH) {
   const yByTrophic = { producer: 0.85, decomposer: 0.85, primary: 0.62, secondary: 0.38, tertiary: 0.15 };
@@ -15,7 +16,7 @@ export function initialPosition(species, existing, canvasW, canvasH) {
   return { x: bestX + (Math.random() - 0.5) * 30, y: baseY + (Math.random() - 0.5) * 30 };
 }
 
-export default function EcosystemCanvas({ nodes, setNodes, selectedId, setSelectedId, onAdd, onRemove }) {
+export default function EcosystemCanvas({ nodes, setNodes, selectedId, setSelectedId, onAdd, onRemove, draggingSpecies, setDraggingSpecies }) {
   const canvasRef = useRef(null);
   const [size, setSize] = useState({ w: 800, h: 600 });
   const [dragOver, setDragOver] = useState(false);
@@ -31,16 +32,28 @@ export default function EcosystemCanvas({ nodes, setNodes, selectedId, setSelect
     return () => ro.disconnect();
   }, []);
 
-  const onCanvasDrop = (e) => {
-    e.preventDefault();
-    setDragOver(false);
-    const id = e.dataTransfer.getData('species/id');
-    if (!id) return;
-    const species = SPECIES_BY_ID[id];
-    if (!species) return;
-    const rect = canvasRef.current.getBoundingClientRect();
-    onAdd(species, { x: e.clientX - rect.left, y: e.clientY - rect.top });
-  };
+  // Track pointer over canvas for drop highlight
+  useEffect(() => {
+    if (!draggingSpecies) { setDragOver(false); return; }
+    const onMove = (e) => {
+      const rect = canvasRef.current?.getBoundingClientRect();
+      if (!rect) return;
+      const over = e.clientX >= rect.left && e.clientX <= rect.right && e.clientY >= rect.top && e.clientY <= rect.bottom;
+      setDragOver(over);
+    };
+    const onUp = (e) => {
+      const rect = canvasRef.current?.getBoundingClientRect();
+      if (rect) {
+        const over = e.clientX >= rect.left && e.clientX <= rect.right && e.clientY >= rect.top && e.clientY <= rect.bottom;
+        if (over) onAdd(draggingSpecies, { x: e.clientX - rect.left, y: e.clientY - rect.top });
+      }
+      setDragOver(false);
+      setDraggingSpecies(null);
+    };
+    window.addEventListener('pointermove', onMove);
+    window.addEventListener('pointerup', onUp);
+    return () => { window.removeEventListener('pointermove', onMove); window.removeEventListener('pointerup', onUp); };
+  }, [draggingSpecies, onAdd, setDraggingSpecies]);
 
   const onNodePointerDown = (e, node) => {
     e.stopPropagation();
@@ -90,9 +103,6 @@ export default function EcosystemCanvas({ nodes, setNodes, selectedId, setSelect
     <div className="canvas-wrap">
       <div ref={canvasRef}
         className={`canvas ${dragOver ? 'drag-over' : ''}`}
-        onDragOver={e => { e.preventDefault(); setDragOver(true); }}
-        onDragLeave={e => { if (e.target === canvasRef.current) setDragOver(false); }}
-        onDrop={onCanvasDrop}
         onClick={() => setSelectedId(null)}>
 
         <div className="canvas-overlay-text canvas-title">My Ecosystem</div>
@@ -110,11 +120,11 @@ export default function EcosystemCanvas({ nodes, setNodes, selectedId, setSelect
 
         <svg className="edges-svg" width={size.w} height={size.h}>
           <defs>
-            <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-              <path d="M0,0 L8,4 L0,8 z" fill="var(--ink-soft)" />
+            <marker id="arrowhead" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+              <path d="M0,0 L7,3.5 L0,7 z" fill="var(--ink-soft)" opacity="0.5" />
             </marker>
-            <marker id="arrowhead-hl" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-              <path d="M0,0 L8,4 L0,8 z" fill="var(--rust)" />
+            <marker id="arrowhead-hl" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+              <path d="M0,0 L7,3.5 L0,7 z" fill="var(--tidal)" />
             </marker>
           </defs>
           {edges.map((e, i) => {
@@ -147,7 +157,8 @@ export default function EcosystemCanvas({ nodes, setNodes, selectedId, setSelect
               style={{ left: n.x, top: n.y }}
               onPointerDown={e => onNodePointerDown(e, n)}
               onClick={e => { e.stopPropagation(); setSelectedId(n.id); }}>
-              <div className="node-photo" style={{ backgroundImage: `url(${s.img})` }}>
+              <div style={{ position: 'relative', width: 80, margin: '0 auto' }}>
+                <SpeciesPhoto species={s} className="node-photo" />
                 <div className={`node-trophic-dot ${s.trophic}`} />
               </div>
               <div className="node-remove"
@@ -161,10 +172,10 @@ export default function EcosystemCanvas({ nodes, setNodes, selectedId, setSelect
 
         {nodes.length > 0 && (
           <div className="legend">
-            {[['var(--sage)','Producer'],['var(--mustard)','Primary'],['var(--rust)','Secondary'],['var(--ink)','Apex'],].map(([c, l]) => (
+            {[['var(--sage)','Producer'],['var(--mustard)','Primary'],['var(--rust)','Secondary'],['var(--ink)','Apex'],['var(--ink-fade)','Decomposer']].map(([c, l]) => (
               <div key={l} className="legend-item"><span className="legend-dot" style={{ background: c }} />{l}</div>
             ))}
-            <div className="legend-item">→ eaten by</div>
+            <div className="legend-item" style={{ color: 'var(--tidal)' }}>→ eaten by</div>
           </div>
         )}
       </div>

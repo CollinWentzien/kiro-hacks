@@ -1,11 +1,12 @@
 import { SPECIES_BY_ID } from '../data/species.js';
+import SpeciesPhoto from './SpeciesPhoto.jsx';
 
 const TROPHIC_LABEL = { producer:'Producer', primary:'Primary', secondary:'Secondary', tertiary:'Apex', decomposer:'Decomposer' };
 
 function RelRow({ sp, placedIds, onSelect, onAdd }) {
   return (
     <div className="rel-row" onClick={() => placedIds.has(sp.id) ? onSelect(sp.id) : onAdd(sp)}>
-      <div className="thumb" style={{ backgroundImage: `url(${sp.img})` }} />
+      <SpeciesPhoto species={sp} className="thumb" />
       <div className="name">{sp.name}</div>
       <div className="arrow">{placedIds.has(sp.id) ? '→ view' : '+ add'}</div>
     </div>
@@ -35,7 +36,7 @@ export default function SpeciesInfoPanel({ selectedId, placedIds, onSelect, onAd
   return (
     <aside className="detail">
       <div className="detail-card">
-        <div className="detail-photo" style={{ backgroundImage: `url(${s.img})` }} />
+        <SpeciesPhoto species={s} className="detail-photo" />
         <div className="detail-body">
           <div className="detail-name">{s.name}</div>
           <div className="detail-latin">{s.latin}</div>

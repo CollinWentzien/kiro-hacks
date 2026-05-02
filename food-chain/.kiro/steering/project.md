@@ -63,6 +63,41 @@ food-chain/
 - **Backend agent (separate):** will own `src/data/` schemas, rule engine, health score logic, recommendation engine
 - **AI agent (separate):** will own LLM integration layer
 
+## Backend contracts (stubs awaiting implementation)
+
+### 1. Compatible species filter
+**Location:** `src/components/SpeciesLibraryPanel.jsx`
+**Stub:** `if (tab === 'compatible') return false;` and `if (active.compatible) return false;`
+**Expected:** Given the current set of placed species IDs, return a filtered list of species that are ecologically compatible with the existing ecosystem. Compatibility criteria TBD by backend team (suggested: shared habitat/climate, food web fit, no invasive conflicts).
+**Interface needed:**
+```js
+// src/data/compatibility.js (or API call)
+getCompatibleSpecies(placedIds: Set<string>): Species[]
+```
+
+### 2. Health score engine
+**Location:** `src/components/HealthScorePanel.jsx`
+**Current:** Rule-based heuristics (no producer = -25, no prey = -15, etc.)
+**Expected:** Replace `computeHealth(nodes)` with a proper ecological rule engine. Should return `{ score: number, status: 'healthy'|'developing'|'unstable', warnings: Warning[] }`.
+**Interface needed:**
+```js
+// src/data/healthEngine.js (or API call)
+computeHealth(nodes: { id: string }[]): HealthResult
+```
+
+### 3. Species data enrichment
+**Location:** `src/data/species.js`
+**Current:** 40 hand-authored species with `eats[]` / `eatenBy[]` arrays
+**Expected:** Backend team to expand dataset, validate ecological relationships, and potentially replace with a structured DB or JSON schema. The `SPECIES` array and `SPECIES_BY_ID` map are the UI's only dependency — keep those exports stable.
+
+### 4. City → ecosystem seeding
+**Location:** `src/App.jsx` → `handleStart({ city, mode })`
+**Current:** Creates a blank project with just a name
+**Expected:** Given a city name, suggest a starter set of species appropriate for that region (e.g. "Austin, TX" → backyard temperate/arid mix). Backend should expose:
+```js
+getSeedSpecies(city: string, mode: string): string[] // array of species IDs
+```
+
 ## Key constraints
 - Desktop-only — no mobile breakpoints needed
 - No persistence — projects are in-session React state only

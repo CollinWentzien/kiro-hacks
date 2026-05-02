@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import HomePage from './pages/HomePage.jsx';
 import ProjectDashboard from './pages/ProjectDashboard.jsx';
 import EcosystemBuilder from './pages/EcosystemBuilder.jsx';
@@ -10,6 +10,53 @@ function makeProject({ name, mode, city }) {
   return { id: String(nextId++), name, mode, city, speciesCount: 0 };
 }
 
+function AnimatedRoutes({ projects, activeId, session, onStart, onCreateProject, onSelectProject, onUpdateProject }) {
+  const location = useLocation();
+  const [displayLocation, setDisplayLocation] = useState(location);
+  const [fadingOut, setFadingOut] = useState(false);
+
+  useEffect(() => {
+    if (location.pathname !== displayLocation.pathname) {
+      setFadingOut(true);
+      const t = setTimeout(() => {
+        setDisplayLocation(location);
+        setFadingOut(false);
+      }, 400);
+      return () => clearTimeout(t);
+    }
+  }, [location, displayLocation]);
+
+  return (
+    <div
+      key={displayLocation.pathname}
+      className={fadingOut ? 'page-fade-out' : 'page-fade'}
+      style={{ height: '100%' }}
+    >
+      <Routes location={displayLocation}>
+        <Route path="/" element={<HomePage onStart={onStart} />} />
+        <Route path="/builder" element={
+          activeId
+            ? <EcosystemBuilder projects={projects} activeId={activeId} onUpdateProject={onUpdateProject} />
+            : <Navigate to="/" replace />
+        } />
+        <Route path="/dashboard" element={
+          <ProjectDashboard
+            projects={projects}
+            defaultCity={session.city}
+            activeId={activeId}
+            onCreateProject={onCreateProject}
+            onSelectProject={onSelectProject}
+          />
+        } />
+        <Route path="/project/:id" element={
+          <EcosystemBuilder projects={projects} activeId={activeId} onUpdateProject={onUpdateProject} />
+        } />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </div>
+  );
+}
+
 export default function App() {
   const [session, setSession] = useState({ city: null, mode: null });
   const [projects, setProjects] = useState([]);
@@ -17,7 +64,6 @@ export default function App() {
 
   const handleStart = ({ city, mode }) => {
     setSession({ city, mode });
-    // Auto-create a project using the city as name
     const name = city ? `${city} Ecosystem` : 'My Terrarium';
     const p = makeProject({ name, mode, city });
     setProjects(ps => [...ps, p]);
@@ -36,26 +82,14 @@ export default function App() {
   };
 
   return (
-    <Routes>
-      <Route path="/" element={<HomePage onStart={handleStart} />} />
-      <Route path="/builder" element={
-        activeId
-          ? <EcosystemBuilder projects={projects} activeId={activeId} onUpdateProject={updateProject} />
-          : <Navigate to="/" replace />
-      } />
-      <Route path="/dashboard" element={
-        <ProjectDashboard
-          projects={projects}
-          defaultCity={session.city}
-          activeId={activeId}
-          onCreateProject={createProject}
-          onSelectProject={setActiveId}
-        />
-      } />
-      <Route path="/project/:id" element={
-        <EcosystemBuilder projects={projects} activeId={activeId} onUpdateProject={updateProject} />
-      } />
-      <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
+    <AnimatedRoutes
+      projects={projects}
+      activeId={activeId}
+      session={session}
+      onStart={handleStart}
+      onCreateProject={createProject}
+      onSelectProject={setActiveId}
+      onUpdateProject={updateProject}
+    />
   );
 }

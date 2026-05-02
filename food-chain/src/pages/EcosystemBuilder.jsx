@@ -15,6 +15,7 @@ export default function EcosystemBuilder({ projects, activeId, onUpdateProject }
 
   const [nodes, setNodes] = useState([]);
   const [selectedId, setSelectedId] = useState(null);
+  const [draggingSpecies, setDraggingSpecies] = useState(null);
 
   const placedIds = useMemo(() => new Set(nodes.map(n => n.id)), [nodes]);
 
@@ -40,11 +41,6 @@ export default function EcosystemBuilder({ projects, activeId, onUpdateProject }
     setSelectedId(s => s === nodeId ? null : s);
   }, [id, onUpdateProject]);
 
-  const onDragStart = (e, species) => {
-    e.dataTransfer.setData('species/id', species.id);
-    e.dataTransfer.effectAllowed = 'copy';
-  };
-
   if (!project) {
     return (
       <div className="paper-bg" style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -60,28 +56,30 @@ export default function EcosystemBuilder({ projects, activeId, onUpdateProject }
       <div className="topbar">
         <div className="brand">
           <Link to="/" className="brand-mark">Food Chain</Link>
-          <div className="brand-sub">— a field guide to ecosystems</div>
+          <div className="brand-sub">field guide</div>
         </div>
         <div className="meta">
           <span><strong>{project.name}</strong></span>
+          <span className="sep">·</span>
           <span>{MODE_LABELS[project.mode]}{project.city ? ` · ${project.city}` : ''}</span>
-          <span><strong>{nodes.length}</strong> species on canvas</span>
+          <span className="sep">·</span>
+          <span><strong>{nodes.length}</strong> species</span>
         </div>
         <div className="actions">
-          <Link to="/dashboard" className="icon-btn" style={{ textDecoration: 'none' }}>← Projects</Link>
+          <Link to="/" className="icon-btn" style={{ textDecoration: 'none' }}>← home</Link>
           <button className="icon-btn" onClick={() => { setNodes([]); setSelectedId(null); onUpdateProject(id, { speciesCount: 0 }); }}>
-            Clear canvas
+            clear
           </button>
         </div>
       </div>
 
       <SpeciesLibraryPanel
         placedIds={placedIds}
-        onDragStart={onDragStart}
+        onDragStart={setDraggingSpecies}
         onAdd={addSpecies}
       />
 
-      <div style={{ position: 'relative' }}>
+      <div style={{ position: 'relative', height: '100%' }}>
         <EcosystemCanvas
           nodes={nodes}
           setNodes={setNodes}
@@ -89,6 +87,8 @@ export default function EcosystemBuilder({ projects, activeId, onUpdateProject }
           setSelectedId={setSelectedId}
           onAdd={addSpecies}
           onRemove={removeNode}
+          draggingSpecies={draggingSpecies}
+          setDraggingSpecies={setDraggingSpecies}
         />
         <HealthScorePanel nodes={nodes} />
       </div>
