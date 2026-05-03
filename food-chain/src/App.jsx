@@ -5,6 +5,7 @@ import ProjectDashboard from './pages/ProjectDashboard.jsx';
 import EcosystemBuilder from './pages/EcosystemBuilder.jsx';
 import CoachPage from './pages/CoachPage.jsx';
 import VisionPage from './pages/VisionPage.jsx';
+import { fetchEcosystem } from './data/api.js';
 
 let nextId = 1;
 
@@ -12,7 +13,7 @@ function makeProject({ name, mode, city }) {
   return { id: String(nextId++), name, mode, city, speciesCount: 0 };
 }
 
-function AnimatedRoutes({ projects, activeId, session, onStart, onCreateProject, onSelectProject, onUpdateProject }) {
+function AnimatedRoutes({ projects, activeId, session, seedSpecies, onStart, onCreateProject, onSelectProject, onUpdateProject }) {
   const location = useLocation();
   const [displayLocation, setDisplayLocation] = useState(location);
   const [fadingOut, setFadingOut] = useState(false);
@@ -40,7 +41,7 @@ function AnimatedRoutes({ projects, activeId, session, onStart, onCreateProject,
         <Route path="/vision" element={<VisionPage />} />
         <Route path="/builder" element={
           activeId
-            ? <EcosystemBuilder projects={projects} activeId={activeId} onUpdateProject={onUpdateProject} />
+            ? <EcosystemBuilder projects={projects} activeId={activeId} onUpdateProject={onUpdateProject} seedSpecies={seedSpecies} extraSpecies={seedSpecies} />
             : <Navigate to="/" replace />
         } />
         <Route path="/dashboard" element={
@@ -65,13 +66,26 @@ export default function App() {
   const [session, setSession] = useState({ city: null, mode: null });
   const [projects, setProjects] = useState([]);
   const [activeId, setActiveId] = useState(null);
+  const [seedSpecies, setSeedSpecies] = useState([]);
 
-  const handleStart = ({ city, mode }) => {
+  const handleStart = async ({ city, mode }) => {
     setSession({ city, mode });
     const name = city ? `${city} Ecosystem` : 'My Terrarium';
     const p = makeProject({ name, mode, city });
     setProjects(ps => [...ps, p]);
     setActiveId(p.id);
+    if (city) {
+      try {
+        const { species } = await fetchEcosystem(city);
+        console.log('[API] fetched', species.length, 'species for', city);
+        setSeedSpecies(species);
+      } catch (e) {
+        console.warn('Backend unavailable, starting with empty canvas', e);
+        setSeedSpecies([]);
+      }
+    } else {
+      setSeedSpecies([]);
+    }
   };
 
   const createProject = ({ name, mode, city }) => {
@@ -90,6 +104,7 @@ export default function App() {
       projects={projects}
       activeId={activeId}
       session={session}
+      seedSpecies={seedSpecies}
       onStart={handleStart}
       onCreateProject={createProject}
       onSelectProject={setActiveId}

@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
 import { SPECIES } from '../data/species.js';
 import SpeciesPhoto from './SpeciesPhoto.jsx';
+import { searchCatalog } from '../data/api.js';
 
 const TROPHIC_LABEL = { producer:'Producer', primary:'Primary', secondary:'Secondary', tertiary:'Apex', decomposer:'Decomposer' };
 
@@ -28,12 +29,42 @@ function DragGhost({ species, pos }) {
   );
 }
 
-export default function SpeciesLibraryPanel({ placedIds, onDragStart, onAdd }) {
+export default function SpeciesLibraryPanel({ placedIds, onDragStart, onAdd, extraSpecies = [] }) {
   const [query, setQuery] = useState('');
   const [tab, setTab] = useState('all');
   const [active, setActive] = useState({});
   const [ghostPos, setGhostPos] = useState(null);
   const [ghostSpecies, setGhostSpecies] = useState(null);
+
+  // Catalog state for "All" tab
+  const [catalogResults, setCatalogResults] = useState([]);
+  const [catalogLoading, setCatalogLoading] = useState(false);
+  const [catalogTotal, setCatalogTotal] = useState(0);
+  const debounceRef = useRef(null);
+
+  // Fetch from catalog API when on All tab
+  useEffect(() => {
+    if (tab !== 'all') return;
+    if (!query.trim()) { setCatalogResults([]); setCatalogTotal(0); return; }
+    clearTimeout(debounceRef.current);
+    debounceRef.current = setTimeout(async () => {
+      setCatalogLoading(true);
+      try {
+        const { results, total } = await searchCatalog({ q: query, limit: 30 });
+        setCatalogResults(results);
+        setCatalogTotal(total);
+      } catch {
+        // Backend unavailable — fall back to static
+        setCatalogResults([]);
+      } finally {
+        setCatalogLoading(false);
+      }
+    }, 300);
+    return () => clearTimeout(debounceRef.current);
+  }, [query, tab]);
+
+  // Use only backend species; fall back to static if none loaded yet
+  const allSpecies = useMemo(() => extraSpecies.length ? extraSpecies : SPECIES, [extraSpecies]);
 
   const toggle = (group, val) => setActive(prev => {
     const cur = new Set(prev[group] || []);
@@ -47,36 +78,41 @@ export default function SpeciesLibraryPanel({ placedIds, onDragStart, onAdd }) {
   const startDrag = (e, species) => {
     if (placedIds.has(species.id)) return;
     e.preventDefault();
+    e.stopPropagation();
     setGhostSpecies(species);
     setGhostPos({ x: e.clientX, y: e.clientY });
     onDragStart(species);
 
-    const onMove = (ev) => setGhostPos({ x: ev.clientX, y: ev.clientY });
+    const onMove = (ev) => { ev.preventDefault(); setGhostPos({ x: ev.clientX, y: ev.clientY }); };
     const onUp = () => {
       setGhostSpecies(null);
       setGhostPos(null);
       window.removeEventListener('pointermove', onMove);
       window.removeEventListener('pointerup', onUp);
+      window.removeEventListener('pointercancel', onUp);
     };
     window.addEventListener('pointermove', onMove);
     window.addEventListener('pointerup', onUp);
+    window.addEventListener('pointercancel', onUp);
   };
 
-  const filtered = SPECIES.filter(s => {
-    if (tab === 'compatible') return false; // TODO: backend compatibility logic
-    if (active.compatible) return false;    // TODO: backend compatibility logic
-    if (query) {
-      const q = query.toLowerCase();
-      if (!s.name.toLowerCase().includes(q) && !s.latin.toLowerCase().includes(q)) return false;
-    }
-    for (const { key } of FILTER_GROUPS) {
-      const sel = active[key] || [];
-      if (!sel.length) continue;
-      const val = key === 'kind' ? [s.kind] : s[key];
-      if (!sel.some(v => val.includes(v))) return false;
-    }
-    return true;
-  });
+  const filtered = tab === 'all'
+    ? catalogResults
+    : allSpecies.filter(s => {
+        if (tab === 'compatible') return false;
+        if (active.compatible) return false;
+        if (query) {
+          const q = query.toLowerCase();
+          if (!s.name.toLowerCase().includes(q) && !s.latin.toLowerCase().includes(q)) return false;
+        }
+        for (const { key } of FILTER_GROUPS) {
+          const sel = active[key] || [];
+          if (!sel.length) continue;
+          const val = key === 'kind' ? [s.kind] : s[key];
+          if (!sel.some(v => val.includes(v))) return false;
+        }
+        return true;
+      });
 
   return (
     <aside className="sidebar">
@@ -135,7 +171,13 @@ export default function SpeciesLibraryPanel({ placedIds, onDragStart, onAdd }) {
         </div>
       )}
 
-      <div className="sidebar-count">{filtered.length} specimen{filtered.length !== 1 ? 's' : ''}</div>
+      <div className="sidebar-count">
+        {tab === 'all'
+          ? catalogLoading ? 'searching…'
+            : query.trim() ? `${catalogTotal.toLocaleString()} results`
+            : '500k+ species — search to explore'
+          : `${filtered.length} of ${allSpecies.length} specimens`}
+      </div>
 
       <div className="species-list">
         {filtered.map(s => (
@@ -162,6 +204,10 @@ export default function SpeciesLibraryPanel({ placedIds, onDragStart, onAdd }) {
           <div style={{ padding: '24px 12px', fontFamily: 'var(--serif)', fontStyle: 'italic', color: 'var(--ink-fade)', fontSize: 14 }}>
             {tab === 'compatible'
             ? 'add species to your ecosystem to see compatible suggestions.'
+            : tab === 'all' && catalogLoading
+            ? 'searching catalog…'
+            : tab === 'all' && !query.trim()
+            ? 'search to explore 500k+ species.'
             : 'no specimens match.'}
           </div>
         )}

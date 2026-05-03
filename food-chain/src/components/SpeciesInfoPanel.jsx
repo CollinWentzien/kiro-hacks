@@ -13,7 +13,7 @@ function RelRow({ sp, placedIds, onSelect, onAdd }) {
   );
 }
 
-export default function SpeciesInfoPanel({ selectedId, placedIds, onSelect, onAdd }) {
+export default function SpeciesInfoPanel({ selectedId, placedIds, onSelect, onAdd, speciesRegistry = SPECIES_BY_ID }) {
   if (!selectedId) {
     return (
       <aside className="detail">
@@ -28,10 +28,10 @@ export default function SpeciesInfoPanel({ selectedId, placedIds, onSelect, onAd
     );
   }
 
-  const s = SPECIES_BY_ID[selectedId];
+  const s = speciesRegistry[selectedId];
   if (!s) return null;
-  const eats = s.eats.map(id => SPECIES_BY_ID[id]).filter(Boolean);
-  const eatenBy = s.eatenBy.map(id => SPECIES_BY_ID[id]).filter(Boolean);
+  const eats = (s.eats || []).map(id => speciesRegistry[id]).filter(Boolean);
+  const eatenBy = (s.eatenBy || []).map(id => speciesRegistry[id]).filter(Boolean);
 
   return (
     <aside className="detail">
@@ -43,10 +43,19 @@ export default function SpeciesInfoPanel({ selectedId, placedIds, onSelect, onAd
           <div className="detail-meta">
             <span className={`tag trophic-${s.trophic}`}>{TROPHIC_LABEL[s.trophic]}</span>
             <span className="tag">{s.kind}</span>
-            {s.env.map(e => <span key={e} className="tag">{e}</span>)}
-            {s.climate.map(c => <span key={c} className="tag">{c}</span>)}
+            {(s.env || []).map(e => <span key={e} className="tag">{e}</span>)}
+            {(s.climate || []).map(c => <span key={c} className="tag">{c}</span>)}
           </div>
-          <div className="detail-blurb">{s.blurb}</div>
+          <div className="detail-blurb">
+            {s.blurb || (s.wikipediaUrl
+              ? <a href={s.wikipediaUrl} target="_blank" rel="noreferrer" style={{color:'var(--tidal)'}}>Read on Wikipedia ↗</a>
+              : <span style={{opacity:0.45}}>No description available.</span>)}
+          </div>
+          {s.observationCount && (
+            <div className="detail-meta" style={{marginTop:6}}>
+              <span className="tag">{s.observationCount.toLocaleString()} iNat observations</span>
+            </div>
+          )}
 
           <div className="rel-section">
             <div className="rel-title">Eats</div>

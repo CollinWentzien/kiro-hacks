@@ -62,7 +62,7 @@ export default function HomePage({ onStart }) {
         </form>
 
         <button className="home-bypass" onClick={handleBypass}>
-          building a terrarium or aquarium — skip location
+          skip location — i want to start from scratch
         </button>
 
         <Link to="/coach" className="home-coach-link">
