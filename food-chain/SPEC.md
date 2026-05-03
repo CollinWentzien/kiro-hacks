@@ -177,6 +177,45 @@ Resolves a city name to geographic metadata.
 
 ---
 
+### `GET /api/geocode/autocomplete`
+
+City search autocomplete for the home page search bar. Returns city suggestions for a partial query string. Powered by Photon (OpenStreetMap-based, purpose-built for autocomplete).
+
+**Query params:**
+
+| Param | Required | Default | Description |
+|---|---|---|---|
+| `q` | yes | — | Partial city name (min 2 characters) |
+| `limit` | no | 8 | Max suggestions (max 15) |
+
+**Response:**
+```json
+[
+  {
+    "city": "Los Angeles",
+    "state": "California",
+    "country": "United States",
+    "displayName": "Los Angeles, California, United States",
+    "lat": 34.0537,
+    "lng": -118.2428
+  },
+  {
+    "city": "Los Santos",
+    "state": "Castilla y León",
+    "country": "España",
+    "displayName": "Los Santos, Castilla y León, España",
+    "lat": 40.5449,
+    "lng": -5.7972
+  }
+]
+```
+
+**Usage:** Debounce calls on the frontend (300ms). When the user selects a suggestion, pass `city`, `state`, and `country` to `GET /api/ecosystem` for accurate results.
+
+**Caching:** Results cached 1 hour in memory.
+
+---
+
 ### `GET /api/species/observed`
 
 Returns species observed near a lat/lng from GBIF and iNaturalist.
@@ -403,6 +442,7 @@ Full detail for a single species by iNaturalist taxon ID. Includes taxonomy, pho
 | Source | Used for | Auth |
 |---|---|---|
 | Nominatim (OpenStreetMap) | Geocoding | None (User-Agent required) |
+| Photon (komoot) | City autocomplete | None |
 | iNaturalist | Observed species, enrichment, catalog search | None |
 | GBIF | Observed species (fallback), enrichment (fallback) | None |
 | POWO (Kew Gardens) | Plant native status | None |
@@ -422,7 +462,7 @@ food-chain/
     catalog.js       ← GET/POST /api/catalog/search, GET /api/catalog/species/:id
     ecosystem.js     ← GET /api/ecosystem, /gaps, /climate, /saved
     enrich.js        ← GET /api/species/enrich
-    geocode.js       ← GET /api/geocode
+    geocode.js       ← GET /api/geocode, GET /api/geocode/autocomplete
     native.js        ← GET /api/species/native
     observed.js      ← GET /api/species/observed
   services/
@@ -443,4 +483,249 @@ food-chain/
   index.js           ← Hono app, route mounting, server start
   package.json
   vitest.config.js
+```
+
+---
+
+## Authentication
+
+Uses Supabase Auth. Users register and log in with **username + password only** — no email required. Internally, a fake email (`username@ecosystem-builder.internal`) is generated so Supabase Auth can function, but it is never exposed to the user.
+
+All auth tokens are JWTs issued by Supabase. Protected endpoints require `Authorization: Bearer <accessToken>` header.
+
+---
+
+### `POST /api/auth/register`
+
+Creates a new user account.
+
+**Body:** `{ "username": "taren", "password": "mypassword" }`
+
+Rules:
+- `username`: 3–30 characters, letters/numbers/`_`/`-` only
+- `password`: minimum 6 characters
+
+**Response (201):**
+```json
+{
+  "user": { "id": "uuid", "username": "taren" },
+  "session": {
+    "accessToken": "eyJ...",
+    "refreshToken": "abc123",
+    "expiresAt": 1777766996
+  },
+  "message": "Account created"
+}
+```
+
+**Errors:** 400 (missing/invalid fields), 409 (username already taken)
+
+---
+
+### `POST /api/auth/login`
+
+Signs in with username and password.
+
+**Body:** `{ "username": "taren", "password": "mypassword" }`
+
+**Response (200):**
+```json
+{
+  "user": { "id": "uuid", "username": "taren" },
+  "session": {
+    "accessToken": "eyJ...",
+    "refreshToken": "abc123",
+    "expiresAt": 1777766996
+  }
+}
+```
+
+**Errors:** 400 (missing fields), 401 (invalid username or password)
+
+---
+
+### `GET /api/auth/me`
+
+Returns the current user's profile. Requires auth.
+
+**Header:** `Authorization: Bearer <accessToken>`
+
+**Response (200):**
+```json
+{ "id": "uuid", "username": "taren", "createdAt": "2026-05-02T..." }
+```
+
+---
+
+### `POST /api/auth/logout`
+
+Signs out the current session. Requires auth.
+
+**Header:** `Authorization: Bearer <accessToken>`
+
+**Response (200):** `{ "message": "Logged out" }`
+
+---
+
+### `POST /api/auth/refresh`
+
+Exchanges a refresh token for a new access token.
+
+**Body:** `{ "refreshToken": "abc123" }`
+
+**Response (200):**
+```json
+{
+  "session": {
+    "accessToken": "eyJ...",
+    "refreshToken": "newtoken",
+    "expiresAt": 1777770000
+  }
+}
+```
+
+---
+
+## User Projects
+
+Projects are saved to Supabase Postgres. Each project stores a user's ecosystem — the city they chose, the base species fetched from that city, species they manually added from the catalog, and species they removed. Row Level Security ensures users can only access their own projects.
+
+All project endpoints require `Authorization: Bearer <accessToken>`.
+
+---
+
+### `GET /api/projects`
+
+List all projects for the authenticated user, sorted by most recently updated.
+
+**Response (200):**
+```json
+{
+  "projects": [
+    {
+      "id": "uuid",
+      "name": "Austin Ecosystem",
+      "city": "Austin",
+      "state": "Texas",
+      "country": "United States",
+      "lat": 30.27,
+      "lng": -97.74,
+      "radiusKm": 50,
+      "climateProfile": { "biome": "temperate-deciduous", "..." },
+      "createdAt": "2026-05-02T...",
+      "updatedAt": "2026-05-02T..."
+    }
+  ]
+}
+```
+
+---
+
+### `POST /api/projects`
+
+Create a new project.
+
+**Body:**
+```json
+{
+  "name": "Austin Ecosystem",
+  "city": "Austin",
+  "state": "Texas",
+  "country": "United States",
+  "lat": 30.27,
+  "lng": -97.74,
+  "radiusKm": 50,
+  "baseSpecies": [...],
+  "addedSpecies": [...],
+  "removedSpeciesNames": ["Columba livia"],
+  "climateProfile": { "biome": "temperate-deciduous", "..." }
+}
+```
+
+- `city` is required. All other fields are optional.
+- `baseSpecies` — full species array from `/api/ecosystem` (the city's observed species)
+- `addedSpecies` — species the user manually added from the catalog
+- `removedSpeciesNames` — scientific names of species the user removed from the base
+
+**Response (201):** `{ "project": { ...full project object... } }`
+
+---
+
+### `GET /api/projects/:id`
+
+Get a single project with full species data.
+
+**Response (200):** `{ "project": { ...full project object including baseSpecies and addedSpecies... } }`
+
+**Errors:** 404 (not found or belongs to another user)
+
+---
+
+### `PUT /api/projects/:id`
+
+Update any fields of a project. Accepts a partial body — only provided fields are updated.
+
+**Body (any subset):**
+```json
+{
+  "name": "My Updated Ecosystem",
+  "addedSpecies": [...],
+  "removedSpeciesNames": ["Corvus brachyrhynchos"]
+}
+```
+
+**Response (200):** `{ "project": { ...updated project... } }`
+
+---
+
+### `DELETE /api/projects/:id`
+
+Delete a project permanently.
+
+**Response (200):** `{ "message": "Project deleted" }`
+
+---
+
+## Database Schema (Supabase Postgres)
+
+**Table: `projects`**
+
+| Column | Type | Description |
+|---|---|---|
+| `id` | uuid | Primary key |
+| `user_id` | uuid | References `auth.users(id)`, cascade delete |
+| `name` | text | Project display name |
+| `city` | text | City name |
+| `state` | text | State/province |
+| `country` | text | Country |
+| `lat` | float8 | Latitude |
+| `lng` | float8 | Longitude |
+| `radius_km` | int | Search radius used |
+| `base_species` | jsonb | Full species array from `/api/ecosystem` |
+| `added_species` | jsonb | Species added by user from catalog |
+| `removed_species_names` | text[] | Scientific names removed from base |
+| `climate_profile` | jsonb | City climate snapshot |
+| `created_at` | timestamptz | Auto-set on insert |
+| `updated_at` | timestamptz | Auto-updated on change |
+
+Row Level Security is enabled — users can only read, write, update, and delete their own rows.
+
+---
+
+## Updated Project Structure
+
+```
+food-chain/
+  ...
+  routes/
+    auth.js        ← POST /api/auth/register, /login, /logout, /refresh, GET /me
+    projects.js    ← GET/POST /api/projects, GET/PUT/DELETE /api/projects/:id
+    ...
+  services/
+    supabaseClient.js  ← Supabase JS client (anon + service role)
+    ...
+  .env               ← SUPABASE_URL, SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY
+supabase/
+  migrations/
+    20260502224950_create_user_projects.sql
 ```

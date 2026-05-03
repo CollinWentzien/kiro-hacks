@@ -7,6 +7,8 @@ import nativeRouter from './routes/native.js';
 import enrichRouter from './routes/enrich.js';
 import ecosystemRouter from './routes/ecosystem.js';
 import catalogRouter from './routes/catalog.js';
+import authRouter from './routes/auth.js';
+import projectsRouter from './routes/projects.js';
 import { cacheService } from './services/cacheService.js';
 
 const app = new Hono();
@@ -20,6 +22,8 @@ app.route('/api/species/native', nativeRouter);
 app.route('/api/species/enrich', enrichRouter);
 app.route('/api/ecosystem', ecosystemRouter);
 app.route('/api/catalog', catalogRouter);
+app.route('/api/auth', authRouter);
+app.route('/api/projects', projectsRouter);
 
 // Global error handler
 app.onError((err, c) => {
