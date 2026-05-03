@@ -10,6 +10,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import PhotoUpload from '../components/vision/PhotoUpload.jsx';
 import VisionInsightCard from '../components/vision/VisionInsightCard.jsx';
+import ecosysLogo from '../assets/ecosys-logo.svg';
 
 export default function VisionPage() {
   const [result,   setResult]   = useState(null);
@@ -43,7 +44,9 @@ export default function VisionPage() {
       {/* Top bar */}
       <header className="cp-topbar">
         <div className="cp-topbar__brand">
-          <Link to="/" className="cp-topbar__logo">Food Chain</Link>
+          <Link to="/" className="cp-topbar__logo" aria-label="EcoSys home">
+            <img src={ecosysLogo} alt="EcoSys" className="topbar-logo" />
+          </Link>
           <span className="cp-topbar__sep">—</span>
           <span className="cp-topbar__name">Photo Insights</span>
         </div>

@@ -2681,3 +2681,29 @@ html.reduced-motion *::after {
   line-height: 1.6;
 }
 .vic__disclaimer strong { color: var(--ink-soft); }
+
+
+/* ═══════════════════════════════════════════════════════════════
+   ECOSYS LOGO
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Logo in light topbars (CoachPage, VisionPage, Builder, Dashboard) */
+.topbar-logo {
+  height: 28px;
+  width: auto;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* Logo on the dark HomePage — invert + tint to white/light-green */
+.home-logo {
+  position: absolute;
+  top: 18px;
+  left: 22px;
+  height: 32px;
+  width: auto;
+  z-index: 4;
+  /* Invert dark greens to light so it reads on the dark globe background */
+  filter: brightness(0) invert(1) opacity(0.85);
+  pointer-events: none;
+}

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import ecosysLogo from '../assets/ecosys-logo.svg';
 
 const MODE_LABELS = { outdoor: 'Outdoor', terrarium: 'Terrarium', aquarium: 'Aquarium' };
 
@@ -69,7 +70,9 @@ export default function ProjectDashboard({ projects, defaultCity, onCreateProjec
     <div className="dashboard paper-bg">
       <div className="topbar">
         <div className="brand">
-          <Link to="/" className="brand-mark">Food Chain</Link>
+          <Link to="/" className="brand-mark" aria-label="EcoSys home">
+            <img src={ecosysLogo} alt="EcoSys" className="topbar-logo" />
+          </Link>
           <div className="brand-sub">— a field guide to ecosystems</div>
         </div>
         <div className="actions">

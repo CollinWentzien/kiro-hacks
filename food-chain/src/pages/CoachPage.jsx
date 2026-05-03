@@ -14,6 +14,7 @@ import { useTextToSpeech } from '../hooks/useTextToSpeech.js';
 import { useAccessibilitySettings } from '../hooks/useAccessibilitySettings.js';
 import AccessibilityToolbar from '../components/chat/AccessibilityToolbar.jsx';
 import TextToSpeechButton from '../components/chat/TextToSpeechButton.jsx';
+import ecosysLogo from '../assets/ecosys-logo.svg';
 
 // ─── Frontend-safe config (VITE_* vars only — never process.env) ─────────────
 const OLLAMA_BASE_URL = import.meta.env.VITE_OLLAMA_BASE_URL ?? 'http://localhost:11434';
@@ -476,7 +477,9 @@ export default function CoachPage() {
       {/* Top bar */}
       <header className="cp-topbar">
         <div className="cp-topbar__brand">
-          <Link to="/" className="cp-topbar__logo">Food Chain</Link>
+          <Link to="/" className="cp-topbar__logo" aria-label="EcoSys home">
+            <img src={ecosysLogo} alt="EcoSys" className="topbar-logo" />
+          </Link>
           <span className="cp-topbar__sep">—</span>
           <span className="cp-topbar__name">EcoDoctor</span>
         </div>

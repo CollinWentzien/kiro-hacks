@@ -2,6 +2,7 @@ import { useState, useRef, useMemo } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import GlobeScene from '../components/GlobeScene.jsx';
 import { getRandomFacts } from '../data/facts.js';
+import ecosysLogo from '../assets/ecosys-logo.svg';
 
 const POSITIONS = [
   { top: '12%',  left: '5%',  maxWidth: '200px' },
@@ -36,6 +37,14 @@ export default function HomePage({ onStart }) {
   return (
     <div className="home">
       <GlobeScene zooming={zooming} />
+
+      {/* Logo — top-left, inverted for dark background */}
+      <img
+        src={ecosysLogo}
+        alt="EcoSys"
+        className="home-logo"
+        aria-label="EcoSys logo"
+      />
 
       <div className="home-ambient">
         {facts.map((fact, i) => (

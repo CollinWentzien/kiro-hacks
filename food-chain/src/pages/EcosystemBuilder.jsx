@@ -7,6 +7,7 @@ import SpeciesInfoPanel from '../components/SpeciesInfoPanel.jsx';
 import HealthScorePanel from '../components/HealthScorePanel.jsx';
 import EcosystemChat from '../components/chat/EcosystemChat.jsx';
 import ChatToggleButton from '../components/chat/ChatToggleButton.jsx';
+import ecosysLogo from '../assets/ecosys-logo.svg';
 
 const MODE_LABELS = { outdoor: 'Outdoor', terrarium: 'Terrarium', aquarium: 'Aquarium' };
 
@@ -109,7 +110,9 @@ export default function EcosystemBuilder({ projects, activeId, onUpdateProject, 
     <div className="app paper-bg">
       <div className="topbar">
         <div className="brand">
-          <Link to="/" className="brand-mark">Food Chain</Link>
+          <Link to="/" className="brand-mark" aria-label="EcoSys home">
+            <img src={ecosysLogo} alt="EcoSys" className="topbar-logo" />
+          </Link>
           <div className="brand-sub">field guide</div>
         </div>
         <div className="meta">
