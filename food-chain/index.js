@@ -1,5 +1,6 @@
 import { serve } from '@hono/node-server';
 import { Hono } from 'hono';
+import { cors } from 'hono/cors';
 import geocodeRouter from './routes/geocode.js';
 import observedRouter from './routes/observed.js';
 import nativeRouter from './routes/native.js';
@@ -9,6 +10,8 @@ import catalogRouter from './routes/catalog.js';
 import { cacheService } from './services/cacheService.js';
 
 const app = new Hono();
+
+app.use('*', cors({ origin: '*' }));
 
 // Mount routes
 app.route('/api/geocode', geocodeRouter);
@@ -28,7 +31,7 @@ app.onError((err, c) => {
 app.notFound((c) => c.json({ message: 'Not found' }, 404));
 
 // Initialize cache and start server
-cacheService.clear(); // ensure clean state on startup
+cacheService.clear();
 
 const port = Number(process.env.PORT) || 3000;
 

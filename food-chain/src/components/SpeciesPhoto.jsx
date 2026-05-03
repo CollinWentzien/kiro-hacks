@@ -1,7 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function SpeciesPhoto({ species, className, style }) {
   const [src, setSrc] = useState(species.img);
+
+  useEffect(() => { setSrc(species.img); }, [species.img]);
+
   return (
     <div className={className} style={style}>
       <img

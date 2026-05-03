@@ -157,7 +157,25 @@ export async function getEcosystemFeedback(nodes: { id: string }[]): Promise<{
 
 ---
 
-## Species Data Stability Contract
+## 6. Food Web Edge Data (BLOCKING for arrows)
+
+**File:** `src/data/api.js` → `mapBackendSpecies()`
+
+**Current state:** The `interactions.eats` field contains space-separated single-word taxonomy names (genera, families) from a global database. These rarely match the scientific names of other species in the same 40-species response, so almost no arrows draw.
+
+**What's needed:** Each species in the `/api/ecosystem` response should include an `eatsIds` array containing the IDs (or scientific names) of other species **within the same response** that it eats.
+
+**Interface needed:**
+```js
+// Each species in /api/ecosystem response should include:
+{
+  ...existingFields,
+  eatsIds: string[],     // scientificNames of prey that appear in this response
+  eatenByIds: string[]   // scientificNames of predators that appear in this response
+}
+```
+
+**Or alternatively:** A post-processing step in the ecosystem endpoint that cross-references the returned species list and adds matched interaction IDs.
 
 The backend team may expand `src/data/species.js` but **must keep these exports stable**:
 

@@ -5,20 +5,23 @@ const TROPHIC_ORDER = ['producer', 'primary', 'secondary', 'tertiary', 'decompos
 const TROPHIC_LABEL = { producer: 'Producers', primary: 'Primary', secondary: 'Secondary', tertiary: 'Apex', decomposer: 'Decomposers' };
 const TROPHIC_COLOR = { producer: 'var(--sage)', primary: 'var(--mustard)', secondary: 'var(--rust)', tertiary: 'var(--ink)', decomposer: 'var(--ink-fade)' };
 
-function computeHealth(nodes) {
+function computeHealth(nodes, reg) {
   if (nodes.length === 0) return null;
   const idSet = new Set(nodes.map(n => n.id));
   const warnings = [];
   let score = 100;
 
-  const hasProducer = nodes.some(n => SPECIES_BY_ID[n.id].trophic === 'producer');
-  if (!hasProducer && nodes.length > 1) {
+  const hasProducer = nodes.some(n => reg[n.id]?.trophic === 'producer');
+  const allSeeded = nodes.every(n => reg[n.id]?._fromBackend || reg[n.id]?._fromCatalog);
+  if (!hasProducer && nodes.length > 1 && !allSeeded) {
     warnings.push({ badge: 'GAP', text: 'No producers — primary consumers will starve.' });
     score -= 25;
   }
 
   for (const n of nodes) {
-    const s = SPECIES_BY_ID[n.id];
+    const s = reg[n.id];
+    if (!s) continue;
+    if (s._fromBackend || s._fromCatalog) continue; // seeded species — skip prey warnings
     if ((s.trophic === 'secondary' || s.trophic === 'tertiary') && !s.eats.some(p => idSet.has(p))) {
       warnings.push({ badge: 'STARVE', text: `${s.name} has no prey present.` });
       score -= 15;
@@ -26,7 +29,7 @@ function computeHealth(nodes) {
   }
 
   const climates = new Set();
-  nodes.forEach(n => SPECIES_BY_ID[n.id].climate.forEach(c => climates.add(c)));
+  nodes.forEach(n => reg[n.id]?.climate?.forEach(c => climates.add(c)));
   if (climates.has('arid') && climates.has('tropical')) {
     warnings.push({ badge: 'HABITAT', text: 'Mixing arid and tropical species.' });
     score -= 10;
@@ -35,21 +38,19 @@ function computeHealth(nodes) {
   score = Math.max(0, score);
   const status = score >= 75 ? 'healthy' : score >= 45 ? 'developing' : 'unstable';
 
-  // Trophic breakdown
   const byTrophic = {};
-  for (const t of TROPHIC_ORDER) byTrophic[t] = nodes.filter(n => SPECIES_BY_ID[n.id].trophic === t).length;
+  for (const t of TROPHIC_ORDER) byTrophic[t] = nodes.filter(n => reg[n.id]?.trophic === t).length;
 
-  // Count edges (food web connections)
   let edges = 0;
   for (const n of nodes) {
-    edges += SPECIES_BY_ID[n.id].eats.filter(id => idSet.has(id)).length;
+    edges += (reg[n.id]?.eats || []).filter(id => idSet.has(id)).length;
   }
 
   return { score, status, warnings, byTrophic, edges, total: nodes.length };
 }
 
-export default function HealthScorePanel({ nodes }) {
-  const data = useMemo(() => computeHealth(nodes), [nodes]);
+export default function HealthScorePanel({ nodes, speciesRegistry = SPECIES_BY_ID }) {
+  const data = useMemo(() => computeHealth(nodes, speciesRegistry), [nodes, speciesRegistry]);
   if (!data) return null;
 
   const { score, status, warnings, byTrophic, edges, total } = data;

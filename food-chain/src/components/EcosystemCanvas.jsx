@@ -17,7 +17,7 @@ export function initialPosition(species, existing, canvasW, canvasH) {
   return { x: bestX + (Math.random() - 0.5) * 30, y: baseY + (Math.random() - 0.5) * 30 };
 }
 
-export default function EcosystemCanvas({ nodes, setNodes, selectedId, setSelectedId, onAdd, onRemove, draggingSpecies, setDraggingSpecies }) {
+export default function EcosystemCanvas({ nodes, setNodes, selectedId, setSelectedId, onAdd, onRemove, draggingSpecies, setDraggingSpecies, speciesRegistry = SPECIES_BY_ID }) {
   const canvasRef = useRef(null);
   const [size, setSize] = useState({ w: 800, h: 600 });
   const [dragOver, setDragOver] = useState(false);
@@ -38,7 +38,20 @@ export default function EcosystemCanvas({ nodes, setNodes, selectedId, setSelect
     return () => ro.disconnect();
   }, []);
 
-  // Zoom toward cursor
+  // Auto-fit when a large batch of nodes arrives at once
+  useEffect(() => {
+    if (nodes.length < 5) return;
+    const el = canvasRef.current;
+    if (!el) return;
+    const xs = nodes.map(n => n.x), ys = nodes.map(n => n.y);
+    const minX = Math.min(...xs), maxX = Math.max(...xs);
+    const minY = Math.min(...ys), maxY = Math.max(...ys);
+    const contentW = maxX - minX + 160, contentH = maxY - minY + 160;
+    const rect = el.getBoundingClientRect();
+    const fitZoom = Math.min(rect.width / contentW, rect.height / contentH, 1) * 0.85;
+    setZoom(fitZoom);
+    setPan({ x: (rect.width - contentW * fitZoom) / 2 - minX * fitZoom, y: (rect.height - contentH * fitZoom) / 2 - minY * fitZoom });
+  }, [nodes.length]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => {
     const el = canvasRef.current;
     if (!el) return;
@@ -150,24 +163,26 @@ export default function EcosystemCanvas({ nodes, setNodes, selectedId, setSelect
     const idSet = new Set(nodes.map(n => n.id));
     const list = [];
     for (const n of nodes) {
-      const s = SPECIES_BY_ID[n.id];
-      for (const preyId of s.eats) {
+      const s = speciesRegistry[n.id];
+      if (!s) continue;
+      for (const preyId of (s.eats || [])) {
         if (idSet.has(preyId)) list.push({ from: preyId, to: n.id });
       }
     }
     return list;
-  }, [nodes]);
+  }, [nodes, speciesRegistry]);
 
   const nodePos = useMemo(() => Object.fromEntries(nodes.map(n => [n.id, n])), [nodes]);
 
   const relIds = useMemo(() => {
     if (!selectedId) return null;
-    const s = SPECIES_BY_ID[selectedId];
+    const s = speciesRegistry[selectedId];
+    if (!s) return new Set([selectedId]);
     const rel = new Set([selectedId]);
-    s.eats.forEach(i => rel.add(i));
-    s.eatenBy.forEach(i => rel.add(i));
+    (s.eats || []).forEach(i => rel.add(i));
+    (s.eatenBy || []).forEach(i => rel.add(i));
     return rel;
-  }, [selectedId]);
+  }, [selectedId, speciesRegistry]);
 
   return (
     <div className="canvas-wrap">
@@ -181,7 +196,7 @@ export default function EcosystemCanvas({ nodes, setNodes, selectedId, setSelect
         onPointerLeave={onCanvasPointerUp}>
 
         {/* Fixed UI — outside transform */}
-        <HealthScorePanel nodes={nodes} />
+        <HealthScorePanel nodes={nodes} speciesRegistry={speciesRegistry} />
 
         {/* Pannable/zoomable content */}
         <div style={{ transform: `translate(${pan.x}px, ${pan.y}px) scale(${zoom})`, transformOrigin: '0 0', position: 'absolute', inset: 0, pointerEvents: 'none' }}>
@@ -241,7 +256,8 @@ export default function EcosystemCanvas({ nodes, setNodes, selectedId, setSelect
           </svg>
 
           {nodes.map(n => {
-            const s = SPECIES_BY_ID[n.id];
+            const s = speciesRegistry[n.id];
+            if (!s) return null;
             const dimmed = relIds && !relIds.has(n.id);
             return (
               <div key={n.id}
@@ -279,7 +295,20 @@ export default function EcosystemCanvas({ nodes, setNodes, selectedId, setSelect
         <div className="zoom-controls">
           <div className="zoom-btns-row">
             <button onClick={e => { e.stopPropagation(); zoomFromCenter(1.2); }}><i className="fa-solid fa-magnifying-glass-plus" /></button>
-            <button onClick={e => { e.stopPropagation(); setZoom(1); setPan({ x: 0, y: 0 }); }}><i className="fa-solid fa-arrows-to-dot" /></button>
+            <button onClick={e => {
+            e.stopPropagation();
+            if (!nodes.length) { setZoom(1); setPan({ x: 0, y: 0 }); return; }
+            const el = canvasRef.current;
+            if (!el) return;
+            const xs = nodes.map(n => n.x), ys = nodes.map(n => n.y);
+            const minX = Math.min(...xs), maxX = Math.max(...xs);
+            const minY = Math.min(...ys), maxY = Math.max(...ys);
+            const contentW = maxX - minX + 160, contentH = maxY - minY + 160;
+            const rect = el.getBoundingClientRect();
+            const fz = Math.min(rect.width / contentW, rect.height / contentH, 1) * 0.85;
+            setZoom(fz);
+            setPan({ x: (rect.width - contentW * fz) / 2 - minX * fz, y: (rect.height - contentH * fz) / 2 - minY * fz });
+          }}><i className="fa-solid fa-arrows-to-dot" /></button>
             <button onClick={e => { e.stopPropagation(); zoomFromCenter(0.8); }}><i className="fa-solid fa-magnifying-glass-minus" /></button>
           </div>
           <button className="sort-btn" title="Sort by trophic level" onClick={e => {
@@ -290,7 +319,7 @@ export default function EcosystemCanvas({ nodes, setNodes, selectedId, setSelect
             const W = rect?.width ?? 800, H = rect?.height ?? 600;
             const byLevel = {};
             nodes.forEach(n => {
-              const t = SPECIES_BY_ID[n.id].trophic;
+              const t = speciesRegistry[n.id].trophic;
               (byLevel[t] = byLevel[t] || []).push(n);
             });
             const rows = Object.entries(byLevel).sort((a, b) => ORDER[a[0]] - ORDER[b[0]]);
