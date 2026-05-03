@@ -1,5 +1,5 @@
 import { useState, useRef, useMemo } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import GlobeScene from '../components/GlobeScene.jsx';
 import { getRandomFacts } from '../data/facts.js';
 
@@ -64,6 +64,10 @@ export default function HomePage({ onStart }) {
         <button className="home-bypass" onClick={handleBypass}>
           building a terrarium or aquarium — skip location
         </button>
+
+        <Link to="/coach" className="home-coach-link">
+          or talk to the Ecosystem Coach →
+        </Link>
       </div>
 
       <div className="home-bottom">

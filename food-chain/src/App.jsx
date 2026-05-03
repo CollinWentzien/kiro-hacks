@@ -3,6 +3,8 @@ import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import HomePage from './pages/HomePage.jsx';
 import ProjectDashboard from './pages/ProjectDashboard.jsx';
 import EcosystemBuilder from './pages/EcosystemBuilder.jsx';
+import CoachPage from './pages/CoachPage.jsx';
+import VisionPage from './pages/VisionPage.jsx';
 
 let nextId = 1;
 
@@ -34,6 +36,8 @@ function AnimatedRoutes({ projects, activeId, session, onStart, onCreateProject,
     >
       <Routes location={displayLocation}>
         <Route path="/" element={<HomePage onStart={onStart} />} />
+        <Route path="/coach" element={<CoachPage />} />
+        <Route path="/vision" element={<VisionPage />} />
         <Route path="/builder" element={
           activeId
             ? <EcosystemBuilder projects={projects} activeId={activeId} onUpdateProject={onUpdateProject} />
