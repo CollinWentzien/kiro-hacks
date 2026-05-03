@@ -6,22 +6,6 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "rag:ingest": "node scripts/ingest-rag.js",
-    "rag:test": "node scripts/test-rag.js"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-react": "^4.4.1",
-    "dotenv": "^16.5.0",
-    "vite": "^6.3.5"
-  },
-  "dependencies": {
-    "@supabase/supabase-js": "^2.49.4",
-    "pdf-parse": "^1.1.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.30.0",
-    "sharp": "^0.33.5",
-    "three": "^0.176.0",
     "start": "node index.js",
     "test": "vitest run",
     "test:watch": "vitest"
@@ -30,6 +14,7 @@
     "@hono/node-server": "^1.19.14",
     "@supabase/supabase-js": "^2.105.1",
     "hono": "^4.12.16",
+    "pdf-parse": "^1.1.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-router-dom": "^6.30.3",
@@ -37,6 +22,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "4.4.1",
+    "dotenv": "^16.5.0",
     "fast-check": "3.22.0",
     "vite": "^6.4.2",
     "vitest": "^4.1.5"
