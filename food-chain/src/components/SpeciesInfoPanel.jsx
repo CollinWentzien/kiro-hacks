@@ -13,7 +13,73 @@ function RelRow({ sp, placedIds, onSelect, onAdd }) {
   );
 }
 
-export default function SpeciesInfoPanel({ selectedId, placedIds, onSelect, onAdd, speciesRegistry = SPECIES_BY_ID }) {
+export default function SpeciesInfoPanel({ selectedId, placedIds, onSelect, onAdd, speciesRegistry = SPECIES_BY_ID, aiResult, aiLoading }) {
+  if (aiLoading) {
+    return (
+      <aside className="detail">
+        <div className="detail-empty">
+          <div className="seal">✦</div>
+          <h3>Analyzing Ecosystem…</h3>
+          <p style={{opacity:0.6}}>Consulting the ecological record.</p>
+        </div>
+      </aside>
+    );
+  }
+
+  if (aiResult && !selectedId) {
+    if (aiResult.error) {
+      return (
+        <aside className="detail">
+          <div className="detail-empty">
+            <div className="seal">✕</div>
+            <h3>Analysis Failed</h3>
+            <p style={{color:'var(--rust)', fontSize:13}}>{aiResult.error}</p>
+            <div className="meta" style={{marginTop:16}}>click any species to return to field guide</div>
+          </div>
+        </aside>
+      );
+    }
+    return (
+      <aside className="detail">
+        <div className="detail-card">
+          <div className="detail-body" style={{padding:'18px 20px'}}>
+            <div className="detail-name" style={{marginBottom:6}}>Ecosystem Review</div>
+            <div className="detail-blurb" style={{marginBottom:16}}>{aiResult.message}</div>
+
+            {aiResult.recommendations?.length > 0 && (
+              <div className="rel-section">
+                <div className="rel-title">Add to ecosystem</div>
+                <ul style={{margin:'6px 0 0',paddingLeft:18,fontSize:13,lineHeight:1.6}}>
+                  {aiResult.recommendations.map((r, i) => <li key={i}>{r}</li>)}
+                </ul>
+              </div>
+            )}
+
+            {aiResult.removals?.length > 0 && (
+              <div className="rel-section">
+                <div className="rel-title">Consider removing</div>
+                <ul style={{margin:'6px 0 0',paddingLeft:18,fontSize:13,lineHeight:1.6}}>
+                  {aiResult.removals.map((r, i) => <li key={i}>{r}</li>)}
+                </ul>
+              </div>
+            )}
+
+            {aiResult.nextActions?.length > 0 && (
+              <div className="rel-section">
+                <div className="rel-title">Next steps</div>
+                <ol style={{margin:'6px 0 0',paddingLeft:18,fontSize:13,lineHeight:1.6}}>
+                  {aiResult.nextActions.map((a, i) => <li key={i}>{a}</li>)}
+                </ol>
+              </div>
+            )}
+
+            <div className="meta" style={{marginTop:20}}>click any species to return to field guide</div>
+          </div>
+        </div>
+      </aside>
+    );
+  }
+
   if (!selectedId) {
     return (
       <aside className="detail">

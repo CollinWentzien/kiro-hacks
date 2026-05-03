@@ -16,8 +16,7 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import ChatMessage from './ChatMessage.jsx';
 import ChatInput from './ChatInput.jsx';
-import ResponseCard from './ResponseCard.jsx';
-import { sendChatMessage } from '../../services/api/chatApi.js';
+import { sendGroqMessage } from '../../data/groqChat.js';
 
 const WELCOME_MESSAGE = {
   role: 'assistant',
@@ -34,7 +33,7 @@ What would you like to work on today?`,
   response: null,
 };
 
-export default function EcosystemChat({ profile, isOpen, onClose }) {
+export default function EcosystemChat({ profile, isOpen, onClose, nodes, speciesRegistry }) {
   const [messages, setMessages] = useState([WELCOME_MESSAGE]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -152,10 +151,6 @@ export default function EcosystemChat({ profile, isOpen, onClose }) {
               content={msg.content}
               timestamp={msg.timestamp}
             />
-            {/* Show ResponseCard for assistant messages with structured data */}
-            {msg.role === 'assistant' && msg.response && (
-              <ResponseCard response={msg.response} />
-            )}
           </div>
         ))}
 

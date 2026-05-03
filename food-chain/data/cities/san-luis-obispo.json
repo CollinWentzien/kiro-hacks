@@ -1,0 +1,5840 @@
+{
+  "region": {
+    "city": null,
+    "state": "California",
+    "county": "San Luis Obispo County",
+    "country": "United States",
+    "lat": 35.3540209,
+    "lng": -120.375716
+  },
+  "climateProfile": {
+    "tempMin": -6.8,
+    "tempMax": 40.4,
+    "tempMeanMin": 9.9,
+    "tempMeanMax": 23.4,
+    "annualPrecipMm": 340,
+    "biome": "temperate-grassland",
+    "label": "Temperate Grassland/Steppe"
+  },
+  "species": [
+    {
+      "scientificName": "Sceloporus occidentalis",
+      "commonName": "Western Fence Lizard",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/36416485/medium.jpeg",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Reptilia",
+        "order": "Squamata",
+        "family": "Phrynosomatidae",
+        "genus": "Sceloporus"
+      },
+      "observationSummary": "188,555 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/36204"
+        }
+      ],
+      "sources": [
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Malvales",
+          "Hemiptera",
+          "Lepidoptera",
+          "Dermaptera",
+          "Orthoptera",
+          "Hymenoptera",
+          "Coleoptera",
+          "Araneae",
+          "Diptera",
+          "Reticulitermes hesperus",
+          "Heterotermitidae",
+          "Polyphylla",
+          "Polyergus mexicanus",
+          "Schistocerca nitens",
+          "Celastrina echo",
+          "Reticulitermes",
+          "Nymphalidae",
+          "Termitoidae",
+          "Tettigoniidae",
+          "Apis",
+          "Apis mellifera",
+          "Bombus",
+          "Vanessa",
+          "Gryllus",
+          "Sceloporus occidentalis"
+        ],
+        "eatenBy": [
+          "Crotalus pyrrhus",
+          "Coluber taeniatus",
+          "Trimorphodon lyrophanes",
+          "Tamias panamintinus",
+          "Ixodes pacificus",
+          "Bubo virginianus",
+          "Geococcyx californianus",
+          "Coluber lateralis lateralis",
+          "Crotalus cerastes",
+          "Accipiter striatus",
+          "Arizona elegans",
+          "Accipiter cooperii",
+          "Rhinocheilus",
+          "Falco sparverius",
+          "Pituophis catenifer",
+          "Coluber flagellum",
+          "Crotalus scutulatus",
+          "Lampropeltis californiae",
+          "Buteo jamaicensis",
+          "Cathartes aura",
+          "Coluber lateralis euryxanthus",
+          "Hypsiglena ochrorhynchus klauberi",
+          "Glaucidium gnoma",
+          "Crotalus oreganus oreganus",
+          "Buteo lineatus",
+          "Vespula pensylvanica",
+          "Coluber constrictor mormon",
+          "Crotalus oreganus helleri",
+          "Pituophis catenifer catenifer",
+          "Neotamias merriami",
+          "Otospermophilus beecheyi",
+          "Sciurus niger",
+          "Buteo regalis",
+          "Ardea alba",
+          "Aphelocoma californica",
+          "Lanius ludovicianus",
+          "Thamnophis elegans elegans",
+          "Melozone crissalis",
+          "Thamnophis elegans terrestris",
+          "Ardea herodias",
+          "Linepithema humile",
+          "Tyto alba",
+          "Falco peregrinus"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Secondary consumer (taxonomy)",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Larus occidentalis",
+      "commonName": "Western Gull",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/1877/medium.jpg",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Aves",
+        "order": "Charadriiformes",
+        "family": "Laridae",
+        "genus": "Larus"
+      },
+      "observationSummary": "74,500 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/4345"
+        }
+      ],
+      "sources": [
+        "iNaturalist",
+        "GBIF"
+      ],
+      "interactions": {
+        "eats": [
+          "others",
+          "Others",
+          "Engraulis australis",
+          "Engraulis japonicus",
+          "Kondakovia longimana",
+          "Engraulis encrasicolus",
+          "Engraulis anchoita",
+          "Engraulis",
+          "Gnathostomata",
+          "Synthliboramphus scrippsi",
+          "Sicyonia penicillata",
+          "Podicipedidae",
+          "Mytilidae",
+          "Achelous xantusii",
+          "Chloroscombrus orqueta",
+          "Euechinoidea",
+          "Paralabrax",
+          "Epialtidae",
+          "Caudina arenicola",
+          "Syngnathus",
+          "Octopus bimaculoides",
+          "Batoidea",
+          "Norrisia norrisii",
+          "Metacarcinus gracilis",
+          "Mesocentrotus franciscanus",
+          "Strongylocentrotus purpuratus",
+          "Grimothea planipes",
+          "Pleuronichthys guttulatus",
+          "Paralabrax maculatofasciatus",
+          "Urile penicillatus",
+          "Romaleon antennarium",
+          "Procambarus clarkii",
+          "Cancridae",
+          "Phoca vitulina richardii",
+          "Setophaga coronata",
+          "Mytilus californianus",
+          "Pisaster ochraceus",
+          "Pleuronectoidei",
+          "Octopoda",
+          "Tivela stultorum",
+          "Urechis caupo",
+          "Chrysaora fuscescens",
+          "Astyris lunata",
+          "Engraulis mordax",
+          "Brachyura",
+          "Illex",
+          "Engraulidae",
+          "Euphausiacea",
+          "Columba livia domestica",
+          "Actinopterygii",
+          "Phalacrocoracidae",
+          "Cephalopoda",
+          "Hippocampus ingens",
+          "Sphyraena argentea",
+          "Urolophus halleri",
+          "Eschrichtius robustus",
+          "Mirounga angustirostris",
+          "Sebastes mystinus",
+          "Bivalvia",
+          "Larus",
+          "Myliobatis californica",
+          "Carcinus maenas",
+          "Sebastes paucispinis",
+          "Balaenoptera musculus",
+          "Pancrustacea",
+          "Asteroidea",
+          "Metacarcinus magister",
+          "Hippoglossus stenolepis",
+          "Lepomis macrochirus",
+          "Holothuroidea",
+          "Hyperprosopon argenteum",
+          "Teuthida",
+          "Atherinidae",
+          "Plantae",
+          "Platyrhinoidis triseriata",
+          "Aves",
+          "Stenella coeruleoalba",
+          "Aplysia vaccaria",
+          "Phoca vitulina",
+          "Zalophus californianus",
+          "Uria aalge",
+          "Entosphenus tridentatus",
+          "Oncorhynchus tshawytscha",
+          "Decapoda",
+          "Paralichthys californicus",
+          "Umbrina roncador",
+          "Mollusca",
+          "Sebastes",
+          "Scorpaenichthys marmoratus",
+          "Pugettia producta",
+          "Scomber japonicus",
+          "Gallus gallus",
+          "Morone saxatilis",
+          "Loligo",
+          "Platichthys stellatus",
+          "Heterodontus francisci"
+        ],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Secondary consumer (taxonomy)",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Enhydra lutris",
+      "commonName": "Sea Otter",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/311432614/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Mammalia",
+        "order": null,
+        "family": null,
+        "genus": "Enhydra"
+      },
+      "observationSummary": "16,424 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/41860"
+        }
+      ],
+      "sources": [
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "marine invertebrates",
+          "Echinarachnius parma",
+          "Aspidochirotacea",
+          "Chionoecetes bairdi",
+          "Pododesmus",
+          "Mactromeris",
+          "Chionoecetes opilio",
+          "Phascolosomatidae",
+          "Hiatellidae",
+          "Clinocardium",
+          "Enteroctopus dofleini",
+          "Telmessus cheiragonus",
+          "Entodesma",
+          "Pycnopodia helianthoides",
+          "Cryptochiton stelleri",
+          "Pharidae",
+          "Pugettia",
+          "Octocorallia",
+          "Tresus",
+          "Trochidae",
+          "Echiura",
+          "Venus staminea",
+          "Paralithodes",
+          "Saxidomus",
+          "Evasterias troscheli",
+          "Gavia",
+          "Strongylocentrotus franciscanus",
+          "Katharina tunicata",
+          "Pleurogrammus monopterygius",
+          "Naticidae",
+          "Hyas",
+          "Cucumaria",
+          "Macoma",
+          "Cancer",
+          "Mytilus",
+          "Ophiodon elongatus",
+          "Anas",
+          "Haliotis",
+          "Brachyura",
+          "Gnathostomata",
+          "Cancer antennarius",
+          "Panopea generosa",
+          "Saxidomus nuttalli",
+          "Mesocentrotus",
+          "Cancer productus",
+          "Strongylocentrotus purpuratus",
+          "Venerida",
+          "Haliotidae",
+          "Chordata",
+          "Ammodytes hexapterus",
+          "Animalia",
+          "Bivalvia",
+          "Musculus",
+          "Mya",
+          "Modiolus",
+          "Strongylocentrotus",
+          "Pectinidae",
+          "Crustacea",
+          "Echinoidea",
+          "Tellina",
+          "Paguridae",
+          "Buccinidae",
+          "Crangonidae",
+          "Mollusca",
+          "Mesocentrotus franciscanus",
+          "Ostreidae",
+          "Siliqua patula",
+          "Hexagrammos lagocephalus",
+          "Nucella lamellosa",
+          "Actinopterygii",
+          "Strongylocentrotus droebachiensis",
+          "Nemertea",
+          "Arthropoda",
+          "Gastropoda",
+          "Melanitta perspicillata",
+          "Octopus",
+          "Echinodermata"
+        ],
+        "eatenBy": [
+          "Haliaeetus leucocephalus",
+          "Carcharodon carcharias"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 4,
+      "trophicLabel": "apex predator",
+      "trophicNote": "Apex predator (name match)",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Cathartes aura",
+      "commonName": "Turkey Vulture",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/52277010/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Aves",
+        "order": null,
+        "family": null,
+        "genus": "Cathartes"
+      },
+      "observationSummary": "249,155 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/4756"
+        }
+      ],
+      "sources": [
+        "iNaturalist",
+        "GBIF"
+      ],
+      "interactions": {
+        "eats": [
+          "Megascapheus bottae",
+          "Acipenser fulvescens",
+          "Pudu puda",
+          "Gallus",
+          "Gymnura marmorata",
+          "Gymnothorax castaneus",
+          "Channa aurolineata",
+          "Ozotoceros bezoarticus",
+          "Acipenser transmontanus",
+          "Pelecanus thagus",
+          "Leucocarbo bougainvilliorum",
+          "Chilomycterus schoepfii",
+          "Equus asinus",
+          "Cairina moschata",
+          "Lontra felina",
+          "Scapanus latimanus",
+          "Cheloniidae",
+          "Spatula discors",
+          "Phocoidea",
+          "Meleagris gallopavo",
+          "Chelonioidea",
+          "Phasianus colchicus",
+          "Sus scrofa scrofa",
+          "Ctenosaura",
+          "Sciurus griseus",
+          "Odocoileus hemionus columbianus",
+          "Tamias striatus",
+          "Urocyon cinereoargenteus",
+          "Lepus californicus",
+          "Sylvilagus audubonii",
+          "Phoca vitulina richardii",
+          "Coluber constrictor constrictor",
+          "Lynx rufus",
+          "Sus scrofa",
+          "Anas platyrhynchos",
+          "Ovis aries",
+          "Pterygoplichthys",
+          "Otospermophilus douglasii",
+          "Marmota monax",
+          "Taxidea taxus",
+          "Sylvilagus floridanus",
+          "Pituophis catenifer catenifer",
+          "Quiscalus mexicanus",
+          "Crotalus viridis",
+          "Odocoileus virginianus",
+          "Otospermophilus beecheyi",
+          "Procyon lotor",
+          "Odocoileus hemionus",
+          "Branta canadensis",
+          "Serpentes",
+          "Sciurus niger",
+          "Vulpes vulpes",
+          "Tamiasciurus hudsonicus",
+          "Mephitis mephitis",
+          "Rattus norvegicus",
+          "Ondatra zibethicus",
+          "Squamata",
+          "Dasypus novemcinctus",
+          "Lampropeltis californiae",
+          "Corvus",
+          "Sciurus carolinensis",
+          "Testudines",
+          "Equus africanus",
+          "Mephitidae",
+          "Emydidae",
+          "Canidae",
+          "Lepomis macrochirus",
+          "Cardinalidae",
+          "Sialia mexicana",
+          "Poliocitellus franklinii",
+          "Acrocomia",
+          "Cynomys ludovicianus",
+          "Didelphis marsupialis",
+          "Equus ferus",
+          "Castor canadensis",
+          "Cervus canadensis",
+          "Alces alces",
+          "Felis catus",
+          "Capra hircus",
+          "Bos taurus",
+          "Cingulata",
+          "Talpidae",
+          "Ictalurus",
+          "Sciurus",
+          "Anseriformes",
+          "Icteridae",
+          "Mugilidae",
+          "Canis latrans",
+          "Canis familiaris",
+          "Carnivora",
+          "Iguana iguana",
+          "Colubridae",
+          "Columbidae",
+          "Sigmodon fulviventer",
+          "Juniperus",
+          "Tayassuidae",
+          "Didelphimorphia",
+          "Anatidae",
+          "Vitis",
+          "Artiodactyla"
+        ],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Secondary consumer (taxonomy)",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Otospermophilus beecheyi",
+      "commonName": "California Ground Squirrel",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/1353651/medium.jpg",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Rodentia",
+        "family": "Sciuridae",
+        "genus": "Otospermophilus"
+      },
+      "observationSummary": "58,777 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/180007"
+        }
+      ],
+      "sources": [
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "carrion",
+          "Batrachochytrium dendrobatidis",
+          "Nyctotherus",
+          "Opalina",
+          "Anaxyrus boreas",
+          "Megalodiscus",
+          "Halipegus",
+          "Taricha torosa",
+          "Fagaceae",
+          "Fungi",
+          "Vertebrata",
+          "Magnoliopsida",
+          "Cephalogonimus americanus",
+          "Ribeiroia ondatrae",
+          "Rana draytonii",
+          "Nematoda",
+          "Alaria",
+          "Echinostoma",
+          "Insecta",
+          "Pseudacris regilla",
+          "Aves",
+          "Echinostoma trivolvis"
+        ],
+        "eatenBy": [
+          "Aquila chrysaetos",
+          "Ribeiroia ondatrae",
+          "Buteo jamaicensis",
+          "Echinostoma",
+          "Ardea herodias",
+          "Canis latrans",
+          "Crotalus",
+          "Canis lupus familiaris",
+          "Echinostoma trivolvis",
+          "Taxidea taxus",
+          "Mustela",
+          "Felis silvestris"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 2,
+      "trophicLabel": "primary consumer",
+      "trophicNote": "Herbivore (taxonomy)",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Hermissenda opalescens",
+      "commonName": "Opalescent Nudibranch",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://static.inaturalist.org/photos/2401372/medium.JPG",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Mollusca",
+        "class": "Gastropoda",
+        "order": "Nudibranchia",
+        "family": "Myrrhinidae",
+        "genus": "Hermissenda"
+      },
+      "observationSummary": "18,395 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/494603"
+        }
+      ],
+      "sources": [
+        "iNaturalist",
+        "GBIF"
+      ],
+      "interactions": {
+        "eats": [
+          "Pyrosoma atlanticum",
+          "Ectopleura",
+          "Coryne",
+          "Pycnoclavella stanleyi",
+          "Tubulariidae",
+          "Eudistoma ritteri"
+        ],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 0,
+      "trophicLabel": "decomposer",
+      "trophicNote": "Decomposer/detritivore (taxonomy)",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Zonotrichia leucophrys",
+      "commonName": "White-crowned Sparrow",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/27928/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Aves",
+        "order": null,
+        "family": null,
+        "genus": "Zonotrichia"
+      },
+      "observationSummary": "147,440 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/9176"
+        }
+      ],
+      "sources": [
+        "iNaturalist",
+        "GBIF"
+      ],
+      "interactions": {
+        "eats": [
+          "Avena",
+          "Phalaris canariensis",
+          "Lactuca serriola",
+          "Erodium cicutarium",
+          "Sonchus asper",
+          "Portulaca oleracea",
+          "Calandrinia ciliata",
+          "Trifolium",
+          "Silene",
+          "Brassica nigra",
+          "Claytonia perfoliata",
+          "Deinandra fasciculata",
+          "Anthemis cotula",
+          "Helianthus",
+          "Madia sativa",
+          "Centaurea melitensis",
+          "Toxicodendron diversilobum",
+          "Avena fatua",
+          "Brahea armata",
+          "Spergula arvensis",
+          "Zea mays",
+          "Stellaria media",
+          "Amaranthus retroflexus",
+          "Lupinus",
+          "Cassia",
+          "Sorghum bicolor",
+          "Solanum ptychanthum",
+          "Saissetia oleae",
+          "Ceanothus",
+          "Membracidae",
+          "Rumex acetosella",
+          "Psyllidae",
+          "Chenopodium album",
+          "Sambucus",
+          "Carex",
+          "Triticum",
+          "Pentatomidae",
+          "Heteroptera",
+          "Tracheophyta",
+          "Animalia",
+          "Polygonum",
+          "Geranium dissectum",
+          "Rubus",
+          "Ficus",
+          "Lepidoptera",
+          "Prunus",
+          "Cicadellidae",
+          "Eschscholzia californica",
+          "Magnoliopsida",
+          "Poaceae",
+          "Formicidae",
+          "Ranunculales",
+          "Solanales",
+          "Sapindales",
+          "Fabales",
+          "Brassicales",
+          "Dipsacales",
+          "Caryophyllales",
+          "Rosales",
+          "Geraniales",
+          "Asterales",
+          "Poales",
+          "Orthoptera",
+          "Hemiptera",
+          "Cercopidae",
+          "Sporobolus",
+          "Diptera",
+          "Hymenoptera",
+          "Coleoptera",
+          "Endotropis crocea crocea"
+        ],
+        "eatenBy": [
+          "Simulium craigi",
+          "Simulium silvestre",
+          "Lanius borealis",
+          "Surnia ulula",
+          "Falco mexicanus",
+          "Falco sparverius",
+          "Accipiter cooperii",
+          "Accipiter striatus",
+          "Aquila chrysaetos",
+          "Falco peregrinus",
+          "Buteo swainsoni"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Secondary consumer (taxonomy)",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Pelecanus occidentalis",
+      "commonName": "Brown Pelican",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/74013719/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Aves",
+        "order": null,
+        "family": null,
+        "genus": "Pelecanus"
+      },
+      "observationSummary": "135,541 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/4328"
+        }
+      ],
+      "sources": [
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Actinopterygii",
+          "Tylosurus crocodilus",
+          "Gobioides broussonnetii",
+          "Calamus proridens",
+          "Larimus fasciatus",
+          "Selene setapinnis",
+          "Hemiramphus brasiliensis",
+          "Caranx crysos",
+          "Anchoa mitchilli",
+          "Anchoa hepsetus",
+          "Chloroscombrus chrysurus",
+          "Synodus foetens",
+          "Orthopristis chrysoptera",
+          "Harengula jaguana",
+          "Stenotomus caprinus",
+          "Hemicaranx amblyrhynchus",
+          "Bagre marinus",
+          "Peprilus burti",
+          "Diplectrum formosum",
+          "Symphurus urospilus",
+          "Lolliguncula brevis",
+          "Decapterus punctatus",
+          "Bairdiella chrysoura",
+          "Menidia beryllina",
+          "Farfantepenaeus duorarum",
+          "Cyprinodon variegatus",
+          "Leiostomus xanthurus",
+          "Oreochromis mossambicus",
+          "Harengula",
+          "Cetengraulis edentulus",
+          "Micropogonias undulatus",
+          "Trichiurus lepturus",
+          "Prionotus tribulus",
+          "Teleostei",
+          "Brevoortia patronus",
+          "Sardinops sagax",
+          "Engraulis mordax",
+          "Animalia",
+          "Jenkinsia lamprotaenia",
+          "Anchoa lyolepis",
+          "Mugil curema",
+          "Cynoscion arenarius",
+          "Peprilus paru",
+          "Diodon holocanthus",
+          "Cynoscion nebulosus",
+          "Lagodon rhomboides",
+          "Opisthonema oglinum",
+          "Menticirrhus americanus",
+          "Lutjanus campechanus",
+          "Auxis thazard",
+          "Scomberomorus cavalla",
+          "Scomberomorus maculatus",
+          "Citharichthys spilopterus",
+          "Mugil cephalus",
+          "Fundulus majalis",
+          "Gallus",
+          "Isopoda",
+          "Sciaenops ocellatus"
+        ],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Secondary consumer (taxonomy)",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Quercus agrifolia",
+      "commonName": "coast live oak",
+      "category": "plant",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/18734105/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Plantae",
+        "order": null,
+        "family": null,
+        "genus": "Quercus"
+      },
+      "observationSummary": "62,267 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/47850"
+        }
+      ],
+      "sources": [
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [
+          "Bos",
+          "Mammalia",
+          "Cervidae"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 1,
+      "trophicLabel": "producer",
+      "trophicNote": "Produces energy via photosynthesis",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Toxicodendron diversilobum",
+      "commonName": "Pacific poison oak",
+      "category": "plant",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://static.inaturalist.org/photos/14897857/medium.jpeg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Plantae",
+        "order": null,
+        "family": null,
+        "genus": "Toxicodendron"
+      },
+      "observationSummary": "59,082 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/51080"
+        }
+      ],
+      "sources": [
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [
+          "Caloptilia diversilobiella",
+          "Acmaeodera mariposa"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [
+          "Andrena microchlora",
+          "Nomada"
+        ],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 1,
+      "trophicLabel": "producer",
+      "trophicNote": "Produces energy via photosynthesis",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Danaus plexippus",
+      "commonName": "Monarch",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/625551566/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Insecta",
+        "order": null,
+        "family": null,
+        "genus": "Danaus"
+      },
+      "observationSummary": "471,025 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/48662"
+        }
+      ],
+      "sources": [
+        "iNaturalist",
+        "GBIF"
+      ],
+      "interactions": {
+        "eats": [
+          "Aster novae angliae",
+          "Gomphocarpus cancellatus",
+          "Hesperis matronalis",
+          "Apocynum androsaemifolium",
+          "Eupatorium perfoliatum",
+          "Aster",
+          "Apocynaceae",
+          "Bidens cernua",
+          "Doellingeria umbellata",
+          "Phlox",
+          "Asclepias incarnata",
+          "Liatris",
+          "Oleaceae",
+          "Asclepias syriaca",
+          "Aster lanceolatus",
+          "Euphorbia",
+          "Euthamia graminifolia",
+          "Liatris scariosa",
+          "Asclepias curassavica",
+          "Syringa vulgaris",
+          "Trifolium pratense",
+          "Aster laevis",
+          "Cirsium arvense",
+          "Persicaria amphibia",
+          "Asclepias",
+          "Solidago altissima",
+          "Platanthera blephariglottis",
+          "Cirsium",
+          "Silene vulgaris",
+          "Solidago",
+          "Taraxacum officinale",
+          "Eutrochium maculatum",
+          "Syringa",
+          "Daucus carota",
+          "Salix",
+          "Polygala polygama",
+          "Achillea millefolium",
+          "Erigeron canadensis",
+          "Dipsacus fullonum",
+          "Verbena hastata",
+          "Apocynum",
+          "Medicago sativa",
+          "Liatris cylindracea",
+          "Calotropis gigantea"
+        ],
+        "eatenBy": [
+          "Hagenius brevistylus",
+          "Harmonia axyridis",
+          "Toxostoma rufum",
+          "Camponotus pennsylvanicus",
+          "Turdus migratorius",
+          "Icterus",
+          "Passeridae",
+          "Progne subis",
+          "Mus",
+          "Cardinalidae"
+        ],
+        "pollinates": [
+          "Asclepias uncialis",
+          "Berberis nevinii",
+          "Asclepias lanceolata",
+          "Asclepias exaltata",
+          "Asclepias verticillata",
+          "Asclepias incarnata",
+          "Asclepias curassavica",
+          "Asclepias tuberosa",
+          "Platanthera ciliaris",
+          "Liatris aspera",
+          "Asclepias syriaca",
+          "Gomphocarpus physocarpus",
+          "Platanthera blephariglottis",
+          "Lantana",
+          "Heracleum sphondylium ssp. montanum"
+        ],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Eats animals, preyed upon by 10 species",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Ardea herodias",
+      "commonName": "Great Blue Heron",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/65060931/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Aves",
+        "order": null,
+        "family": null,
+        "genus": "Ardea"
+      },
+      "observationSummary": "419,900 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/4956"
+        }
+      ],
+      "sources": [
+        "iNaturalist",
+        "GBIF"
+      ],
+      "interactions": {
+        "eats": [
+          "Actinopterygii",
+          "Opsanus beta",
+          "Opalina",
+          "Ribeiroia ondatrae",
+          "Batrachochytrium dendrobatidis",
+          "Arrenurus sp.",
+          "Nyctotherus",
+          "Gregarinidae",
+          "Anaxyrus boreas",
+          "Tropisternus",
+          "Megalodiscus",
+          "Lethocerus americanus",
+          "Tramea",
+          "Halipegus",
+          "Belostoma",
+          "Anax junius",
+          "Agelaius phoeniceus",
+          "Ondatra zibethicus",
+          "Peromyscus maniculatus",
+          "Microtus pennsylvanicus",
+          "Taricha torosa",
+          "Chlidonias niger",
+          "Echinostoma",
+          "Tachycineta bicolor",
+          "Progne subis",
+          "Cricetidae",
+          "Lestes",
+          "Teleostei",
+          "Tracheophyta",
+          "Pimephales promelas",
+          "Taricha",
+          "Chordata",
+          "Thamnophis atratus",
+          "Decapoda",
+          "Acris crepitans",
+          "Coenagrion",
+          "Hydrophilus",
+          "Sistrurus catenatus",
+          "Cephalogonimus americanus",
+          "Hirundo rustica",
+          "Arctomys beecheyi",
+          "Lepomis macrochirus",
+          "Pimephales notatus",
+          "Pseudacris triseriata",
+          "Pseudacris regilla",
+          "Ambystoma tigrinum",
+          "Tringa solitaria",
+          "Rana draytonii",
+          "Fulica americana",
+          "Lithobates clamitans",
+          "Tamias striatus",
+          "Anaxyrus americanus",
+          "Trionyx spiniferus",
+          "Thamnophis saurita",
+          "Thamnophis sirtalis",
+          "Alaria",
+          "Rattus",
+          "Nematoda",
+          "Echinostoma trivolvis",
+          "Cyprinus carpio",
+          "Pseudocorynosoma constrictum",
+          "Aix sponsa",
+          "Chelydra serpentina",
+          "Nerodia",
+          "Chrysemys picta",
+          "Gastropoda",
+          "Petrochelidon pyrrhonota",
+          "Carassius auratus",
+          "Larus argentatus"
+        ],
+        "eatenBy": [
+          "Ribeiroia ondatrae",
+          "Lynx rufus",
+          "Buteo jamaicensis",
+          "Procyon lotor",
+          "Corvus corax",
+          "Bubo virginianus",
+          "Bubo scandiacus",
+          "Echinostoma",
+          "Haliaeetus leucocephalus",
+          "Culicidae",
+          "Ursidae",
+          "Cathartes aura",
+          "Aquila chrysaetos"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Secondary consumer (taxonomy)",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Diplacus aurantiacus",
+      "commonName": "orange bush monkeyflower",
+      "category": "plant",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/29807440/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Plantae",
+        "order": null,
+        "family": null,
+        "genus": "Diplacus"
+      },
+      "observationSummary": "33,099 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/777371"
+        }
+      ],
+      "sources": [
+        "iNaturalist",
+        "GBIF"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [
+          "Philaenus spumarius",
+          "Colladonus intricatus",
+          "Colladonus intricata",
+          "Colladonus rupinatus",
+          "Colladonus commissus",
+          "Ibidoecus longiclypeatus",
+          "Tetralimonius ornatulus",
+          "Eulonchus marginatus",
+          "Closterocoris amoenus",
+          "Oecanthus californicus",
+          "Platylyra californica",
+          "Plebeia emerina",
+          "Adela septentrionella",
+          "Cultellunguis americanus",
+          "Xylocopa tabaniformis",
+          "Pseudoscaeva diversifasciatus",
+          "Eulonchus smaragdinus",
+          "Euphydryas chalcedona chalcedona",
+          "Selasphorus rufus",
+          "Callophrys dumetorum",
+          "Eupeodes fumipennis",
+          "Tharsalea gorgon",
+          "Selasphorus",
+          "Zerene eurydice",
+          "Selasphorus sasin",
+          "Celastrina echo",
+          "Euphydryas chalcedona",
+          "Limenitis bredowii californica",
+          "Ochlodes agricola",
+          "Toxomerus marginatus",
+          "Limenitis lorquini",
+          "Battus philenor hirsuta",
+          "Calypte anna",
+          "Lon melane",
+          "Volucella bombylans",
+          "Bombus californicus",
+          "Hippodamia convergens",
+          "Xylocopa tabaniformis orpifex"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 1,
+      "trophicLabel": "producer",
+      "trophicNote": "Produces energy via photosynthesis",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Salvia spathacea",
+      "commonName": "Hummingbird Sage",
+      "category": "plant",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/526697773/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Plantae",
+        "order": null,
+        "family": null,
+        "genus": "Salvia"
+      },
+      "observationSummary": "9,121 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/64133"
+        }
+      ],
+      "sources": [
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [
+          "Pyrausta dapalis",
+          "Anstenoptilia marmarodactyla",
+          "Xylocopa tabaniformis",
+          "Archilochus alexandri",
+          "Selasphorus rufus",
+          "Hyles lineata",
+          "Selasphorus",
+          "Selasphorus sasin",
+          "Calypte anna",
+          "Goniocotes microcephalus",
+          "Pieris rapae",
+          "Xylocopa tabaniformis orpifex",
+          "Polites sabuleti",
+          "Danaus plexippus",
+          "Apis mellifera"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 1,
+      "trophicLabel": "producer",
+      "trophicNote": "Produces energy via photosynthesis",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Buteo jamaicensis",
+      "commonName": "Red-tailed Hawk",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/101327658/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Aves",
+        "order": null,
+        "family": null,
+        "genus": "Buteo"
+      },
+      "observationSummary": "336,648 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/5212"
+        }
+      ],
+      "sources": [
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Myodes rutilus",
+          "Euchelicerata",
+          "Icteridae",
+          "Pica hudsonia",
+          "Urocitellus richardsonii",
+          "Callipepla gambelii",
+          "Lampropeltis getula",
+          "Dryobates scalaris",
+          "Coluber flagellum",
+          "Coluber taeniatus",
+          "Phrynosoma orbiculare",
+          "Plestiodon brevirostris",
+          "Rhinocheilus lecontei",
+          "Ictidomys tridecemlineatus",
+          "Heterodon",
+          "Poliocitellus franklinii",
+          "Anguidae",
+          "Vespertilionidae",
+          "Opheodrys vernalis",
+          "Parulidae",
+          "Melospiza",
+          "Anser",
+          "Chordata",
+          "Patagioenas fasciata",
+          "Otospermophilus variegatus",
+          "Urocitellus columbianus",
+          "Urocitellus townsendii",
+          "Crotalus oreganus",
+          "Teiidae",
+          "Piciformes",
+          "Columba",
+          "Urocitellus brunneus",
+          "Ammospermophilus harrisii",
+          "Tamias minimus",
+          "Tamias dorsalis",
+          "Xerospermophilus tereticaudus",
+          "Urocitellus beldingi",
+          "Perognathus parvus",
+          "Thomomys townsendii",
+          "Sigmodon fulviventer",
+          "Lepus townsendii",
+          "Condylura cristata",
+          "Chilopoda",
+          "Anseriformes",
+          "Anatidae",
+          "Teleostei",
+          "Artiodactyla",
+          "Sciuridae",
+          "Soricidae",
+          "Scorpiones",
+          "Reptilia",
+          "Serpentes",
+          "Sciurus lateralis",
+          "Falcipennis canadensis",
+          "Corvus caurinus",
+          "Microtus pennsylvanicus",
+          "Reithrodontomys",
+          "Thamnophis cyrtopsis",
+          "Amphibia",
+          "Passeriformes",
+          "Animalia",
+          "Acrididae",
+          "Araneae",
+          "Mammalia",
+          "Felis catus",
+          "Phalaenoptilus nuttallii",
+          "Sceloporus uniformis",
+          "Aeorestes cinereus",
+          "Aspidoscelis tigris",
+          "Toxostoma bendirei",
+          "Leiothlypis luciae",
+          "Tyrannus verticalis",
+          "Leiothlypis virginiae",
+          "Setophaga nigrescens",
+          "Icterus parisorum",
+          "Icterus cucullatus",
+          "Setophaga graciae",
+          "Quiscalus mexicanus",
+          "Lichanura orcutti",
+          "Uropygi",
+          "Tamias panamintinus",
+          "Leiothlypis celata",
+          "Solifugae",
+          "Setophaga petechia",
+          "Peromyscus eremicus",
+          "Xerospermophilus mohavensis",
+          "Urocitellus washingtoni",
+          "Orthoptera",
+          "Euderma maculatum",
+          "Geothlypis tolmiei",
+          "Parastrellus hesperus",
+          "Corynorhinus townsendii",
+          "Lasionycteris noctivagans",
+          "Sceloporus graciosus",
+          "Sceloporus occidentalis",
+          "Sceloporus jarrovii",
+          "Salvadora hexalepis",
+          "Dipsosaurus dorsalis",
+          "Aegolius acadicus",
+          "Aphelocoma californica",
+          "Sialia currucoides",
+          "Eremophila alpestris",
+          "Arctomys beecheyi",
+          "Setophaga occidentalis",
+          "Talpidae",
+          "Phasianidae",
+          "Dipodomys deserti",
+          "Lampropeltis californiae",
+          "Microtus pinetorum",
+          "Heloderma suspectum",
+          "Euphagus cyanocephalus",
+          "Alectoris chukar",
+          "Pooecetes gramineus",
+          "Icterus bullockii",
+          "Crotalus molossus",
+          "Neurotrichus gibbsii",
+          "Elaphe obsoleta",
+          "Mustela frenata",
+          "Pica pica",
+          "Gambelia wislizenii",
+          "Antrozous pallidus",
+          "Sauromalus ater",
+          "Neotoma lepida",
+          "Peromyscus truei",
+          "Myotis californicus",
+          "Myodes gapperi",
+          "Microtus montanus",
+          "Picoides villosus",
+          "Eumeces obsoletus",
+          "Xanthocephalus xanthocephalus",
+          "Myotis ciliolabrum",
+          "Amblystoma",
+          "Notiosorex crawfordi",
+          "Pituophis catenifer",
+          "Sylvilagus audubonii",
+          "Pituophis melanoleucus",
+          "Sturnus vulgaris",
+          "Mephitis mephitis",
+          "Mus",
+          "Spermophilus",
+          "Bonasa umbellus",
+          "Melospiza melodia",
+          "Passer domesticus",
+          "Icteria virens",
+          "Blarina brevicauda",
+          "Leporidae",
+          "Turdus migratorius",
+          "Phasianus",
+          "Microtus xanthognathus",
+          "Sceloporus magister",
+          "Didelphis marsupialis",
+          "Microtus ochrogaster",
+          "Fulica americana",
+          "Diadophis punctatus",
+          "Tamias striatus",
+          "Branta canadensis",
+          "Sylvilagus floridanus",
+          "Cyanocitta cristata",
+          "Coluber constrictor",
+          "Squamata",
+          "Sigmodon",
+          "Sciurus aberti",
+          "Dipodomys merriami",
+          "Zenaida",
+          "Agkistrodon contortrix",
+          "Pituophis",
+          "Colaptes auratus"
+        ],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Secondary consumer (taxonomy)",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Eschscholzia californica",
+      "commonName": "California poppy",
+      "category": "plant",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://static.inaturalist.org/photos/14208264/medium.jpeg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Plantae",
+        "order": null,
+        "family": null,
+        "genus": "Eschscholzia"
+      },
+      "observationSummary": "98,424 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/48225"
+        }
+      ],
+      "sources": [
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Eschscholzia californica"
+        ],
+        "eatenBy": [
+          "Eumecomera cyanipennis",
+          "Anasimyia perfidiosus",
+          "Sargus viridis",
+          "Dilophus tibialis",
+          "Hemipenthes inops",
+          "Platycheirus stegnus",
+          "Perdita interrupta",
+          "Lytta comans",
+          "Bombus caliginosus",
+          "Plebeia emerina",
+          "Micralictoides ruficaudus",
+          "Icaricia icarioides missionensis",
+          "Neoterpes edwardsata",
+          "Villa lateralis",
+          "Habropoda depressa",
+          "Ferdinandea croesus",
+          "Lasioglossum pavonotum",
+          "Sphaerophoria sulphuripes",
+          "Toxomerus occidentalis",
+          "Epicauta puncticollis",
+          "Geminaria canalis",
+          "Tharsalea helloides",
+          "Acmaeodera hepburnii",
+          "Adela trigrapha",
+          "Lytta stygica",
+          "Paragus haemorrhous",
+          "Bombus vancouverensis vancouverensis",
+          "Megachile perihirta",
+          "Coenonympha california",
+          "Eupeodes fumipennis",
+          "Anthrenus verbasci",
+          "Junonia grisea",
+          "Merodon equestris",
+          "Icaricia acmon",
+          "Acmaeodera connexa",
+          "Pieris marginalis",
+          "Euphydryas chalcedona",
+          "Eristalis arbustorum",
+          "Agapostemon texanus",
+          "Hylephila phyleus",
+          "Toxomerus marginatus",
+          "Battus philenor hirsuta",
+          "Amartus tinctus",
+          "Hemipenthes",
+          "Brachysomida californica",
+          "Pyrobombus",
+          "Otospermophilus beecheyi",
+          "Dione vanillae",
+          "Polistes aurifer",
+          "Halictus farinosus",
+          "Bombus melanopygus",
+          "Calypte anna",
+          "Bombus rufocinctus",
+          "Halictus ligatus",
+          "Bombus crotchii",
+          "Halictus rubicundus",
+          "Anthophora bomboides",
+          "Ceratina",
+          "Eupeodes volucris",
+          "Syrphus opinator",
+          "Allograpta obliqua",
+          "Augochlorella pomoniella"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 1,
+      "trophicLabel": "producer",
+      "trophicNote": "Produces energy via photosynthesis",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Salvia mellifera",
+      "commonName": "black sage",
+      "category": "plant",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/352364687/medium.jpg",
+      "taxonomy": {
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Magnoliopsida",
+        "order": "Lamiales",
+        "family": "Lamiaceae",
+        "genus": "Salvia"
+      },
+      "observationSummary": "30,029 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/50643"
+        }
+      ],
+      "sources": [
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [
+          "Tiaja interrupta"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 1,
+      "trophicLabel": "producer",
+      "trophicNote": "Produces energy via photosynthesis",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Heteromeles arbutifolia",
+      "commonName": "Toyon",
+      "category": "plant",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/342304993/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Plantae",
+        "order": null,
+        "family": null,
+        "genus": "Heteromeles"
+      },
+      "observationSummary": "53,522 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/53405"
+        }
+      ],
+      "sources": [
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Aves"
+        ],
+        "eatenBy": [
+          "unidentified"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 1,
+      "trophicLabel": "producer",
+      "trophicNote": "Produces energy via photosynthesis",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Odocoileus hemionus",
+      "commonName": "Mule Deer",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/42633041/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Mammalia",
+        "order": null,
+        "family": null,
+        "genus": "Odocoileus"
+      },
+      "observationSummary": "184,038 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/42220"
+        }
+      ],
+      "sources": [
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Rubus spectabilis"
+        ],
+        "eatenBy": [
+          "Ursus arctos"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 2,
+      "trophicLabel": "primary consumer",
+      "trophicNote": "Herbivore — eats 1 plant species",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Numenius americanus",
+      "commonName": "Long-billed Curlew",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://static.inaturalist.org/photos/169122861/medium.jpg",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Aves",
+        "order": "Charadriiformes",
+        "family": "Scolopacidae",
+        "genus": "Numenius"
+      },
+      "observationSummary": "25,452 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/3906"
+        }
+      ],
+      "sources": [
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Neotrypaea",
+          "Caridoida",
+          "Malacostraca",
+          "Brachyura",
+          "Decapoda",
+          "Pachygrapsus crassipes",
+          "Actinopterygii",
+          "Bivalvia",
+          "Myrsidea birmensis",
+          "Emerita analoga"
+        ],
+        "eatenBy": [
+          "Buteo regalis",
+          "Aquila chrysaetos",
+          "Buteo swainsoni"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Secondary consumer (taxonomy)",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Pachygrapsus crassipes",
+      "commonName": "Striped Shore Crab",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/66333024/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Animalia",
+        "order": null,
+        "family": null,
+        "genus": "Pachygrapsus"
+      },
+      "observationSummary": "31,379 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/47188"
+        }
+      ],
+      "sources": [
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Doryteuthis opalescens",
+          "Citharichthys sordidus",
+          "terrestrial-detritus",
+          "marine-detritus",
+          "Marine detritus",
+          "carrion-detritus",
+          "Detritus",
+          "Grimothea planipes",
+          "Octopoda",
+          "Pleocyemata",
+          "Brachyura",
+          "Chlorophyta",
+          "Pachygrapsus crassipes"
+        ],
+        "eatenBy": [
+          "Tringa semipalmatus",
+          "Octopus bimaculatus",
+          "Rallus obsoletus",
+          "Octopus bimaculoides",
+          "Numenius hudsonicus",
+          "Tringa semipalmata",
+          "Nyctanassa violacea",
+          "Anthopleura sola",
+          "Egretta thula",
+          "Numenius americanus",
+          "Gavia immer",
+          "Larus delawarensis",
+          "Egretta caerulea",
+          "Podilymbus podiceps",
+          "Numenius",
+          "Triakis semifasciata",
+          "Enhydra lutris nereis",
+          "Pachygrapsus crassipes"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Eats animals, preyed upon by 18 species",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Aphelocoma californica",
+      "commonName": "California Scrub-Jay",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://static.inaturalist.org/photos/1576701/medium.jpg",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Aves",
+        "order": "Passeriformes",
+        "family": "Corvidae",
+        "genus": "Aphelocoma"
+      },
+      "observationSummary": "73,952 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/506118"
+        }
+      ],
+      "sources": [
+        "iNaturalist",
+        "GBIF"
+      ],
+      "interactions": {
+        "eats": [
+          "Reticulitermes hesperus",
+          "Diadophis punctatus amabilis",
+          "Araneus andrewsi",
+          "Vespinae",
+          "Hyles lineata",
+          "Nymphalis antiopa",
+          "Sambucus nigra ssp. cerulea",
+          "Quercus douglasii",
+          "Arachis monticola",
+          "Heteromeles arbutifolia",
+          "Elgaria multicarinata",
+          "Spirobolida",
+          "Lithobiomorpha",
+          "Avena",
+          "Sceloporus occidentalis",
+          "Chordata",
+          "Zea mays",
+          "Rhamnus purshiana",
+          "Arctostaphylos",
+          "Umbellularia californica",
+          "Saissetia oleae",
+          "Malacosoma californicum",
+          "Malus domestica",
+          "Vanessa cardui",
+          "Quercus agrifolia",
+          "Sambucus",
+          "Triticum",
+          "Diplopoda",
+          "Vitis",
+          "Paropsis atomaria",
+          "Clitellata",
+          "Ribes",
+          "Rubus",
+          "Ficus",
+          "Lepidoptera",
+          "Pyrus",
+          "Prunus",
+          "Araneae",
+          "Dermaptera",
+          "Quercus",
+          "Apis mellifera",
+          "Magnoliopsida",
+          "Mammalia",
+          "Poaceae",
+          "Neuroptera",
+          "Auriparus flaviceps",
+          "Opiliones",
+          "Tenthredinidae",
+          "Passeriformes",
+          "Orthoptera",
+          "Hemiptera",
+          "Carabidae",
+          "Malus pumila",
+          "Cotinis mutabilis",
+          "Arachis hypogaea",
+          "Forficula auricularia",
+          "Plantae",
+          "Isopoda",
+          "Cydia pomonella",
+          "Coleoptera",
+          "Hymenoptera",
+          "Diadophis punctatus",
+          "Diptera",
+          "Myrsidea borneoensis",
+          "Arthropoda",
+          "Aves"
+        ],
+        "eatenBy": [
+          "Ornithoica vicina",
+          "Accipiter cooperii",
+          "Buteo jamaicensis",
+          "Aquila chrysaetos"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Secondary consumer (taxonomy)",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Calypte anna",
+      "commonName": "Anna's Hummingbird",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://static.inaturalist.org/photos/358438292/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Aves",
+        "order": null,
+        "family": null,
+        "genus": "Calypte"
+      },
+      "observationSummary": "121,053 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/6317"
+        }
+      ],
+      "sources": [
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Secondary consumer (taxonomy)",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Artemisia californica",
+      "commonName": "California sagebrush",
+      "category": "plant",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/121001827/medium.jpg",
+      "taxonomy": {
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Magnoliopsida",
+        "order": "Asterales",
+        "family": "Asteraceae",
+        "genus": "Artemisia"
+      },
+      "observationSummary": "41,788 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/53357"
+        }
+      ],
+      "sources": [
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 1,
+      "trophicLabel": "producer",
+      "trophicNote": "Produces energy via photosynthesis",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Pituophis catenifer",
+      "commonName": "Gopher Snake",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/389786008/medium.jpeg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Reptilia",
+        "order": null,
+        "family": null,
+        "genus": "Pituophis"
+      },
+      "observationSummary": "75,238 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/29044"
+        }
+      ],
+      "sources": [
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Sylvilagus audubonii",
+          "Aves",
+          "Rodentia",
+          "Sylvilagus",
+          "Neotoma",
+          "Ictidomys parvidens",
+          "Microtus californicus",
+          "Otospermophilus beecheyi",
+          "Haemorhous mexicanus",
+          "Sciuridae",
+          "Melozone crissalis",
+          "Spinus psaltria",
+          "Sceloporus uniformis",
+          "Chaetodipus spinatus",
+          "Stelgidopteryx serripennis",
+          "Chamaea fasciata",
+          "Sitta pygmaea",
+          "Polioptila melanura",
+          "Phainopepla nitens",
+          "Tamias panamintinus",
+          "Psaltriparus minimus",
+          "Peromyscus eremicus",
+          "Xerospermophilus mohavensis",
+          "Xerospermophilus tereticaudus",
+          "Sialia mexicana",
+          "Chaetodipus penicillatus",
+          "Otospermophilus variegatus",
+          "Sceloporus graciosus",
+          "Sceloporus occidentalis",
+          "Eremophila alpestris",
+          "Hirundo rustica",
+          "Sialia currucoides",
+          "Myiarchus cinerascens",
+          "Troglodytes aedon",
+          "Chaetodipus formosus",
+          "Dipodomys deserti",
+          "Euphagus cyanocephalus",
+          "Crotalus molossus",
+          "Cyanocitta stelleri",
+          "Peromyscus truei",
+          "Dipodomys merriami",
+          "Sturnus vulgaris",
+          "Lepus californicus",
+          "Zenaida asiatica",
+          "Leporidae",
+          "Zenaida macroura",
+          "Dipodomys microps",
+          "Gambelia wislizenii",
+          "Ammospermophilus leucurus",
+          "Junco hyemalis",
+          "Callipepla californica",
+          "Geococcyx californianus",
+          "Colaptes auratus",
+          "Peromyscus maniculatus",
+          "Dipodomys",
+          "Sturnella neglecta",
+          "Orthoptera",
+          "Uta stansburiana",
+          "Sceloporus magister",
+          "Petrochelidon pyrrhonota",
+          "Callipepla gambelii",
+          "Turdus migratorius",
+          "Gallus gallus",
+          "Pituophis catenifer"
+        ],
+        "eatenBy": [
+          "Coluber flagellum ruddocki",
+          "Buteo lineatus elegans",
+          "Nicrophorus guttula",
+          "Buteo jamaicensis calurus",
+          "Urocyon cinereoargenteus",
+          "Vespula pensylvanica",
+          "Buteo jamaicensis",
+          "Lampropeltis californiae",
+          "Coluber flagellum",
+          "Canis latrans",
+          "Coluber taeniatus",
+          "Trimorphodon lyrophanes",
+          "Quiscalus mexicanus",
+          "Coluber lateralis lateralis",
+          "Vulpes macrotis",
+          "Buteo regalis",
+          "Cathartes aura",
+          "Aquila chrysaetos",
+          "Coluber constrictor",
+          "Buteo swainsoni",
+          "Bubo virginianus",
+          "Accipiter cooperii",
+          "Falco mexicanus",
+          "Corvus corax"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Eats animals, preyed upon by 24 species",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Baccharis pilularis",
+      "commonName": "coyote brush",
+      "category": "plant",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/5362069/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Plantae",
+        "order": null,
+        "family": null,
+        "genus": "Baccharis"
+      },
+      "observationSummary": "53,195 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/53359"
+        }
+      ],
+      "sources": [
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 1,
+      "trophicLabel": "producer",
+      "trophicNote": "Produces energy via photosynthesis",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Pisaster ochraceus",
+      "commonName": "Ochre Sea Star",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/248324436/medium.jpg",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Echinodermata",
+        "class": "Asteroidea",
+        "order": "Forcipulatida",
+        "family": "Asteriidae",
+        "genus": "Pisaster"
+      },
+      "observationSummary": "74,413 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/49699"
+        }
+      ],
+      "sources": [
+        "iNaturalist",
+        "GBIF"
+      ],
+      "interactions": {
+        "eats": [
+          "Mytilus californianus",
+          "Tonicella lineata",
+          "Tegula funebralis",
+          "Mytilus",
+          "Mollusca",
+          "Thecostraca"
+        ],
+        "eatenBy": [
+          "Solaster dawsoni",
+          "Larus",
+          "Pycnopodia helianthoides",
+          "Loxorhynchus grandis",
+          "Larus glaucescens",
+          "Larus occidentalis"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Eats animals, preyed upon by 6 species",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Anas platyrhynchos",
+      "commonName": "Mallard",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/95268822/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Aves",
+        "order": null,
+        "family": null,
+        "genus": "Anas"
+      },
+      "observationSummary": "876,902 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/6930"
+        }
+      ],
+      "sources": [
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [
+          "Ursus arctos"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Secondary consumer (taxonomy)",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Haemorhous mexicanus",
+      "commonName": "House Finch",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://static.inaturalist.org/photos/178968933/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Aves",
+        "order": null,
+        "family": null,
+        "genus": "Haemorhous"
+      },
+      "observationSummary": "315,201 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/199840"
+        }
+      ],
+      "sources": [
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Liquidambar styraciflua",
+          "Insecta",
+          "Pyrus",
+          "Vitaceae",
+          "Santalum ellipticum",
+          "Dracaena rockii",
+          "Polyscias sandwicensis",
+          "Psidium cattleianum",
+          "Diospyros sandwicensis",
+          "Trema orientalis",
+          "Psidium guajava",
+          "Lantana camara",
+          "Bocconia frutescens",
+          "Passiflora edulis",
+          "Clidemia hirta",
+          "Rubus rosifolius",
+          "Passiflora suberosa",
+          "Rivina humilis",
+          "Schinus terebinthifolia"
+        ],
+        "eatenBy": [
+          "Culicidae",
+          "Glaucidium gnoma",
+          "Falco columbarius",
+          "Bubo virginianus",
+          "Falco mexicanus",
+          "Falco sparverius",
+          "Accipiter cooperii",
+          "Accipiter striatus",
+          "Megascops asio"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Secondary consumer (taxonomy)",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Patiria miniata",
+      "commonName": "Bat Star",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/127624366/medium.jpeg",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Echinodermata",
+        "class": "Asteroidea",
+        "order": "Valvatida",
+        "family": "Asterinidae",
+        "genus": "Patiria"
+      },
+      "observationSummary": "21,605 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/48830"
+        }
+      ],
+      "sources": [
+        "iNaturalist",
+        "GBIF"
+      ],
+      "interactions": {
+        "eats": [
+          "Unidentified compound tunicate",
+          "Celleporella pacifica",
+          "Clavelina",
+          "Polyclinum planum",
+          "Diaperoecia californica",
+          "Euherdmania claviformis",
+          "Styela montereyensis",
+          "Bryozoa",
+          "Primavelans insculpta",
+          "Hymenamphiastra cyanocrypta",
+          "Crisia occidentalis",
+          "Thalamoporella californica",
+          "Phidolopora labiata",
+          "Pycnoclavella stanleyi",
+          "Porifera",
+          "Chelyosoma productum",
+          "Lytechinus anamesus",
+          "Archidistoma",
+          "Unspecified seaweeds",
+          "Unspecified sea urchin",
+          "detritus",
+          "Urticina coriacea",
+          "Tubulipora",
+          "Animalia",
+          "Zalophus californianus",
+          "Echinodermata",
+          "Plantae",
+          "Teuthida"
+        ],
+        "eatenBy": [
+          "Urticina piscivora",
+          "Loxorhynchus grandis",
+          "Solaster dawsoni",
+          "Enhydra lutris",
+          "Enhydra lutris nereis"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Eats animals, preyed upon by 5 species",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Adenostoma fasciculatum",
+      "commonName": "chamise",
+      "category": "plant",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/621330016/medium.jpg",
+      "taxonomy": {
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Magnoliopsida",
+        "order": "Rosales",
+        "family": "Rosaceae",
+        "genus": "Adenostoma"
+      },
+      "observationSummary": "26,845 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/47146"
+        }
+      ],
+      "sources": [
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 1,
+      "trophicLabel": "producer",
+      "trophicNote": "Produces energy via photosynthesis",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Anthopleura sola",
+      "commonName": "Sunburst Anemone",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/10551/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Animalia",
+        "order": null,
+        "family": null,
+        "genus": "Anthopleura"
+      },
+      "observationSummary": "31,795 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/49051"
+        }
+      ],
+      "sources": [
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Unidentified compound tunicate",
+          "Aurelia",
+          "Epialtidae",
+          "Strongylocentrotus purpuratus",
+          "Grimothea planipes",
+          "Breviturma paucigranulata",
+          "Brachyura",
+          "Echinoidea",
+          "Pachygrapsus crassipes",
+          "Bryozoa",
+          "Panulirus interruptus",
+          "Urolophus halleri",
+          "Pugettia producta",
+          "Anthopleura sola"
+        ],
+        "eatenBy": [
+          "Aeolidia loui",
+          "Aeolidia",
+          "Dermasterias imbricata",
+          "Neobernaya spadicea",
+          "Hypsypops rubicundus",
+          "Anthopleura sola"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Eats animals, preyed upon by 6 species",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Pseudacris regilla",
+      "commonName": "Pacific chorus frog",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/173430494/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Amphibia",
+        "order": null,
+        "family": null,
+        "genus": "Pseudacris"
+      },
+      "observationSummary": "84,145 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/24259"
+        }
+      ],
+      "sources": [
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "benthic microalgae/periphyton",
+          "detritus",
+          "carrion",
+          "Callibaetis",
+          "Opalina",
+          "Arrenurus sp.",
+          "Gerridae",
+          "Gregarinidae",
+          "Batrachochytrium dendrobatidis",
+          "Nyctotherus",
+          "Tropisternus",
+          "Lethocerus americanus",
+          "Tramea",
+          "Halipegus",
+          "Belostoma",
+          "Anax junius",
+          "Hesperocorixa",
+          "Notonecta",
+          "Lestes",
+          "Ephydridae",
+          "Ceratopogonidae",
+          "Chironomidae",
+          "Haliplus",
+          "Coenagrion",
+          "Cephalogonimus americanus",
+          "Echinostoma",
+          "Alaria",
+          "Echinostoma trivolvis",
+          "Nematoda",
+          "Bacteria",
+          "Ribeiroia ondatrae",
+          "Plantae",
+          "Pseudacris regilla"
+        ],
+        "eatenBy": [
+          "Opalina",
+          "Nyctotherus",
+          "Batrachochytrium dendrobatidis",
+          "Tramea",
+          "Lethocerus americanus",
+          "Halipegus",
+          "Anaxyrus boreas",
+          "Belostoma",
+          "Anax junius",
+          "Buteo jamaicensis",
+          "Taricha torosa",
+          "Notonecta",
+          "Thamnophis atratus",
+          "Hydrophilus",
+          "Cephalogonimus americanus",
+          "Arctomys beecheyi",
+          "Alaria",
+          "Echinostoma trivolvis",
+          "Fulica americana",
+          "Ardea herodias",
+          "Canis latrans",
+          "Echinostoma",
+          "Rana draytonii",
+          "Ribeiroia ondatrae",
+          "Pseudacris regilla"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Eats animals, preyed upon by 25 species",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Elgaria multicarinata",
+      "commonName": "Southern Alligator Lizard",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/6926027/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Reptilia",
+        "order": null,
+        "family": null,
+        "genus": "Elgaria"
+      },
+      "observationSummary": "39,693 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/32055"
+        }
+      ],
+      "sources": [
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Gryllidea",
+          "Pieris rapae",
+          "Tipulidae",
+          "Elgaria multicarinata webbii",
+          "Gryllidae"
+        ],
+        "eatenBy": [
+          "Accipiter cooperii",
+          "Falco columbarius",
+          "Aquila chrysaetos",
+          "Bubo virginianus",
+          "Diadophis punctatus modestus",
+          "Lampropeltis zonata",
+          "Buteo lineatus",
+          "Vespula pensylvanica",
+          "Buteo jamaicensis",
+          "Ardea herodias",
+          "Coluber lateralis",
+          "Coluber lateralis lateralis",
+          "Formicidae",
+          "Prenolepis imparis",
+          "Ardea alba",
+          "Lampropeltis californiae",
+          "Aphelocoma californica",
+          "Buteo lineatus elegans",
+          "Cyprinus rubrofuscus",
+          "Coluber flagellum piceus",
+          "Latrodectus geometricus",
+          "Elgaria multicarinata webbii"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Eats animals, preyed upon by 22 species",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Crotalus oreganus",
+      "commonName": "Western Rattlesnake",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/391040742/medium.jpeg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Reptilia",
+        "order": null,
+        "family": null,
+        "genus": "Crotalus"
+      },
+      "observationSummary": "35,330 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/48268"
+        }
+      ],
+      "sources": [
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Otospermophilus",
+          "Sauria",
+          "Spinus psaltria",
+          "Sceloporus graciosus",
+          "Mammalia",
+          "Rodentia",
+          "Sciuridae",
+          "Megascapheus bottae",
+          "Dipodomys californicus",
+          "Aspidoscelis tigris stejnegeri",
+          "Sceloporus occidentalis longipes",
+          "Dipodomys agilis",
+          "Mimus",
+          "Uta stansburiana elegans",
+          "Geomyidae",
+          "Uta stansburiana",
+          "Otospermophilus beecheyi",
+          "Rattus",
+          "Sceloporus orcutti",
+          "Sylvilagus",
+          "Neotoma",
+          "Leporidae",
+          "Sceloporus occidentalis",
+          "Aves",
+          "Neotamias",
+          "Peromyscus sonoriensis",
+          "Plestiodon skiltonianus",
+          "Dipodomys",
+          "Turdus migratorius",
+          "Sceloporus",
+          "Sylvilagus bachmani",
+          "Chiroptera",
+          "Tamiasciurus douglasii",
+          "Aspidoscelis tigris",
+          "Heteromyidae",
+          "Ammospermophilus leucurus",
+          "Sylvilagus audubonii",
+          "Vertebrata"
+        ],
+        "eatenBy": [
+          "Vespula pensylvanica",
+          "Lampropeltis californiae",
+          "Coluber lateralis",
+          "Ameiurus nebulosus",
+          "Prenolepis imparis"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 4,
+      "trophicLabel": "apex predator",
+      "trophicNote": "Apex predator (name match)",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Nycticorax nycticorax",
+      "commonName": "Black-crowned Night Heron",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/49357930/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Aves",
+        "order": null,
+        "family": null,
+        "genus": "Nycticorax"
+      },
+      "observationSummary": "161,912 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/4981"
+        }
+      ],
+      "sources": [
+        "iNaturalist",
+        "GBIF"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Secondary consumer (taxonomy)",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Zalophus californianus",
+      "commonName": "California Sea Lion",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://static.inaturalist.org/photos/11888923/medium.png",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Mammalia",
+        "order": null,
+        "family": null,
+        "genus": "Zalophus"
+      },
+      "observationSummary": "38,726 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/41740"
+        }
+      ],
+      "sources": [
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Opisthonema libertate",
+          "Leachia",
+          "Chromis punctipinnis",
+          "Abraliopsis",
+          "Onychoteuthis borealijaponica",
+          "Sebastes jordani",
+          "Doryteuthis opalescens",
+          "Salmonidae",
+          "Engraulis mordax",
+          "Girella nigricans",
+          "Cephalopoda",
+          "Scomber japonicus",
+          "Octopus",
+          "Porichthys",
+          "Crustacea",
+          "Sardinops sagax",
+          "Cetengraulis mysticetus",
+          "Trachurus symmetricus",
+          "Mallotus villosus",
+          "Rexea solandri",
+          "Chordata",
+          "Clupea pallasii",
+          "Merluccius productus",
+          "Scomber"
+        ],
+        "eatenBy": [
+          "Canidae",
+          "Cathartidae",
+          "Canis latrans"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Eats animals, preyed upon by 3 species",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Nannopterum auritum",
+      "commonName": "Double-crested Cormorant",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/182713821/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Aves",
+        "order": null,
+        "family": null,
+        "genus": "Nannopterum"
+      },
+      "observationSummary": "193,929 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/1454382"
+        }
+      ],
+      "sources": [
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Tilapia mariae",
+          "Ariopsis assimilis",
+          "Pteroinae",
+          "Atherinopsis californiensis",
+          "Pleuronichthys guttulatus",
+          "Porichthys notatus",
+          "Pterygoplichthys",
+          "Pleuronectoidei",
+          "Clupea pallasii",
+          "Actinopterygii",
+          "Micropterus dolomieu",
+          "Gibbonsia metzi",
+          "Dorosoma cepedianum",
+          "Hippocampus erectus",
+          "Ameiurus melas",
+          "Anguilliformes",
+          "Myoxocephalus scorpius",
+          "Citharichthys sordidus",
+          "Leptocottus armatus",
+          "Lepisosteidae",
+          "Scomber scombrus",
+          "Monacanthidae",
+          "Syngnathus californiensis",
+          "Perca flavescens",
+          "Oreochromis aureus",
+          "Hexagrammos decagrammus",
+          "Platichthys stellatus",
+          "Acanthogobius flavimanus",
+          "Oncorhynchus mykiss",
+          "Lepomis macrochirus",
+          "Carcinus maenas",
+          "Scorpaenidae",
+          "Cichlasoma urophthalmum",
+          "Cyprinus carpio",
+          "Pholis ornata",
+          "Enophrys bison",
+          "Ameiurus catus",
+          "Syngnathus fuscus",
+          "Clarias batrachus",
+          "Ameiurus nebulosus",
+          "Ammodytes americanus",
+          "Siluriformes",
+          "Ariopsis felis",
+          "Ictalurus punctatus",
+          "Anguilla rostrata",
+          "Tautoga onitis",
+          "Esox niger",
+          "Paralichthys californicus",
+          "Necturus maculosus"
+        ],
+        "eatenBy": [
+          "Larus hyperboreus"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Secondary consumer (taxonomy)",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Frangula californica",
+      "commonName": "coffeeberry",
+      "category": "plant",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/49491423/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Plantae",
+        "order": null,
+        "family": null,
+        "genus": "Frangula"
+      },
+      "observationSummary": "24,768 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/53423"
+        }
+      ],
+      "sources": [
+        "iNaturalist",
+        "GBIF"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [
+          "Satyrium auretorum",
+          "Danaus plexippus",
+          "Argyrotaenia franciscana",
+          "Papilio eurymedon",
+          "Acalyptris punctulata",
+          "Sorhagenia nimbosus",
+          "Strymon melinus",
+          "Orgyia cana",
+          "Callophrys muiri"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 1,
+      "trophicLabel": "producer",
+      "trophicNote": "Produces energy via photosynthesis",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Limosa fedoa",
+      "commonName": "Marbled Godwit",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/246304965/medium.jpeg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Aves",
+        "order": null,
+        "family": null,
+        "genus": "Limosa"
+      },
+      "observationSummary": "27,260 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/3954"
+        }
+      ],
+      "sources": [
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Ulvaceae",
+          "Ulva lactuca",
+          "Cicadellidae",
+          "Acrididae",
+          "Curculionidae",
+          "Gryllidae",
+          "Nabidae",
+          "Athysanus argentarius",
+          "Leiobunum",
+          "Lestidae",
+          "Chlorophyta",
+          "Ichneumonidae",
+          "Stratiomyidae",
+          "Chironomidae",
+          "Sarcophagidae",
+          "Staphylinidae"
+        ],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Secondary consumer (taxonomy)",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Porcellio scaber",
+      "commonName": "Common Rough Woodlouse",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/355369366/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Animalia",
+        "order": null,
+        "family": null,
+        "genus": "Porcellio"
+      },
+      "observationSummary": "62,377 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/122238"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "microbes",
+          "litter",
+          "Detritus",
+          "Chrysomela confluens",
+          "Fragaria vesca",
+          "Arbutus menziesii",
+          "Alnus glutinosa",
+          "Hedera helix",
+          "Quercus robur",
+          "Fungi"
+        ],
+        "eatenBy": [
+          "Parkesia noveboracensis",
+          "Nyctalus leisleri",
+          "Anguilla australis"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 0,
+      "trophicLabel": "decomposer",
+      "trophicNote": "Decomposer/detritivore (name match)",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Cancer productus",
+      "commonName": "Red Rock Crab",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/100280808/medium.jpeg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Animalia",
+        "order": null,
+        "family": null,
+        "genus": "Cancer"
+      },
+      "observationSummary": "14,361 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/47826"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Crassostrea gigas",
+          "Ocenebra",
+          "Animalia",
+          "Mandrillus leucophaeus",
+          "Urosalpinx cinerea",
+          "Gastropoda",
+          "Ostrea lurida",
+          "Cephalopoda",
+          "Littorina sitkana",
+          "Tresus capax",
+          "Mya arenaria",
+          "Dendraster excentricus",
+          "Echinodermata",
+          "Mollusca"
+        ],
+        "eatenBy": [
+          "Enhydra lutris",
+          "Mustelus henlei",
+          "Corvus caurinus",
+          "Sebastes caurinus",
+          "Triakis semifasciata",
+          "Mustelus californicus",
+          "Platycephalus laevigatus",
+          "Enteroctopus dofleini",
+          "Corvus brachyrhynchos",
+          "Larus glaucescens",
+          "Enhydra lutris nereis"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Eats animals, preyed upon by 11 species",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Ariolimax stramineus",
+      "commonName": "Southern Pacific Banana Slug",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://static.inaturalist.org/photos/1973851/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Mollusca",
+        "order": null,
+        "family": null,
+        "genus": "Ariolimax"
+      },
+      "observationSummary": "1,404 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/560098"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 0,
+      "trophicLabel": "decomposer",
+      "trophicNote": "Decomposer/detritivore (name match)",
+      "climateCompatibility": "marginal",
+      "climateNote": "Frost-sensitive tropical plant — city minimum is -6.8°C"
+    },
+    {
+      "scientificName": "Tonicella lokii",
+      "commonName": "Flame Lined Chiton",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://static.inaturalist.org/photos/1418553/medium.JPG",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Mollusca",
+        "order": null,
+        "family": null,
+        "genus": "Tonicella"
+      },
+      "observationSummary": "2,244 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/50886"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 2,
+      "trophicLabel": "primary consumer",
+      "trophicNote": "Trophic level estimated — no interaction data available",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Diaphoreolis lagunae",
+      "commonName": "Laguna Beach Aeolid",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/15749/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Mollusca",
+        "order": null,
+        "family": null,
+        "genus": "Tenellia"
+      },
+      "observationSummary": "1,141 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/521100"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Xingyurella turgida"
+        ],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Eats animals, preyed upon by 0 species",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Doriopsilla albopunctata",
+      "commonName": "White-spotted Sea Goddess",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/2324626/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Mollusca",
+        "order": null,
+        "family": null,
+        "genus": "Doriopsilla"
+      },
+      "observationSummary": "4,065 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/474590"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Acarnus erithacus",
+          "Animalia"
+        ],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Eats animals, preyed upon by 0 species",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Hapalogaster cavicauda",
+      "commonName": "Furry Crab",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/560020312/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Animalia",
+        "order": null,
+        "family": null,
+        "genus": "Hapalogaster"
+      },
+      "observationSummary": "214 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/51632"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 2,
+      "trophicLabel": "primary consumer",
+      "trophicNote": "Trophic level estimated — no interaction data available",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Artedius lateralis",
+      "commonName": "Smoothhead Sculpin",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://static.inaturalist.org/photos/83907372/medium.jpeg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Actinopterygii",
+        "order": null,
+        "family": null,
+        "genus": "Artedius"
+      },
+      "observationSummary": "1,555 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/117529"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Errantia",
+          "Osteichthyes",
+          "Gnathostomata",
+          "Crustacea",
+          "Caridae",
+          "Plantae",
+          "Polychaeta",
+          "Amphipoda",
+          "Animalia",
+          "Brachyura"
+        ],
+        "eatenBy": [
+          "Phalacrocorax penicillatus"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Secondary consumer (taxonomy)",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Acanthodoris lutea",
+      "commonName": "Sandalwood Dorid",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/21404874/medium.jpeg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Mollusca",
+        "order": null,
+        "family": null,
+        "genus": "Acanthodoris"
+      },
+      "observationSummary": "1,797 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/47472"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 2,
+      "trophicLabel": "primary consumer",
+      "trophicNote": "Trophic level estimated — no interaction data available",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Peltodoris nobilis",
+      "commonName": "Noble Dorid",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/392112497/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Mollusca",
+        "order": null,
+        "family": null,
+        "genus": "Peltodoris"
+      },
+      "observationSummary": "7,087 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/48450"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Endectyon hispitumulus",
+          "Halichondria panicea",
+          "Animalia"
+        ],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Eats animals, preyed upon by 0 species",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Petrospongium rugosum",
+      "commonName": null,
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://static.inaturalist.org/photos/2718965/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Chromista",
+        "order": null,
+        "family": null,
+        "genus": "Petrospongium"
+      },
+      "observationSummary": "310 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/475636"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 2,
+      "trophicLabel": "primary consumer",
+      "trophicNote": "Trophic level estimated — no interaction data available",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Euphagus cyanocephalus",
+      "commonName": "Brewer's Blackbird",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://static.inaturalist.org/photos/704834/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Aves",
+        "order": null,
+        "family": null,
+        "genus": "Euphagus"
+      },
+      "observationSummary": "47,414 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/10325"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Gasterosteus aculeatus",
+          "Cirrula hians",
+          "Hyles lineata",
+          "Junonia grisea",
+          "Tipulidae",
+          "Lepidoptera",
+          "Chenopodium album",
+          "Avena fatua",
+          "Alopecurus",
+          "Secale",
+          "Avena",
+          "Helianthus",
+          "Zea mays",
+          "Fragaria",
+          "Sporobolus cryptandrus",
+          "Sorghum halepense",
+          "Sorghum bicolor",
+          "Saissetia oleae",
+          "Anisoptera",
+          "Triticum",
+          "Auchenorrhyncha",
+          "Chilopoda",
+          "Tracheophyta",
+          "Vitaceae",
+          "Animalia",
+          "Polygonum",
+          "Rubus",
+          "Prunus",
+          "Acrididae",
+          "Araneae",
+          "Magnoliopsida",
+          "Amaranthus",
+          "Poaceae",
+          "Zygoptera",
+          "Commelinales",
+          "Caryophyllales",
+          "Rosales",
+          "Asterales",
+          "Poales",
+          "Orthoptera",
+          "Dytiscinae",
+          "Curculionidae",
+          "Hemiptera",
+          "Carabidae",
+          "Malacosoma disstria",
+          "Hirundo rustica",
+          "Lithobates pipiens",
+          "Diptera",
+          "Murdannia nudiflora",
+          "Coleoptera",
+          "Arthropoda",
+          "Helicoverpa armigera",
+          "Agrotis ipsilon",
+          "Gastropoda",
+          "Phasianus colchicus",
+          "Odonata",
+          "Lanius ludovicianus",
+          "Hymenoptera"
+        ],
+        "eatenBy": [
+          "Buteo jamaicensis",
+          "Corvus corax",
+          "Mustela frenata",
+          "Bubo virginianus",
+          "Accipiter cooperii",
+          "Falco columbarius",
+          "Larus delawarensis",
+          "Aquila chrysaetos",
+          "Lanius ludovicianus",
+          "Colubridae",
+          "Falco mexicanus",
+          "Falco peregrinus",
+          "Corvus brachyrhynchos",
+          "Asio otus"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Secondary consumer (taxonomy)",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Zemysina orbella",
+      "commonName": "Orb Diplodon",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/6125386/medium.jpeg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Mollusca",
+        "order": null,
+        "family": null,
+        "genus": "Zemysina"
+      },
+      "observationSummary": "322 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/1073521"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [
+          "Octopus bimaculatus"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 2,
+      "trophicLabel": "primary consumer",
+      "trophicNote": "Trophic level estimated — no interaction data available",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Cornus sericea",
+      "commonName": "red osier dogwood",
+      "category": "plant",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://static.inaturalist.org/photos/16633753/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Plantae",
+        "order": null,
+        "family": null,
+        "genus": "Cornus"
+      },
+      "observationSummary": "81,782 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/53387"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [
+          "Anoecia corni",
+          "Aphis salicariae",
+          "Aphis cornifoliae",
+          "Aphis caliginosa",
+          "Oligia mactata",
+          "Antispila aurirubra",
+          "Plemyria georgii",
+          "Euchlaena serrata",
+          "Euchlaena marginaria",
+          "Lycia rachelae",
+          "Sunira verberata",
+          "Saturnia pavonia",
+          "Samia cynthia",
+          "Acronicta grisea",
+          "Anavitrinella pampinaria",
+          "Antheraea polyphemus",
+          "Sayornis nigricans",
+          "Lymantria dispar",
+          "Catharus ustulatus",
+          "Hesperiphona vespertina",
+          "Celastrina argiolus",
+          "Tympanuchus phasianellus"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 1,
+      "trophicLabel": "producer",
+      "trophicNote": "Produces energy via photosynthesis",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Henricia pumila",
+      "commonName": "Dwarf Mottled Henricia",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/3939321/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Animalia",
+        "order": null,
+        "family": null,
+        "genus": "Henricia"
+      },
+      "observationSummary": "3,332 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/130864"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 2,
+      "trophicLabel": "primary consumer",
+      "trophicNote": "Trophic level estimated — no interaction data available",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Tegula brunnea",
+      "commonName": "Brown Tegula",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/13682469/medium.jpeg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Mollusca",
+        "order": null,
+        "family": null,
+        "genus": "Tegula"
+      },
+      "observationSummary": "3,036 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/490478"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 2,
+      "trophicLabel": "primary consumer",
+      "trophicNote": "Trophic level estimated — no interaction data available",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Gavia immer",
+      "commonName": "Common Loon",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/2960972/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Aves",
+        "order": null,
+        "family": null,
+        "genus": "Gavia"
+      },
+      "observationSummary": "62,941 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/4626"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Siphateles bicolor",
+          "Chordata",
+          "Gnathostomata",
+          "Perca flavescens",
+          "Mesoplodon",
+          "Stizostedion",
+          "aquatic or marine worms",
+          "Pelophylax kl. hispanicus",
+          "Pleuronectoidei",
+          "Pelophylax grafi",
+          "Rana tavasensis",
+          "Pelophylax shqipericus",
+          "Pelophylax kurtmuelleri",
+          "Pelophylax lessonae",
+          "Rana pyrenaica",
+          "Rana arvalis",
+          "Pelophylax bergeri",
+          "Rana graeca",
+          "Rana macrocnemis",
+          "Pelophylax cerigensis",
+          "Pelophylax cretensis",
+          "Rana latastei",
+          "Pelophylax epeiroticus",
+          "Rana iberica",
+          "Pelophylax bedriagae",
+          "Pelophylax esculentus",
+          "Salix",
+          "Libinia emarginata",
+          "Zoarces viviparus",
+          "Gadus morhua",
+          "Myoxocephalus scorpius",
+          "Anguilla anguilla",
+          "Brachyura",
+          "Pelophylax perezi",
+          "Rana italica",
+          "Pelophylax caralitanus",
+          "Cynoglossidae",
+          "Crustacea",
+          "Platichthys flesus",
+          "Decapoda",
+          "Pachygrapsus crassipes",
+          "Metacarcinus magister",
+          "Homarus americanus",
+          "Dorosoma cepedianum",
+          "Pelophylax ridibunda",
+          "Pseudopleuronectes americanus",
+          "Rana dalmatina",
+          "Platichthys stellatus",
+          "Rana temporaria",
+          "Gasterosteus aculeatus",
+          "Insecta"
+        ],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Secondary consumer (taxonomy)",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Gallinago delicata",
+      "commonName": "Wilson's Snipe",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://static.inaturalist.org/photos/105697371/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Aves",
+        "order": null,
+        "family": null,
+        "genus": "Gallinago"
+      },
+      "observationSummary": "24,252 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/144496"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Tabanidae",
+          "Scirpus",
+          "Ephemeroptera",
+          "Hemiptera",
+          "Gryllidae",
+          "Hymenoptera",
+          "Acrididae",
+          "Formicidae",
+          "Anura",
+          "Odonata",
+          "Lepidoptera",
+          "Corydalidae",
+          "Trichoptera",
+          "Coleoptera",
+          "Diptera",
+          "Caudata",
+          "Schoenoplectus",
+          "Tipulidae",
+          "Orthoptera",
+          "Scapteriscus didactylus",
+          "Teleostei",
+          "Tracheophyta",
+          "Clitellata",
+          "Animalia",
+          "Magnoliopsida",
+          "Mollusca",
+          "Arthropoda"
+        ],
+        "eatenBy": [
+          "Bubo virginianus",
+          "Falco columbarius",
+          "Accipiter cooperii",
+          "Accipiter gentilis",
+          "Falco peregrinus",
+          "Didelphis virginiana"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Secondary consumer (taxonomy)",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Doriopsilla fulva",
+      "commonName": "White-speckled Dorid",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/1875597/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Mollusca",
+        "order": null,
+        "family": null,
+        "genus": "Doriopsilla"
+      },
+      "observationSummary": "4,480 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/467284"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 2,
+      "trophicLabel": "primary consumer",
+      "trophicNote": "Trophic level estimated — no interaction data available",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Egregia menziesii",
+      "commonName": "Feather Boa Kelp",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/55064789/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Chromista",
+        "order": null,
+        "family": null,
+        "genus": "Egregia"
+      },
+      "observationSummary": "13,100 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/67419"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [
+          "Pugettia",
+          "Haliotis fulgens",
+          "Haliotis corrugata",
+          "Discurria insessa",
+          "Haliotis cracherodii",
+          "Tegula",
+          "Strongylocentrotus franciscanus",
+          "Medialuna californiensis",
+          "Strongylocentrotus purpuratus",
+          "Pugettia producta",
+          "Lytechinus anamesus",
+          "Norrisia norrisi",
+          "Lithopoma",
+          "Megathura crenulata",
+          "Aplysia californica",
+          "Girella nigricans",
+          "Aplysia vaccaria"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 2,
+      "trophicLabel": "primary consumer",
+      "trophicNote": "Trophic level estimated — no interaction data available",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Anthopleura artemisia",
+      "commonName": "Moonglow Anemone",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/79892958/medium.jpeg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Animalia",
+        "order": null,
+        "family": null,
+        "genus": "Anthopleura"
+      },
+      "observationSummary": "8,979 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/51658"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [
+          "Neobernaya spadicea",
+          "Dermasterias imbricata",
+          "Hypsypops rubicundus"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 2,
+      "trophicLabel": "primary consumer",
+      "trophicNote": "Trophic level estimated — no interaction data available",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Triopha catalinae",
+      "commonName": "Clown Dorid",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://static.inaturalist.org/photos/8838891/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Mollusca",
+        "order": null,
+        "family": null,
+        "genus": "Triopha"
+      },
+      "observationSummary": "5,261 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/47454"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Gymnolaemata"
+        ],
+        "eatenBy": [
+          "Crossaster papposus",
+          "Mesoplodon bidens"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Eats animals, preyed upon by 2 species",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Idotea urotoma",
+      "commonName": "Blunt-tailed Isopod",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/128960200/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Animalia",
+        "order": null,
+        "family": null,
+        "genus": "Idotea"
+      },
+      "observationSummary": "537 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/67638"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 0,
+      "trophicLabel": "decomposer",
+      "trophicNote": "Decomposer/detritivore (name match)",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Molothrus ater",
+      "commonName": "Brown-headed Cowbird",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/471179764/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Aves",
+        "order": null,
+        "family": null,
+        "genus": "Molothrus"
+      },
+      "observationSummary": "96,926 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/10373"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Secondary consumer (taxonomy)",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Scrophularia atrata",
+      "commonName": "black-flowered figwort",
+      "category": "plant",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://static.inaturalist.org/photos/172333825/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Plantae",
+        "order": null,
+        "family": null,
+        "genus": "Scrophularia"
+      },
+      "observationSummary": "114 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/79011"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 1,
+      "trophicLabel": "producer",
+      "trophicNote": "Produces energy via photosynthesis",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Pluvialis squatarola",
+      "commonName": "Black-bellied Plover",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://static.inaturalist.org/photos/10603462/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Aves",
+        "order": null,
+        "family": null,
+        "genus": "Pluvialis"
+      },
+      "observationSummary": "53,538 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/4892"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Alderia modesta",
+          "Peringia ulvae",
+          "Emerita",
+          "Life",
+          "Hediste diversicolor",
+          "Retusa obtusa",
+          "Hypsoblennius gilberti",
+          "Animalia",
+          "Crustacea",
+          "Arenicola marina",
+          "Mytilus galloprovincialis",
+          "Macoma balthica",
+          "Crangon septemspinosa",
+          "Mollusca",
+          "Corophium volutator",
+          "Cerastoderma edule",
+          "Actinopterygii",
+          "Emerita analoga"
+        ],
+        "eatenBy": [
+          "Circus hudsonius"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Secondary consumer (taxonomy)",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Anthopleura xanthogrammica",
+      "commonName": "Giant Green Anemone",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/3863/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Animalia",
+        "order": null,
+        "family": null,
+        "genus": "Anthopleura"
+      },
+      "observationSummary": "25,081 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/51659"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Strongylocentrotus purpuratus",
+          "Cirripedia"
+        ],
+        "eatenBy": [
+          "Cynoglossus semilaevis"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Eats animals, preyed upon by 1 species",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Fissurellidea bimaculata",
+      "commonName": "Two-spotted Keyhole Limpet",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/2638680/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Mollusca",
+        "order": null,
+        "family": null,
+        "genus": "Fissurellidea"
+      },
+      "observationSummary": "912 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/53832"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 2,
+      "trophicLabel": "primary consumer",
+      "trophicNote": "Trophic level estimated — no interaction data available",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Doris montereyensis",
+      "commonName": "Monterey Dorid",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/83019584/medium.jpeg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Mollusca",
+        "order": null,
+        "family": null,
+        "genus": "Doris"
+      },
+      "observationSummary": "15,221 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/47469"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Haliclona",
+          "Halichondria panicea",
+          "Halichondria",
+          "Myxilla incrustans",
+          "Animalia",
+          "Suberites lambei",
+          "Porifera"
+        ],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Eats animals, preyed upon by 0 species",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Acmispon glaber",
+      "commonName": "deerweed",
+      "category": "plant",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/272983126/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Plantae",
+        "order": null,
+        "family": null,
+        "genus": "Acmispon"
+      },
+      "observationSummary": "32,534 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/53134"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [
+          "Melanoplus cinereus cyanipes",
+          "Lopidea marginata",
+          "Acmaeodera fenyesi",
+          "Megachile angelarum",
+          "Euphydryas chalcedona chalcedona",
+          "Bombus sonorus",
+          "Glaucopsyche lygdamus",
+          "Incisalia irioides",
+          "Tharsalea gorgon",
+          "Zerene eurydice",
+          "Icaricia acmon",
+          "Euphydryas chalcedona",
+          "Ochlodes agricola",
+          "Pyrobombus",
+          "Bombus melanopygus",
+          "Bombus crotchii",
+          "Strymon melinus",
+          "Aphis craccivora",
+          "Chlosyne gabbii",
+          "Erynnis tristis",
+          "Colias eurytheme",
+          "Leptotes marina",
+          "Bombus vosnesenskii",
+          "Phyciodes tharos",
+          "Bombus californicus",
+          "Apis mellifera"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 1,
+      "trophicLabel": "producer",
+      "trophicNote": "Produces energy via photosynthesis",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Calliostoma ligatum",
+      "commonName": "Blue-Ringed Top Snail",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://static.inaturalist.org/photos/1405105/medium.JPG",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Mollusca",
+        "order": null,
+        "family": null,
+        "genus": "Calliostoma"
+      },
+      "observationSummary": "3,539 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/129920"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "unspecified detritus",
+          "unspecified hydroids",
+          "detritus",
+          "Medusozoa",
+          "Bacillariophyceae",
+          "Plantae"
+        ],
+        "eatenBy": [
+          "Histrionicus histrionicus"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 0,
+      "trophicLabel": "decomposer",
+      "trophicNote": "Decomposer/detritivore (name match)",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Pelecanus erythrorhynchos",
+      "commonName": "American White Pelican",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://static.inaturalist.org/photos/68158229/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Aves",
+        "order": null,
+        "family": null,
+        "genus": "Pelecanus"
+      },
+      "observationSummary": "80,552 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/4334"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Oreochromis mossambicus",
+          "Gnathostomata",
+          "Girella nigricans",
+          "Oncorhynchus mykiss",
+          "Actinopterygii",
+          "Orconectes",
+          "Pimephales promelas",
+          "Etheostoma exile",
+          "Catostomus commersonii",
+          "Cyprinus carpio",
+          "Caudata",
+          "Ambystoma tigrinum",
+          "Animalia",
+          "Catostomus catostomus"
+        ],
+        "eatenBy": [
+          "Corvus corax",
+          "Vulpes vulpes",
+          "Bubo virginianus",
+          "Haliaeetus leucocephalus",
+          "Larus delawarensis",
+          "Canis latrans",
+          "Larus argentatus"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Secondary consumer (taxonomy)",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Amanita velosa",
+      "commonName": "springtime amanita",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/14405698/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Fungi",
+        "order": null,
+        "family": null,
+        "genus": "Amanita"
+      },
+      "observationSummary": "5,545 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/51314"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [
+          "Hesperarion hemphilli"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 2,
+      "trophicLabel": "primary consumer",
+      "trophicNote": "Trophic level estimated — no interaction data available",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Octopus bimaculoides",
+      "commonName": "Lesser Two-spot Octopus",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/589996599/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Mollusca",
+        "order": null,
+        "family": null,
+        "genus": "Octopus"
+      },
+      "observationSummary": "4,147 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/54509"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Leptopecten montimerus",
+          "Olivella biplicata",
+          "Hypsoblennius gentilis",
+          "Haliotis fulgens",
+          "Chione undatella",
+          "Argopecten aequisulcatus",
+          "Gnathostomata",
+          "Lottia",
+          "Notoacmea",
+          "Leukoma staminea",
+          "Nephropoidea",
+          "Haliotis rufescens",
+          "Megastraea undosa",
+          "Norrisia norrisi",
+          "Pachygrapsus crassipes",
+          "Crustacea",
+          "Haliotis corrugata",
+          "Pagurus",
+          "Haliotis cracherodii",
+          "Paguroidea",
+          "Tegula funebralis",
+          "Mytilus edulis",
+          "Mollusca",
+          "Kelletia kelletii",
+          "Hypsoblennius gilberti"
+        ],
+        "eatenBy": [
+          "Urile penicillatus",
+          "Larus occidentalis"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Eats animals, preyed upon by 2 species",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Californiconus californicus",
+      "commonName": "California Cone",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/19706953/medium.jpeg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Mollusca",
+        "order": null,
+        "family": null,
+        "genus": "Californiconus"
+      },
+      "observationSummary": "2,709 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/499874"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Tegula",
+          "Cymatogaster aggregata",
+          "Lythrypnus dalli",
+          "Diopatra ornata",
+          "Orthonopias triacis",
+          "Alloclinus holderi",
+          "Polychaeta",
+          "Lithopoma"
+        ],
+        "eatenBy": [
+          "Octopoda",
+          "Sebastes chrysomelas",
+          "Sebastes carnatus",
+          "Pisaster giganteus",
+          "Orthasterias koehleri",
+          "Pycnopodia helianthoides",
+          "Halichoeres semicinctus",
+          "Rhacochilus vacca",
+          "Embiotoca jacksoni",
+          "Semicossyphus pulcher",
+          "Oxyjulis californica",
+          "Panulirus interruptus",
+          "Sebastes atrovirens"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Eats animals, preyed upon by 13 species",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Hericium erinaceus",
+      "commonName": "lion's-mane mushroom",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://static.inaturalist.org/photos/170247695/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Fungi",
+        "order": null,
+        "family": null,
+        "genus": "Hericium"
+      },
+      "observationSummary": "14,511 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/49158"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Quercus",
+          "Populus pollancrus",
+          "Fagus",
+          "Carpinus betulus",
+          "Fraxinus",
+          "Broadleaved trees"
+        ],
+        "eatenBy": [
+          "Philomycus"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 0,
+      "trophicLabel": "decomposer",
+      "trophicNote": "Breaks down dead organic matter",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Lottia scabra",
+      "commonName": "Rough Limpet",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/12200448/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Mollusca",
+        "order": null,
+        "family": null,
+        "genus": "Lottia"
+      },
+      "observationSummary": "4,234 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/48750"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 2,
+      "trophicLabel": "primary consumer",
+      "trophicNote": "Trophic level estimated — no interaction data available",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Batrachoseps nigriventris",
+      "commonName": "Black-bellied Slender Salamander",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://static.inaturalist.org/photos/17883661/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Amphibia",
+        "order": null,
+        "family": null,
+        "genus": "Batrachoseps"
+      },
+      "observationSummary": "4,495 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/27474"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 2,
+      "trophicLabel": "primary consumer",
+      "trophicNote": "Trophic level estimated — no interaction data available",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Diodora aspera",
+      "commonName": "Rough Keyhole Limpet",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/565276364/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Mollusca",
+        "order": null,
+        "family": null,
+        "genus": "Diodora"
+      },
+      "observationSummary": "3,229 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/64148"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "unspecified bryozoans",
+          "Animalia",
+          "Plantae",
+          "Chlorophyta"
+        ],
+        "eatenBy": [
+          "Haematopus bachmani"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Eats animals, preyed upon by 1 species",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Trillium angustipetalum",
+      "commonName": "narrowpetal wakerobin",
+      "category": "plant",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/213854/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Plantae",
+        "order": null,
+        "family": null,
+        "genus": "Trillium"
+      },
+      "observationSummary": "557 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/79439"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 1,
+      "trophicLabel": "producer",
+      "trophicNote": "Produces energy via photosynthesis",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Omphalotus olivascens",
+      "commonName": "western jack-o'-lantern",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/13126796/medium.jpeg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Fungi",
+        "order": null,
+        "family": null,
+        "genus": "Omphalotus"
+      },
+      "observationSummary": "15,398 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/67752"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [
+          "Anadenulus cockerelli"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 2,
+      "trophicLabel": "primary consumer",
+      "trophicNote": "Trophic level estimated — no interaction data available",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Lepidozona mertensii",
+      "commonName": "Merten's Chiton",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://static.inaturalist.org/photos/1416596/medium.JPG",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Mollusca",
+        "order": null,
+        "family": null,
+        "genus": "Lepidozona"
+      },
+      "observationSummary": "1,129 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/117621"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 2,
+      "trophicLabel": "primary consumer",
+      "trophicNote": "Trophic level estimated — no interaction data available",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Flabellinopsis iodinea",
+      "commonName": "Spanish Shawl",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/6075229/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Mollusca",
+        "order": null,
+        "family": null,
+        "genus": "Flabellinopsis"
+      },
+      "observationSummary": "4,115 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/194495"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Eudendrium",
+          "Medusozoa"
+        ],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Eats animals, preyed upon by 0 species",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Aplysiopsis enteromorphae",
+      "commonName": "Enteromorpha-eating Sapsucker",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/185578756/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Mollusca",
+        "order": null,
+        "family": null,
+        "genus": "Aplysiopsis"
+      },
+      "observationSummary": "898 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/50024"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Cladophora columbiana",
+          "Chaetomorpha",
+          "Cladophorales",
+          "Cladophora"
+        ],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Eats animals, preyed upon by 0 species",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Branta canadensis",
+      "commonName": "Canada Goose",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://static.inaturalist.org/photos/181719420/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Aves",
+        "order": null,
+        "family": null,
+        "genus": "Branta"
+      },
+      "observationSummary": "443,640 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/7089"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Poaceae"
+        ],
+        "eatenBy": [
+          "Ursus maritimus"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Secondary consumer (taxonomy)",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Triopha maculata",
+      "commonName": "Spotted Dorid",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/2638212/medium.JPG",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Mollusca",
+        "order": null,
+        "family": null,
+        "genus": "Triopha"
+      },
+      "observationSummary": "10,826 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/47110"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Bryozoa",
+          "Hincksina"
+        ],
+        "eatenBy": [],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Eats animals, preyed upon by 0 species",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Clangula hyemalis",
+      "commonName": "Long-tailed Duck",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/230873602/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Aves",
+        "order": null,
+        "family": null,
+        "genus": "Clangula"
+      },
+      "observationSummary": "25,306 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/7170"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [
+          "Shrimps, prawns",
+          "others",
+          "Others",
+          "Polyartemia",
+          "Branchiopoda",
+          "Crustacea",
+          "Cumacea",
+          "Decapoda",
+          "Symbion pandora",
+          "Mya arenaria",
+          "Mytilus edulis",
+          "Brachyura",
+          "Actinopterygii",
+          "Pancrustacea",
+          "Isopoda",
+          "Mollusca",
+          "Caprellidae",
+          "Pharidae",
+          "Idoteidae",
+          "Trochidae",
+          "Euphausiidae",
+          "Plantae",
+          "Pandalidae",
+          "Hyperiidea",
+          "Clupea pallasii",
+          "Polytrichum",
+          "Yoldia",
+          "Macoma",
+          "Cancer",
+          "Mytilus",
+          "Sciara",
+          "Chordata",
+          "Mysida",
+          "Gammaridea",
+          "Saduria entomon",
+          "Animalia",
+          "Simulium",
+          "Magnoliopsida",
+          "Lacuna",
+          "Crangonidae",
+          "Amphipoda",
+          "Littorina",
+          "Oligochaeta",
+          "Gastropoda",
+          "Bivalvia",
+          "Coleoptera",
+          "Arthropoda",
+          "Mallotus villosus"
+        ],
+        "eatenBy": [
+          "Larus marinus",
+          "Ursus maritimus",
+          "Bubo scandiacus",
+          "Bubo bubo",
+          "Aquila fasciata",
+          "Aquila heliaca",
+          "Clanga clanga",
+          "Clanga pomarina",
+          "Buteo rufinus",
+          "Accipiter gentilis",
+          "Circus macrourus",
+          "Circus aeruginosus",
+          "Larus cachinnans",
+          "Larus armenicus",
+          "Larus canus",
+          "Haliaeetus albicilla",
+          "Stercorarius pomarinus",
+          "Hierophis viridiflavus carbonarius",
+          "Elaphe sauromates",
+          "Hemorrhois algirus",
+          "Telescopus nigriceps",
+          "Stercorarius skua",
+          "Haliaeetus leucocephalus",
+          "Corvus frugilegus",
+          "Gulo gulo",
+          "Viverra lutreola",
+          "Zamenis situla",
+          "Elaphe dione",
+          "Ichthyaetus ichthyaetus",
+          "Buteo lagopus",
+          "Larus fuscus",
+          "Strix nebulosa",
+          "Herpestes ichneumon",
+          "Larus hyperboreus",
+          "Falco columbarius",
+          "Stercorarius parasiticus",
+          "Varanus griseus"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Secondary consumer (taxonomy)",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Podilymbus podiceps",
+      "commonName": "Pied-billed Grebe",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/117828251/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Aves",
+        "order": null,
+        "family": null,
+        "genus": "Podilymbus"
+      },
+      "observationSummary": "92,814 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/4246"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [
+          "Python bivittatus"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 3,
+      "trophicLabel": "secondary consumer",
+      "trophicNote": "Secondary consumer (taxonomy)",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    },
+    {
+      "scientificName": "Romaleon antennarium",
+      "commonName": "Pacific Rock Crab",
+      "category": "animal",
+      "nativeStatus": "unknown",
+      "confidence": "unknown",
+      "observedNearby": true,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/798283/medium.jpg",
+      "taxonomy": {
+        "kingdom": null,
+        "phylum": null,
+        "class": "Animalia",
+        "order": null,
+        "family": null,
+        "genus": "Romaleon"
+      },
+      "observationSummary": "9,066 observations",
+      "sourceLinks": [
+        {
+          "source": "iNaturalist",
+          "url": "https://www.inaturalist.org/taxa/202315"
+        }
+      ],
+      "sources": [
+        "GBIF",
+        "iNaturalist"
+      ],
+      "interactions": {
+        "eats": [],
+        "eatenBy": [
+          "Myliobatis californica",
+          "Enhydra lutris",
+          "Triakis semifasciata",
+          "Mustelus californicus",
+          "Larus occidentalis",
+          "Enhydra lutris nereis",
+          "Tringa semipalmatus",
+          "Octopus bimaculatus"
+        ],
+        "pollinates": [],
+        "pollinatedBy": [],
+        "parasitizes": [],
+        "parasitizedBy": [],
+        "competesWidth": []
+      },
+      "trophicLevel": 2,
+      "trophicLabel": "primary consumer",
+      "trophicNote": "Trophic level estimated — no interaction data available",
+      "climateCompatibility": "compatible",
+      "climateNote": "Generally compatible with Temperate Grassland/Steppe climate"
+    }
+  ],
+  "savedAt": "2026-05-03T05:19:54.325Z"
+}

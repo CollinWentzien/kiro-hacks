@@ -6,6 +6,7 @@ import EcosystemCanvas, { initialPosition } from '../components/EcosystemCanvas.
 import SpeciesInfoPanel from '../components/SpeciesInfoPanel.jsx';
 import EcosystemChat from '../components/chat/EcosystemChat.jsx';
 import ChatToggleButton from '../components/chat/ChatToggleButton.jsx';
+import { improveEcosystem } from '../data/improveEcosystem.js';
 
 const MODE_LABELS = { outdoor: 'Outdoor', terrarium: 'Terrarium', aquarium: 'Aquarium' };
 
@@ -19,6 +20,9 @@ export default function EcosystemBuilder({ projects, activeId, onUpdateProject, 
   const [draggingSpecies, setDraggingSpecies] = useState(null);
   const [confirmClear, setConfirmClear] = useState(false);
   const [chatOpen, setChatOpen] = useState(false);
+  const [aiResult, setAiResult] = useState(null);
+  const [aiLoading, setAiLoading] = useState(false);
+  const [groqScore, setGroqScore] = useState(null); // null = show --
 
   // Seed canvas when backend species arrive — auto-sorted and auto-fit
   useEffect(() => {
@@ -55,6 +59,21 @@ export default function EcosystemBuilder({ projects, activeId, onUpdateProject, 
     return reg;
   }, [extraSpecies, dynamicSpecies]);
 
+  const handleImprove = useCallback(async (healthData) => {
+    setAiResult(null);
+    setAiLoading(true);
+    setSelectedId(null);
+    try {
+      const result = await improveEcosystem({ nodes, speciesRegistry, healthData, city: project?.city });
+      setAiResult(result);
+      if (result.score != null) setGroqScore(result.score);
+    } catch (e) {
+      setAiResult({ error: e.message });
+    } finally {
+      setAiLoading(false);
+    }
+  }, [nodes, speciesRegistry, project]);
+
   // Build profile for the chat coach from current project state
   const chatProfile = useMemo(() => ({
     userId: `project-${id}`,
@@ -67,6 +86,7 @@ export default function EcosystemBuilder({ projects, activeId, onUpdateProject, 
   const placedIds = useMemo(() => new Set(nodes.map(n => n.id)), [nodes]);
 
   const addSpecies = useCallback((species, pos) => {
+    setGroqScore(null);
     if (!SPECIES_BY_ID[species.id] && !extraSpecies.find(s => s.id === species.id)) {
       setDynamicSpecies(prev => ({ ...prev, [species.id]: species }));
     }
@@ -83,6 +103,7 @@ export default function EcosystemBuilder({ projects, activeId, onUpdateProject, 
   }, [id, onUpdateProject]);
 
   const removeNode = useCallback((nodeId) => {
+    setGroqScore(null);
     setNodes(ns => {
       const updated = ns.filter(n => n.id !== nodeId);
       onUpdateProject(id, { speciesCount: updated.length });
@@ -140,12 +161,14 @@ export default function EcosystemBuilder({ projects, activeId, onUpdateProject, 
           nodes={nodes}
           setNodes={setNodes}
           selectedId={selectedId}
-          setSelectedId={setSelectedId}
+          setSelectedId={(id) => { setSelectedId(id); if (id) setAiResult(null); }}
           onAdd={addSpecies}
           onRemove={removeNode}
           draggingSpecies={draggingSpecies}
           setDraggingSpecies={setDraggingSpecies}
           speciesRegistry={speciesRegistry}
+          onImprove={handleImprove}
+          groqScore={groqScore}
         />
       </div>
 
@@ -155,6 +178,8 @@ export default function EcosystemBuilder({ projects, activeId, onUpdateProject, 
         onSelect={setSelectedId}
         onAdd={addSpecies}
         speciesRegistry={speciesRegistry}
+        aiResult={aiResult}
+        aiLoading={aiLoading}
       />
 
       <ChatToggleButton
@@ -166,6 +191,8 @@ export default function EcosystemBuilder({ projects, activeId, onUpdateProject, 
         profile={chatProfile}
         isOpen={chatOpen}
         onClose={() => setChatOpen(false)}
+        nodes={nodes}
+        speciesRegistry={speciesRegistry}
       />
 
       <div className="corner-mark">— a living index —</div>

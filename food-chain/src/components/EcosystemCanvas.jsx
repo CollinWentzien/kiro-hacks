@@ -17,7 +17,7 @@ export function initialPosition(species, existing, canvasW, canvasH) {
   return { x: bestX + (Math.random() - 0.5) * 30, y: baseY + (Math.random() - 0.5) * 30 };
 }
 
-export default function EcosystemCanvas({ nodes, setNodes, selectedId, setSelectedId, onAdd, onRemove, draggingSpecies, setDraggingSpecies, speciesRegistry = SPECIES_BY_ID }) {
+export default function EcosystemCanvas({ nodes, setNodes, selectedId, setSelectedId, onAdd, onRemove, draggingSpecies, setDraggingSpecies, speciesRegistry = SPECIES_BY_ID, onImprove, groqScore }) {
   const canvasRef = useRef(null);
   const [size, setSize] = useState({ w: 800, h: 600 });
   const [dragOver, setDragOver] = useState(false);
@@ -196,7 +196,7 @@ export default function EcosystemCanvas({ nodes, setNodes, selectedId, setSelect
         onPointerLeave={onCanvasPointerUp}>
 
         {/* Fixed UI — outside transform */}
-        <HealthScorePanel nodes={nodes} speciesRegistry={speciesRegistry} />
+        <HealthScorePanel nodes={nodes} speciesRegistry={speciesRegistry} onImprove={onImprove} groqScore={groqScore} />
 
         {/* Pannable/zoomable content */}
         <div style={{ transform: `translate(${pan.x}px, ${pan.y}px) scale(${zoom})`, transformOrigin: '0 0', position: 'absolute', inset: 0, pointerEvents: 'none' }}>

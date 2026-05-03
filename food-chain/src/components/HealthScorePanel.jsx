@@ -49,11 +49,17 @@ function computeHealth(nodes, reg) {
   return { score, status, warnings, byTrophic, edges, total: nodes.length };
 }
 
-export default function HealthScorePanel({ nodes, speciesRegistry = SPECIES_BY_ID }) {
+export default function HealthScorePanel({ nodes, speciesRegistry = SPECIES_BY_ID, onImprove, groqScore }) {
   const data = useMemo(() => computeHealth(nodes, speciesRegistry), [nodes, speciesRegistry]);
   if (!data) return null;
 
-  const { score, status, warnings, byTrophic, edges, total } = data;
+  const { status: localStatus, warnings, byTrophic, edges, total } = data;
+  // Use Groq score if available, otherwise show pending state
+  const score = groqScore;
+  const arcPct = groqScore != null ? groqScore / 100 : 0;
+  const status = groqScore != null
+    ? (groqScore >= 75 ? 'healthy' : groqScore >= 45 ? 'developing' : 'unstable')
+    : localStatus;
   const arc = (pct) => {
     const r = 28, cx = 36, cy = 36;
     const angle = pct * 2 * Math.PI - Math.PI / 2;
@@ -73,9 +79,11 @@ export default function HealthScorePanel({ nodes, speciesRegistry = SPECIES_BY_I
         <div className="hp-ring-wrap">
           <svg width="72" height="72">
             <circle cx="36" cy="36" r="28" fill="none" stroke="var(--rule)" strokeWidth="5" />
-            <path d={arc(score / 100)} fill="none" stroke={statusColor} strokeWidth="5" strokeLinecap="round" />
+            <path d={arc(arcPct)} fill="none" stroke={statusColor} strokeWidth="5" strokeLinecap="round" />
           </svg>
-          <div className="hp-ring-num" style={{ color: statusColor, transform: 'translateY(-2px)' }}>{score}</div>
+          <div className="hp-ring-num" style={{ color: statusColor, transform: 'translateY(-2px)' }}>
+            {groqScore != null ? groqScore : '--'}
+          </div>
         </div>
 
         {/* Stats column */}
@@ -105,7 +113,7 @@ export default function HealthScorePanel({ nodes, speciesRegistry = SPECIES_BY_I
 
         {/* Action button */}
         <div className="hp-actions">
-          <button className="hp-action-btn" onClick={() => {}}>
+          <button className="hp-action-btn" onClick={() => onImprove?.(data)}>
             <i className="fa-solid fa-wand-magic-sparkles" />
             <span>Improve<br/>Ecosystem</span>
           </button>
