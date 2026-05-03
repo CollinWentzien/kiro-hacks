@@ -4,6 +4,8 @@ import { SPECIES_BY_ID } from '../data/species.js';
 import SpeciesLibraryPanel from '../components/SpeciesLibraryPanel.jsx';
 import EcosystemCanvas, { initialPosition } from '../components/EcosystemCanvas.jsx';
 import SpeciesInfoPanel from '../components/SpeciesInfoPanel.jsx';
+import EcosystemChat from '../components/chat/EcosystemChat.jsx';
+import ChatToggleButton from '../components/chat/ChatToggleButton.jsx';
 
 const MODE_LABELS = { outdoor: 'Outdoor', terrarium: 'Terrarium', aquarium: 'Aquarium' };
 
@@ -16,6 +18,7 @@ export default function EcosystemBuilder({ projects, activeId, onUpdateProject, 
   const [selectedId, setSelectedId] = useState(null);
   const [draggingSpecies, setDraggingSpecies] = useState(null);
   const [confirmClear, setConfirmClear] = useState(false);
+  const [chatOpen, setChatOpen] = useState(false);
 
   // Seed canvas when backend species arrive — auto-sorted and auto-fit
   useEffect(() => {
@@ -28,7 +31,6 @@ export default function EcosystemBuilder({ projects, activeId, onUpdateProject, 
     const NODE_W = 130, NODE_H = 160, PAD_X = 60, PAD_Y = 80;
     const maxCols = Math.max(...rows.map(([, g]) => g.length));
     const totalW = maxCols * NODE_W + PAD_X * 2;
-    const totalH = rows.length * NODE_H + PAD_Y * 2;
 
     const seeded = [];
     rows.forEach(([, group], ri) => {
@@ -43,7 +45,6 @@ export default function EcosystemBuilder({ projects, activeId, onUpdateProject, 
     onUpdateProject(id, { speciesCount: seeded.length });
   }, [seedSpecies]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Build a registry merging static species + backend-seeded species
   // Build a registry merging static + backend + any dynamically added catalog species
   const [dynamicSpecies, setDynamicSpecies] = useState({});
 
@@ -54,10 +55,18 @@ export default function EcosystemBuilder({ projects, activeId, onUpdateProject, 
     return reg;
   }, [extraSpecies, dynamicSpecies]);
 
+  // Build profile for the chat coach from current project state
+  const chatProfile = useMemo(() => ({
+    userId: `project-${id}`,
+    location: project?.city || null,
+    climateZone: project?.mode === 'outdoor' ? 'temperate' : null,
+    placedSpeciesIds: nodes.map(n => n.id),
+    preferences: [],
+  }), [id, project, nodes]);
+
   const placedIds = useMemo(() => new Set(nodes.map(n => n.id)), [nodes]);
 
   const addSpecies = useCallback((species, pos) => {
-    // Register species if not already in any registry
     if (!SPECIES_BY_ID[species.id] && !extraSpecies.find(s => s.id === species.id)) {
       setDynamicSpecies(prev => ({ ...prev, [species.id]: species }));
     }
@@ -146,6 +155,17 @@ export default function EcosystemBuilder({ projects, activeId, onUpdateProject, 
         onSelect={setSelectedId}
         onAdd={addSpecies}
         speciesRegistry={speciesRegistry}
+      />
+
+      <ChatToggleButton
+        isOpen={chatOpen}
+        onClick={() => setChatOpen(o => !o)}
+        speciesCount={nodes.length}
+      />
+      <EcosystemChat
+        profile={chatProfile}
+        isOpen={chatOpen}
+        onClose={() => setChatOpen(false)}
       />
 
       <div className="corner-mark">— a living index —</div>
