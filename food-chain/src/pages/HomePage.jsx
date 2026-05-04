@@ -27,7 +27,9 @@ export default function HomePage({ onStart }) {
     clearTimeout(debounceRef.current);
     debounceRef.current = setTimeout(async () => {
       try {
-        const res = await fetch(`http://localhost:3000/api/geocode/autocomplete?q=${encodeURIComponent(query)}&limit=6`);
+        const apiBase = import.meta.env.VITE_API_URL ||
+          (window.location.hostname === 'localhost' ? 'http://localhost:3000' : '');
+        const res = await fetch(`${apiBase}/api/geocode/autocomplete?q=${encodeURIComponent(query)}&limit=6`);
         if (res.ok) {
           const data = await res.json();
           const list = Array.isArray(data) ? data : [];

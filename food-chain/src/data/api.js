@@ -1,4 +1,5 @@
-const BASE = 'http://localhost:3000';
+const BASE = import.meta.env.VITE_API_URL ||
+  (window.location.hostname === 'localhost' ? 'http://localhost:3000' : '');
 
 // Genera that are reliably herbivores regardless of GloBI interaction data
 const HERBIVORE_GENERA = new Set([

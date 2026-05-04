@@ -23,6 +23,7 @@ export default function EcosystemChat({ profile, isOpen, onClose, nodes, species
   const [messages, setMessages] = useState([WELCOME_MESSAGE]);
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
+  const chatBodyRef = useRef(null);
 
   useEffect(() => {
     if (messagesEndRef.current) {
@@ -94,7 +95,7 @@ export default function EcosystemChat({ profile, isOpen, onClose, nodes, species
         <button className="ecosystem-chat__close" onClick={onClose} aria-label="Close chat">×</button>
       </div>
 
-      <div className="ecosystem-chat__body" ref={useRef(null)} role="log" aria-live="polite">
+      <div className="ecosystem-chat__body" ref={chatBodyRef} role="log" aria-live="polite">
         {messages.map((msg, i) => (
           <div key={i} className="ecosystem-chat__message-group">
             <ChatMessage role={msg.role} content={msg.content} timestamp={msg.timestamp} />
